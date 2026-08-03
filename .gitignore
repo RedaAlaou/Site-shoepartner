@@ -1,0 +1,26 @@
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dépendances / build
+node_modules/
+dist/
+build/
+
+# Logs & temporaires
+*.log
+npm-debug.log*
+*.tmp
+
+# Secrets
+.env
+.env.*

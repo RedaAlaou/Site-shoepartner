@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="176" viewBox="0 0 440 176">
+  <title>ShoePartner — trame zellige (étoile à huit branches, tuile 44)</title>
+  <defs>
+    <pattern id="zellige" width="44" height="44" patternUnits="userSpaceOnUse">
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#B4763A" stroke-width="1.2"/>
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#B4763A" stroke-width="1.2" transform="rotate(45 22 22)"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#zellige)"/>
+</svg>

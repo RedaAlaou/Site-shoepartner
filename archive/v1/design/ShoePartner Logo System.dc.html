@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta name="design_doc_mode" content="canvas">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Kufi+Arabic:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; background:#EAE4DA; }
+    a { color:#0E7C86; text-decoration:none; border-bottom:1px solid rgba(14,124,134,0.35); }
+    a:hover { color:#3A2A20; border-bottom-color:rgba(58,42,32,0.5); }
+  </style>
+</helmet>
+
+<section style="padding:72px; font-family:Jost, sans-serif; color:#3A2A20; display:flex; flex-direction:column; gap:56px">
+
+  <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:48px; border-bottom:1px solid rgba(58,42,32,0.2); padding-bottom:28px">
+    <div style="display:flex; flex-direction:column; gap:14px; max-width:900px">
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:rgba(58,42,32,0.5)">ShoePartner — Identité · Turn 1 · Trois routes</div>
+      <div style="font-size:52px; font-weight:600; letter-spacing:-0.01em; line-height:1.02">Système de logo — matières & digital pour la chaussure</div>
+      <div style="font-size:18px; font-weight:300; line-height:1.5; color:rgba(58,42,32,0.75); text-wrap:pretty">Trois routes complètes : <a href="#1a">1a</a> semelle abstraite, <a href="#1b">1b</a> maillon partenariat, <a href="#1c">1c</a> monogramme SP zellige. Chaque route est déclinée en lockup horizontal, vertical, icône seule, monochrome noir/blanc, fonds clair et foncé, plus mockups carton kraft, header web et avatar social.</div>
+    </div>
+    <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(58,42,32,0.45); text-align:right; line-height:2">Flat vector<br>16px → 2m<br>1 couleur / kraft OK</div>
+  </div>
+
+  <div style="display:flex; gap:44px; align-items:flex-start; flex-wrap:wrap">
+
+    <!-- ROUTE A -->
+    <div id="1a" style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="display:flex; align-items:center; gap:14px">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.16em; background:#3A2A20; color:#F5F1EA; padding:6px 12px">1A</div>
+        <div style="font-size:26px; font-weight:600; letter-spacing:0.01em">Route A — La semelle</div>
+      </div>
+      <div style="font-size:16px; font-weight:300; line-height:1.55; color:rgba(58,42,32,0.78); text-wrap:pretty">Profil de forme / semelle réduit à une silhouette géométrique, avec une ligne de piqûre pointillée en réserve. La forme pleine tient à 16px et s'imprime en une seule encre : la piqûre devient le carton nu. Lecture immédiate pour un atelier — c'est l'outil, pas la chaussure.</div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">01 · Icône</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:40px; display:flex; align-items:center; justify-content:center; gap:56px">
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="a" primary="#3A2A20" secondary="#FFFCF7" hint-size="100%,100%"></dc-import></div>
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="a" primary="#B4763A" secondary="#FFFCF7" hint-size="100%,100%"></dc-import></div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">02 · Lockup horizontal</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="a" variant="h" c1="#3A2A20" c2="#FFFCF7" t1="#3A2A20" t2="#B4763A" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+      <div style="background:#3A2A20; padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="a" variant="h" c1="#B4763A" c2="#3A2A20" t1="#F5F1EA" t2="#0E7C86" t3="rgba(245,241,234,0.55)" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">03 · Lockup vertical · 04 · Monochrome</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="a" variant="v" c1="#3A2A20" c2="#FFFCF7" t1="#3A2A20" t2="#B4763A" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="a" variant="v" c1="#000000" c2="#FFFCF7" t1="#000000" t2="#000000" t3="rgba(0,0,0,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#22201E; padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="a" variant="v" c1="#FFFFFF" c2="#22201E" t1="#FFFFFF" t2="#FFFFFF" t3="rgba(255,255,255,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">05 · Favicon 64 / 32 / 16</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:28px 36px; display:flex; align-items:center; gap:28px">
+        <div style="width:64px; height:64px; background:#3A2A20; padding:10px; box-sizing:border-box"><dc-import name="Mark" route="a" primary="#F5F1EA" secondary="#3A2A20" hint-size="100%,100%"></dc-import></div>
+        <div style="width:32px; height:32px; background:#3A2A20; padding:5px; box-sizing:border-box"><dc-import name="Mark" route="a" primary="#F5F1EA" secondary="#3A2A20" detail="{{ false }}" hint-size="100%,100%"></dc-import></div>
+        <div style="width:16px; height:16px; background:#3A2A20; padding:2px; box-sizing:border-box"><dc-import name="Mark" route="a" primary="#F5F1EA" secondary="#3A2A20" detail="{{ false }}" hint-size="100%,100%"></dc-import></div>
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; color:rgba(58,42,32,0.45); line-height:1.7">Réserve = 10% de la boîte<br>Piqûre supprimée sous 40px</div>
+      </div>
+
+      <sc-if value="{{ showMockups }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">06 · Mockups</div>
+        <div style="background:#C39A6B; padding:58px 48px 44px; display:flex; align-items:center; justify-content:space-between; gap:32px; position:relative">
+          <div style="position:absolute; top:0; left:0; right:0; height:24px; opacity:0.45; overflow:hidden"><dc-import name="Zellige" color="#3A2A20" tile="24" hint-size="100%,24px"></dc-import></div>
+          <dc-import name="Lockup" route="a" variant="h" c1="#3A2A20" c2="#C39A6B" t1="#3A2A20" t2="#3A2A20" t3="rgba(58,42,32,0.6)" style="font-size:26px" hint-size="300px,80px"></dc-import>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(58,42,32,0.8); text-align:right; line-height:1.9">Semelles · PU / TPR<br>Lot ____ · Fès, Maroc</div>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:0">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid rgba(58,42,32,0.12)">
+            <dc-import name="Lockup" route="a" variant="h" c1="#3A2A20" c2="#FFFCF7" t1="#3A2A20" t2="#B4763A" showTag="{{ false }}" style="font-size:17px" hint-size="180px,44px"></dc-import>
+            <div style="display:flex; align-items:center; gap:24px; font-size:14px; font-weight:400; color:rgba(58,42,32,0.75)">
+              <span>Matières</span><span>Digital</span><span>Catalogue</span>
+              <span style="background:#0E7C86; color:#FFFFFF; padding:9px 18px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase">Devis</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:22px; padding:24px">
+            <div style="width:84px; height:84px; border-radius:50%; background:#3A2A20; padding:16px; box-sizing:border-box; flex:none"><dc-import name="Mark" route="a" primary="#F5F1EA" secondary="#3A2A20" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(58,42,32,0.5); line-height:1.9">Avatar Instagram<br>@shoepartner.ma</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- ROUTE B -->
+    <div id="1b" style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="display:flex; align-items:center; gap:14px">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.16em; background:#3A2A20; color:#F5F1EA; padding:6px 12px">1B</div>
+        <div style="font-size:26px; font-weight:600; letter-spacing:0.01em">Route B — Le maillon</div>
+      </div>
+      <div style="font-size:16px; font-weight:300; line-height:1.55; color:rgba(58,42,32,0.78); text-wrap:pretty">Deux demi-maillons imbriqués : à gauche un trait plein continu — le cuir, la matière ; à droite la même course en nœuds ponctués — le digital, la donnée. Même géométrie, deux langages, une seule pièce. C'est la promesse du partenariat sans le cliché de la poignée de main.</div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">01 · Icône</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:40px; display:flex; align-items:center; justify-content:center; gap:56px">
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="b" primary="#3A2A20" secondary="#B4763A" hint-size="100%,100%"></dc-import></div>
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="b" primary="#B4763A" secondary="#0E7C86" hint-size="100%,100%"></dc-import></div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">02 · Lockup horizontal</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="b" variant="h" c1="#3A2A20" c2="#B4763A" t1="#3A2A20" t2="#B4763A" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+      <div style="background:#3A2A20; padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="b" variant="h" c1="#F5F1EA" c2="#0E7C86" t1="#F5F1EA" t2="#0E7C86" t3="rgba(245,241,234,0.55)" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">03 · Lockup vertical · 04 · Monochrome</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="b" variant="v" c1="#3A2A20" c2="#B4763A" t1="#3A2A20" t2="#B4763A" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="b" variant="v" c1="#000000" c2="#000000" t1="#000000" t2="#000000" t3="rgba(0,0,0,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#22201E; padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="b" variant="v" c1="#FFFFFF" c2="#FFFFFF" t1="#FFFFFF" t2="#FFFFFF" t3="rgba(255,255,255,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">05 · Favicon 64 / 32 / 16</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:28px 36px; display:flex; align-items:center; gap:28px">
+        <div style="width:64px; height:64px; background:#3A2A20; padding:8px; box-sizing:border-box"><dc-import name="Mark" route="b" primary="#F5F1EA" secondary="#B4763A" hint-size="100%,100%"></dc-import></div>
+        <div style="width:32px; height:32px; background:#3A2A20; padding:4px; box-sizing:border-box"><dc-import name="Mark" route="b" primary="#F5F1EA" secondary="#B4763A" hint-size="100%,100%"></dc-import></div>
+        <div style="width:16px; height:16px; background:#3A2A20; padding:2px; box-sizing:border-box"><dc-import name="Mark" route="b" primary="#F5F1EA" secondary="#F5F1EA" hint-size="100%,100%"></dc-import></div>
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; color:rgba(58,42,32,0.45); line-height:1.7">Sous 20px : maillon<br>plein, une seule couleur</div>
+      </div>
+
+      <sc-if value="{{ showMockups }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">06 · Mockups</div>
+        <div style="background:#C39A6B; padding:58px 48px 44px; display:flex; align-items:center; justify-content:space-between; gap:32px; position:relative">
+          <div style="position:absolute; top:0; left:0; right:0; height:24px; opacity:0.45; overflow:hidden"><dc-import name="Zellige" color="#3A2A20" tile="24" hint-size="100%,24px"></dc-import></div>
+          <dc-import name="Lockup" route="b" variant="h" c1="#3A2A20" c2="#3A2A20" t1="#3A2A20" t2="#3A2A20" t3="rgba(58,42,32,0.6)" style="font-size:26px" hint-size="300px,80px"></dc-import>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(58,42,32,0.8); text-align:right; line-height:1.9">Cuir naturel · Lot ____<br>Casablanca, Maroc</div>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:0">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid rgba(58,42,32,0.12)">
+            <dc-import name="Lockup" route="b" variant="h" c1="#3A2A20" c2="#B4763A" t1="#3A2A20" t2="#B4763A" showTag="{{ false }}" style="font-size:17px" hint-size="180px,44px"></dc-import>
+            <div style="display:flex; align-items:center; gap:24px; font-size:14px; font-weight:400; color:rgba(58,42,32,0.75)">
+              <span>Matières</span><span>Digital</span><span>Catalogue</span>
+              <span style="background:#0E7C86; color:#FFFFFF; padding:9px 18px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase">Devis</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:22px; padding:24px">
+            <div style="width:84px; height:84px; border-radius:50%; background:#B4763A; padding:14px; box-sizing:border-box; flex:none"><dc-import name="Mark" route="b" primary="#FFFFFF" secondary="#3A2A20" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(58,42,32,0.5); line-height:1.9">Avatar Instagram<br>@shoepartner.ma</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+    <!-- ROUTE C -->
+    <div id="1c" style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="display:flex; align-items:center; gap:14px">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; font-weight:500; letter-spacing:0.16em; background:#3A2A20; color:#F5F1EA; padding:6px 12px">1C</div>
+        <div style="font-size:26px; font-weight:600; letter-spacing:0.01em">Route C — Monogramme SP · zellige</div>
+      </div>
+      <div style="font-size:16px; font-weight:300; line-height:1.55; color:rgba(58,42,32,0.78); text-wrap:pretty">Le S est tracé en points de couture, le P en trait plein comme un profil de semelle. L'étoile à huit branches — deux carrés superposés, rien de plus — encadre le monogramme : le zellige y est structure, pas décor. Le cadre saute sous 24px, le monogramme reste.</div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">01 · Icône · avec / sans cadre</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:40px; display:flex; align-items:center; justify-content:center; gap:56px">
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="c" primary="#3A2A20" secondary="#B4763A" star="{{ showStar }}" hint-size="100%,100%"></dc-import></div>
+        <div style="width:150px; height:150px"><dc-import name="Mark" route="c" primary="#3A2A20" secondary="#B4763A" star="{{ false }}" hint-size="100%,100%"></dc-import></div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">02 · Lockup horizontal</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="c" variant="h" c1="#3A2A20" c2="#B4763A" star="{{ showStar }}" t1="#3A2A20" t2="#B4763A" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+      <div style="background:#3A2A20; padding:48px 56px; display:flex; align-items:center">
+        <dc-import name="Lockup" route="c" variant="h" c1="#F5F1EA" c2="#0E7C86" star="{{ showStar }}" t1="#F5F1EA" t2="#0E7C86" t3="rgba(245,241,234,0.55)" style="font-size:34px" hint-size="380px,100px"></dc-import>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">03 · Lockup vertical · 04 · Monochrome</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="c" variant="v" c1="#3A2A20" c2="#B4763A" star="{{ showStar }}" t1="#3A2A20" t2="#B4763A" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="c" variant="v" c1="#000000" c2="#000000" star="{{ showStar }}" t1="#000000" t2="#000000" t3="rgba(0,0,0,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+        <div style="background:#22201E; padding:36px 20px; display:flex; justify-content:center">
+          <dc-import name="Lockup" route="c" variant="v" c1="#FFFFFF" c2="#FFFFFF" star="{{ showStar }}" t1="#FFFFFF" t2="#FFFFFF" t3="rgba(255,255,255,0.6)" style="font-size:22px" hint-size="180px,150px"></dc-import>
+        </div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">05 · Favicon 64 / 32 / 16</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:28px 36px; display:flex; align-items:center; gap:28px">
+        <div style="width:64px; height:64px; background:#3A2A20; padding:6px; box-sizing:border-box"><dc-import name="Mark" route="c" primary="#F5F1EA" secondary="#B4763A" hint-size="100%,100%"></dc-import></div>
+        <div style="width:32px; height:32px; background:#3A2A20; padding:3px; box-sizing:border-box"><dc-import name="Mark" route="c" primary="#F5F1EA" secondary="#F5F1EA" star="{{ false }}" hint-size="100%,100%"></dc-import></div>
+        <div style="width:16px; height:16px; background:#3A2A20; padding:1px; box-sizing:border-box"><dc-import name="Mark" route="c" primary="#F5F1EA" secondary="#F5F1EA" star="{{ false }}" hint-size="100%,100%"></dc-import></div>
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; color:rgba(58,42,32,0.45); line-height:1.7">Cadre zellige > 24px<br>SP plein en dessous</div>
+      </div>
+
+      <sc-if value="{{ showMockups }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">06 · Mockups</div>
+        <div style="background:#C39A6B; padding:58px 48px 44px; display:flex; align-items:center; justify-content:space-between; gap:32px; position:relative">
+          <div style="position:absolute; top:0; left:0; right:0; height:24px; opacity:0.45; overflow:hidden"><dc-import name="Zellige" color="#3A2A20" tile="24" hint-size="100%,24px"></dc-import></div>
+          <dc-import name="Lockup" route="c" variant="h" c1="#3A2A20" c2="#3A2A20" star="{{ showStar }}" t1="#3A2A20" t2="#3A2A20" t3="rgba(58,42,32,0.6)" style="font-size:26px" hint-size="300px,80px"></dc-import>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(58,42,32,0.8); text-align:right; line-height:1.9">Fournitures atelier<br>Marrakech, Maroc</div>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:0">
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid rgba(58,42,32,0.12)">
+            <dc-import name="Lockup" route="c" variant="h" c1="#3A2A20" c2="#B4763A" star="{{ showStar }}" t1="#3A2A20" t2="#B4763A" showTag="{{ false }}" style="font-size:17px" hint-size="180px,44px"></dc-import>
+            <div style="display:flex; align-items:center; gap:24px; font-size:14px; font-weight:400; color:rgba(58,42,32,0.75)">
+              <span>Matières</span><span>Digital</span><span>Catalogue</span>
+              <span style="background:#0E7C86; color:#FFFFFF; padding:9px 18px; font-size:13px; letter-spacing:0.08em; text-transform:uppercase">Devis</span>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:22px; padding:24px">
+            <div style="width:84px; height:84px; border-radius:50%; background:#0E7C86; padding:10px; box-sizing:border-box; flex:none"><dc-import name="Mark" route="c" primary="#FFFFFF" secondary="#FFFFFF" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:rgba(58,42,32,0.5); line-height:1.9">Avatar Instagram<br>@shoepartner.ma</div>
+          </div>
+        </div>
+      </sc-if>
+    </div>
+
+  </div>
+
+  <!-- SPECIMEN -->
+  <div style="display:flex; gap:44px; flex-wrap:wrap; align-items:stretch; border-top:1px solid rgba(58,42,32,0.2); padding-top:48px">
+    <div style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="font-size:26px; font-weight:600">Palette</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px">
+        <div style="background:#B4763A; color:#FFFFFF; padding:26px; display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Cognac</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#B4763A · matière / cuir</div>
+        </div>
+        <div style="background:#3A2A20; color:#F5F1EA; padding:26px; display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Espresso</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#3A2A20 · base / texte</div>
+        </div>
+        <div style="background:#0E7C86; color:#FFFFFF; padding:26px; display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Teal signal</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#0E7C86 · pôle digital</div>
+        </div>
+        <div style="background:#22201E; color:#F5F1EA; padding:26px; display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Charbon</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#22201E · fonds foncés</div>
+        </div>
+        <div style="background:#F5F1EA; color:#3A2A20; padding:26px; border:1px solid rgba(58,42,32,0.14); display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Blanc cassé</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#F5F1EA · fonds clairs</div>
+        </div>
+        <div style="background:#C39A6B; color:#3A2A20; padding:26px; display:flex; flex-direction:column; gap:6px; min-height:120px; justify-content:flex-end">
+          <div style="font-size:17px; font-weight:500">Kraft (support)</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.14em">#C39A6B · carton, réf.</div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; line-height:1.9; color:rgba(58,42,32,0.6)">Impression 1 encre : espresso #3A2A20 sur kraft, ou blanc #FFFFFF sur espresso.<br>Aucun dégradé, aucune ombre, aucun contour parasite.</div>
+    </div>
+
+    <div style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="font-size:26px; font-weight:600">Typographie</div>
+      <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:34px; display:flex; flex-direction:column; gap:26px">
+        <div style="display:flex; flex-direction:column; gap:10px">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">Jost · géométrique · marque & titres</div>
+          <div style="font-size:60px; font-weight:600; letter-spacing:-0.01em; line-height:1">Aa Bb Cc</div>
+          <div style="font-size:26px; font-weight:300; letter-spacing:0.14em; text-transform:uppercase">Shoe<span style="font-weight:600">Partner</span></div>
+          <div style="display:flex; gap:22px; font-size:15px; color:rgba(58,42,32,0.7)">
+            <span style="font-weight:300">300 Light</span><span style="font-weight:400">400 Regular</span><span style="font-weight:500">500 Medium</span><span style="font-weight:600">600 Semibold</span>
+          </div>
+        </div>
+        <div style="height:1px; background:rgba(58,42,32,0.12)"></div>
+        <div style="display:flex; flex-direction:column; gap:10px">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">IBM Plex Mono · références, lots, QR, étiquettes</div>
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:22px; letter-spacing:0.08em">SEM-TPR-42 / 0248 · QR-8841</div>
+        </div>
+        <div style="height:1px; background:rgba(58,42,32,0.12)"></div>
+        <div style="display:flex; flex-direction:column; gap:8px">
+          <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">Règles de lockup</div>
+          <div style="font-size:15px; font-weight:300; line-height:1.7; color:rgba(58,42,32,0.78)">Interlettrage marque 0,14 em. « Shoe » 600 / « Partner » 300 — la matière porte, le digital allège. Zone de protection = hauteur de l'icône ÷ 2. Taille minimale du lockup horizontal : 96 px de large / 22 mm imprimé.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:700px; display:flex; flex-direction:column; gap:22px">
+      <div style="font-size:26px; font-weight:600">Signature marocaine</div>
+      <div style="font-size:16px; font-weight:300; line-height:1.55; color:rgba(58,42,32,0.78); text-wrap:pretty">Deux éléments seulement, tenus à distance du logo : une trame zellige à huit branches (deux carrés, rien d'autre) réservée aux bandes d'emballage et fonds de catalogue, et un verrou bilingue latin / arabe pour les supports locaux. Aucun motif derrière la marque, aucune couleur touristique.</div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">07 · Trame zellige · bandes & fonds</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px">
+        <div style="background:#F5F1EA; border:1px solid rgba(58,42,32,0.14); height:150px; overflow:hidden"><dc-import name="Zellige" color="#B4763A" hint-size="100%,100%"></dc-import></div>
+        <div style="background:#3A2A20; height:150px; overflow:hidden"><dc-import name="Zellige" color="#0E7C86" hint-size="100%,100%"></dc-import></div>
+      </div>
+      <div style="background:#C39A6B; padding:0; display:flex; flex-direction:column">
+        <div style="height:28px; opacity:0.5; overflow:hidden"><dc-import name="Zellige" color="#3A2A20" tile="28" hint-size="100%,28px"></dc-import></div>
+        <div style="padding:22px 26px; font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:rgba(58,42,32,0.85)">Bande de scellage · carton kraft · 1 encre espresso</div>
+      </div>
+
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:rgba(58,42,32,0.45)">08 · Verrou bilingue latin / arabe</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px">
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:26px 18px; display:flex; flex-direction:column; align-items:center; gap:14px">
+          <div style="width:52px; height:52px"><dc-import name="Mark" route="a" primary="#3A2A20" secondary="#FFFCF7" hint-size="100%,100%"></dc-import></div>
+          <div style="font-size:16px; letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600; color:#3A2A20">Shoe</span><span style="font-weight:300; color:#B4763A">Partner</span></div>
+          <div style="width:44px; height:1px; background:rgba(58,42,32,0.25)"></div>
+          <div style="font-family:'Noto Kufi Arabic', sans-serif; font-size:19px; direction:rtl"><span style="font-weight:600; color:#3A2A20">شو</span> <span style="font-weight:400; color:#B4763A">بارتنر</span></div>
+        </div>
+        <div style="background:#FFFCF7; border:1px solid rgba(58,42,32,0.14); padding:26px 18px; display:flex; flex-direction:column; align-items:center; gap:14px">
+          <div style="width:52px; height:52px"><dc-import name="Mark" route="b" primary="#3A2A20" secondary="#B4763A" hint-size="100%,100%"></dc-import></div>
+          <div style="font-size:16px; letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600; color:#3A2A20">Shoe</span><span style="font-weight:300; color:#B4763A">Partner</span></div>
+          <div style="width:44px; height:1px; background:rgba(58,42,32,0.25)"></div>
+          <div style="font-family:'Noto Kufi Arabic', sans-serif; font-size:19px; direction:rtl"><span style="font-weight:600; color:#3A2A20">شو</span> <span style="font-weight:400; color:#B4763A">بارتنر</span></div>
+        </div>
+        <div style="background:#22201E; padding:26px 18px; display:flex; flex-direction:column; align-items:center; gap:14px">
+          <div style="width:52px; height:52px"><dc-import name="Mark" route="c" primary="#F5F1EA" secondary="#0E7C86" hint-size="100%,100%"></dc-import></div>
+          <div style="font-size:16px; letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600; color:#F5F1EA">Shoe</span><span style="font-weight:300; color:#0E7C86">Partner</span></div>
+          <div style="width:44px; height:1px; background:rgba(245,241,234,0.25)"></div>
+          <div style="font-family:'Noto Kufi Arabic', sans-serif; font-size:19px; direction:rtl"><span style="font-weight:600; color:#F5F1EA">شو</span> <span style="font-weight:400; color:#0E7C86">بارتنر</span></div>
+        </div>
+      </div>
+      <div style="font-family:'IBM Plex Mono', monospace; font-size:12px; letter-spacing:0.1em; line-height:1.9; color:rgba(58,42,32,0.6)">Arabe : Noto Kufi — géométrique, même logique de graisse que Jost.<br>L'arabe ne dépasse jamais la largeur du mot latin ; jamais de calligraphie cursive.</div>
+    </div>
+  </div>
+
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMockups&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenu&quot;},&quot;showStar&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Route C&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props || {};
+    return {
+      showMockups: p.showMockups !== false,
+      showStar: p.showStar !== false,
+      false: false
+    };
+  }
+}
+</script>
+</body>
+</html>

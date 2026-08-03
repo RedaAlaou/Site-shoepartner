@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<sc-if value="{{ isA }}" hint-placeholder-val="{{ true }}">
+  <svg viewBox="0 0 100 100" width="100%" height="100%" style="display:block; overflow:visible">
+    <circle cx="30" cy="50" r="14" fill="{{ primary }}"></circle>
+    <circle cx="70" cy="50" r="22" fill="{{ primary }}"></circle>
+    <path d="M32.8 36.28 L74.4 28.44 L74.4 71.56 L32.8 63.72 Z" fill="{{ primary }}"></path>
+    <sc-if value="{{ hasDetail }}" hint-placeholder-val="{{ true }}">
+      <path d="M35.7 40.4 L71.1 33.7" fill="none" stroke="{{ secondary }}" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"></path>
+      <path d="M35.7 59.6 L71.1 66.3" fill="none" stroke="{{ secondary }}" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"></path>
+    </sc-if>
+  </svg>
+</sc-if>
+<sc-if value="{{ isB }}" hint-placeholder-val="{{ true }}">
+  <svg viewBox="0 0 100 100" width="100%" height="100%" style="display:block; overflow:visible">
+    <path d="M62 26 H42 A24 24 0 0 0 42 74 H62" fill="none" stroke="{{ primary }}" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M38 26 H58 A24 24 0 0 1 58 74 H38" fill="none" stroke="{{ secondary }}" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.1 17"></path>
+  </svg>
+</sc-if>
+<sc-if value="{{ isC }}" hint-placeholder-val="{{ true }}">
+  <svg viewBox="0 0 100 100" width="100%" height="100%" style="display:block; overflow:visible">
+    <sc-if value="{{ hasStar }}" hint-placeholder-val="{{ true }}">
+      <rect x="21" y="21" width="58" height="58" rx="2" fill="none" stroke="{{ primary }}" stroke-width="3"></rect>
+      <rect x="21" y="21" width="58" height="58" rx="2" fill="none" stroke="{{ primary }}" stroke-width="3" transform="rotate(45 50 50)"></rect>
+    </sc-if>
+    <g transform="{{ monoTransform }}">
+      <path d="M58 34 C58 27 40 27 40 36 C40 44 58 44 58 54 C58 63 40 63 40 56" fill="none" stroke="{{ secondary }}" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="6.5 5.5"></path>
+      <path d="M68 30 V64" fill="none" stroke="{{ primary }}" stroke-width="6.5" stroke-linecap="round"></path>
+      <path d="M68 30 H75 A9 9 0 0 1 75 48 H68" fill="none" stroke="{{ primary }}" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </g>
+  </svg>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:160,&quot;height&quot;:160},&quot;route&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;],&quot;default&quot;:&quot;a&quot;,&quot;tsType&quot;:&quot;'a'|'b'|'c'&quot;},&quot;primary&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3A2A20&quot;,&quot;options&quot;:[&quot;#3A2A20&quot;,&quot;#B4763A&quot;,&quot;#0E7C86&quot;,&quot;#F5F1EA&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;secondary&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#B4763A&quot;,&quot;options&quot;:[&quot;#B4763A&quot;,&quot;#F5F1EA&quot;,&quot;#0E7C86&quot;,&quot;#3A2A20&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;star&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;detail&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props || {};
+    const route = (p.route || 'a').toLowerCase();
+    const hasStar = p.star !== false && p.star !== 'false';
+    return {
+      isA: route === 'a',
+      isB: route === 'b',
+      isC: route === 'c',
+      hasStar,
+      hasDetail: p.detail !== false && p.detail !== 'false',
+      primary: p.primary || '#3A2A20',
+      secondary: p.secondary || '#B4763A',
+      monoTransform: hasStar
+        ? 'translate(50,50) scale(0.60) translate(-62.5,-47)'
+        : 'translate(50,50) scale(0.92) translate(-62.5,-47)'
+    };
+  }
+}
+</script>
+</body>
+</html>

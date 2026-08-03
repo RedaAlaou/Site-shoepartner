@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ShoePartner — Charte graphique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Noto+Kufi+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cognac:#B4763A;
+    --espresso:#3A2A20;
+    --teal:#0E7C86;
+    --charbon:#22201E;
+    --creme:#F5F1EA;
+    --kraft:#C39A6B;
+    --papier:#FFFCF7;
+    --canvas:#EAE4DA;
+    --annot:#A8392B;          /* annotation de document — hors palette de marque */
+    --rule:rgba(58,42,32,0.14);
+    --rule-fort:rgba(58,42,32,0.22);
+    --sans:'Jost','Century Gothic','Avenir Next','Futura',system-ui,sans-serif;
+    --mono:'IBM Plex Mono',SFMono-Regular,Consolas,monospace;
+    --arabe:'Noto Kufi Arabic','Segoe UI',sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--canvas); color:var(--espresso);
+    font-family:var(--sans); font-weight:300; line-height:1.6;
+    font-size:16px;
+  }
+
+  /* ---------- structure ---------- */
+  .page{max-width:1180px; margin:0 auto; padding:0 40px 120px}
+  section{padding-top:76px}
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; font-weight:400; letter-spacing:.22em;
+    text-transform:uppercase; color:rgba(58,42,32,.5);
+  }
+  h1,h2,h3,h4{margin:0; font-weight:600; letter-spacing:-.005em; line-height:1.1}
+  h2{font-size:34px; margin-top:10px}
+  h3{font-size:22px; letter-spacing:.005em}
+  h4{font-size:15px; font-weight:500; letter-spacing:.02em}
+  p{margin:0; text-wrap:pretty}
+  .lede{font-size:17px; line-height:1.62; color:rgba(58,42,32,.8); max-width:74ch}
+  .note{font-family:var(--mono); font-size:11.5px; line-height:1.85; letter-spacing:.06em; color:rgba(58,42,32,.6)}
+  .stack{display:flex; flex-direction:column; gap:20px}
+  .stack-s{display:flex; flex-direction:column; gap:12px}
+  .sec-head{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:40px;
+    border-bottom:1px solid var(--rule-fort); padding-bottom:20px; margin-bottom:34px;
+  }
+  .sec-no{
+    font-family:var(--mono); font-size:12px; font-weight:500; letter-spacing:.16em;
+    background:var(--espresso); color:var(--creme); padding:6px 11px; align-self:flex-start;
+  }
+  .panel{background:var(--papier); border:1px solid var(--rule); padding:34px}
+  .panel.dark{background:var(--charbon); border-color:rgba(255,255,255,.12); color:var(--creme)}
+  .panel.espresso{background:var(--espresso); border-color:transparent; color:var(--creme)}
+  .panel.flush{padding:0}
+  .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px}
+  .grid3{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:16px}
+  .grid4{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:14px}
+  .center{display:flex; align-items:center; justify-content:center}
+
+  /* ---------- marque ---------- */
+  .mark{display:block; width:100%; height:100%; overflow:visible}
+  .lockup{display:flex; align-items:center; gap:.62em; font-family:var(--sans); line-height:1}
+  .lockup .ico{width:2.5em; height:2.5em; flex:none}
+  .lockup .txt{display:flex; flex-direction:column; gap:.34em}
+  .lockup .wm{display:flex; align-items:baseline; gap:.2em; font-size:1em; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap}
+  .lockup .wm b{font-weight:600; color:var(--t1,var(--espresso))}
+  .lockup .wm i{font-weight:300; font-style:normal; color:var(--t2,var(--cognac))}
+  .lockup .tag{font-family:var(--mono); font-weight:400; font-size:.235em; letter-spacing:.26em; text-transform:uppercase; color:var(--t3,rgba(58,42,32,.55)); white-space:nowrap}
+  .lockup.v{flex-direction:column; gap:.52em}
+  .lockup.v .ico{width:3.2em; height:3.2em}
+  .lockup.v .txt{align-items:center; gap:.38em}
+
+  /* ---------- couverture ---------- */
+  .cover{
+    background:var(--espresso); color:var(--creme);
+    padding:96px 40px 88px; margin-bottom:0; position:relative; overflow:hidden;
+  }
+  .cover-in{max-width:1100px; margin:0 auto; position:relative; z-index:1}
+  .cover .band{position:absolute; inset:0 0 auto 0; height:34px; opacity:.5}
+  .cover h1{font-size:clamp(38px,6vw,72px); line-height:1.02; letter-spacing:-.015em; max-width:16ch}
+  .cover .eyebrow{color:rgba(245,241,234,.55)}
+  .cover .meta{
+    display:flex; flex-wrap:wrap; gap:36px; margin-top:52px; padding-top:26px;
+    border-top:1px solid rgba(245,241,234,.2);
+    font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(245,241,234,.6)
+  }
+  .cover .meta b{display:block; font-weight:400; color:var(--creme); letter-spacing:.14em; margin-top:6px}
+
+  /* ---------- sommaire ---------- */
+  .toc{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:0; border-top:1px solid var(--rule-fort)}
+  .toc a{
+    display:flex; gap:14px; align-items:baseline; padding:16px 18px 16px 0;
+    border-bottom:1px solid var(--rule); color:var(--espresso); text-decoration:none; font-size:16px;
+  }
+  .toc a:hover{color:var(--teal)}
+  .toc a span{font-family:var(--mono); font-size:11px; letter-spacing:.14em; color:rgba(58,42,32,.45)}
+
+  /* ---------- palette ---------- */
+  .swatch{padding:24px; min-height:158px; display:flex; flex-direction:column; justify-content:flex-end; gap:5px}
+  .swatch .nm{font-size:17px; font-weight:500; letter-spacing:.01em}
+  .swatch .hx{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em}
+  table{width:100%; border-collapse:collapse; font-size:14px}
+  th,td{text-align:left; padding:11px 14px 11px 0; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{font-family:var(--mono); font-size:10.5px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:rgba(58,42,32,.5)}
+  td.mono{font-family:var(--mono); font-size:12.5px; letter-spacing:.05em; white-space:nowrap}
+  .chip{display:inline-block; width:15px; height:15px; border:1px solid var(--rule-fort); vertical-align:-2px; margin-right:9px}
+  .pass{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; padding:2px 7px; border:1px solid currentColor}
+  .ok{color:#1F6B4A}
+  .warn{color:var(--annot)}
+
+  /* ---------- interdits ---------- */
+  .no{background:var(--papier); border:1px solid var(--rule); padding:0; overflow:hidden}
+  .no .art{height:118px; display:flex; align-items:center; justify-content:center; position:relative; border-bottom:1px solid var(--rule); overflow:hidden}
+  .no .art::after{
+    content:''; position:absolute; left:12%; right:12%; top:50%; height:1.5px;
+    background:var(--annot); transform:rotate(-16deg); opacity:.9
+  }
+  .no .cap{padding:13px 15px; font-size:13.5px; line-height:1.45; color:rgba(58,42,32,.82)}
+  .no .cap b{display:block; font-weight:500; color:var(--annot); font-size:11px; font-family:var(--mono); letter-spacing:.14em; text-transform:uppercase; margin-bottom:4px}
+
+  /* ---------- divers ---------- */
+  .clear-zone{position:relative; display:inline-flex; padding:calc(2.5em / 2); outline:1px dashed rgba(14,124,134,.75); outline-offset:-1px}
+  .kv{display:flex; gap:12px; font-size:14.5px; line-height:1.6; padding:9px 0; border-bottom:1px solid var(--rule)}
+  .kv b{font-weight:500; flex:none; width:190px}
+  .callout{border-left:3px solid var(--teal); padding:16px 0 16px 20px; background:rgba(14,124,134,.05)}
+  .callout h4{margin-bottom:6px}
+  a.dl{font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(14,124,134,.35)}
+  a.dl:hover{color:var(--espresso); border-bottom-color:var(--espresso)}
+  footer{border-top:1px solid var(--rule-fort); margin-top:80px; padding-top:26px}
+
+  /* ---------- impression ---------- */
+  @page{size:A4; margin:13mm}
+  @media print{
+    body{background:#fff; font-size:10.5pt}
+    .page{max-width:none; padding:0}
+    section{padding-top:0; margin-top:14mm; break-inside:auto}
+    section.brk{break-before:page}
+    .panel,.no,.swatch,.callout,table{break-inside:avoid}
+    .sec-head{break-after:avoid}
+    h2,h3{break-after:avoid}
+    .cover{margin:-13mm -13mm 0; padding:60mm 13mm 20mm; break-after:page}
+    .toc{display:none}
+    a{color:inherit}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SYMBOLES ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Route A — la semelle -->
+    <symbol id="sp-a" viewBox="0 0 100 100">
+      <circle cx="30" cy="50" r="14" fill="var(--c1)"/>
+      <circle cx="70" cy="50" r="22" fill="var(--c1)"/>
+      <path d="M32.8 36.28 L74.4 28.44 L74.4 71.56 L32.8 63.72 Z" fill="var(--c1)"/>
+      <path d="M35.7 40.4 L71.1 33.7" fill="none" stroke="var(--c2)" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+      <path d="M35.7 59.6 L71.1 66.3" fill="none" stroke="var(--c2)" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="sp-a-flat" viewBox="0 0 100 100">
+      <circle cx="30" cy="50" r="14" fill="var(--c1)"/>
+      <circle cx="70" cy="50" r="22" fill="var(--c1)"/>
+      <path d="M32.8 36.28 L74.4 28.44 L74.4 71.56 L32.8 63.72 Z" fill="var(--c1)"/>
+    </symbol>
+
+    <!-- Route B — le maillon -->
+    <symbol id="sp-b" viewBox="0 0 100 100">
+      <path d="M62 26 H42 A24 24 0 0 0 42 74 H62" fill="none" stroke="var(--c1)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38 26 H58 A24 24 0 0 1 58 74 H38" fill="none" stroke="var(--c2)" stroke-width="11" stroke-linecap="round" stroke-dasharray="0.1 17"/>
+    </symbol>
+    <symbol id="sp-b-solid" viewBox="0 0 100 100">
+      <path d="M62 26 H42 A24 24 0 0 0 42 74 H62" fill="none" stroke="var(--c1)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M38 26 H58 A24 24 0 0 1 58 74 H38" fill="none" stroke="var(--c1)" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <!-- Route C — monogramme SP · zellige -->
+    <symbol id="sp-c" viewBox="0 0 100 100">
+      <rect x="21" y="21" width="58" height="58" rx="2" fill="none" stroke="var(--c1)" stroke-width="3"/>
+      <rect x="21" y="21" width="58" height="58" rx="2" fill="none" stroke="var(--c1)" stroke-width="3" transform="rotate(45 50 50)"/>
+      <g transform="translate(50,50) scale(0.60) translate(-62.5,-47)">
+        <path d="M58 34 C58 27 40 27 40 36 C40 44 58 44 58 54 C58 63 40 63 40 56" fill="none" stroke="var(--c2)" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="6.5 5.5"/>
+        <path d="M68 30 V64" fill="none" stroke="var(--c1)" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M68 30 H75 A9 9 0 0 1 75 48 H68" fill="none" stroke="var(--c1)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <symbol id="sp-c-plain" viewBox="0 0 100 100">
+      <g transform="translate(50,50) scale(0.92) translate(-62.5,-47)">
+        <path d="M58 34 C58 27 40 27 40 36 C40 44 58 44 58 54 C58 63 40 63 40 56" fill="none" stroke="var(--c2)" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="6.5 5.5"/>
+        <path d="M68 30 V64" fill="none" stroke="var(--c1)" stroke-width="6.5" stroke-linecap="round"/>
+        <path d="M68 30 H75 A9 9 0 0 1 75 48 H68" fill="none" stroke="var(--c1)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+
+    <!-- Trame zellige -->
+    <pattern id="zl-cognac" width="44" height="44" patternUnits="userSpaceOnUse">
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#B4763A" stroke-width="1.2"/>
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#B4763A" stroke-width="1.2" transform="rotate(45 22 22)"/>
+    </pattern>
+    <pattern id="zl-teal" width="44" height="44" patternUnits="userSpaceOnUse">
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#0E7C86" stroke-width="1.2"/>
+      <rect x="7.92" y="7.92" width="28.16" height="28.16" fill="none" stroke="#0E7C86" stroke-width="1.2" transform="rotate(45 22 22)"/>
+    </pattern>
+    <pattern id="zl-espresso" width="28" height="28" patternUnits="userSpaceOnUse">
+      <rect x="5.04" y="5.04" width="17.92" height="17.92" fill="none" stroke="#3A2A20" stroke-width="1.2"/>
+      <rect x="5.04" y="5.04" width="17.92" height="17.92" fill="none" stroke="#3A2A20" stroke-width="1.2" transform="rotate(45 14 14)"/>
+    </pattern>
+    <pattern id="zl-creme" width="34" height="34" patternUnits="userSpaceOnUse">
+      <rect x="6.12" y="6.12" width="21.76" height="21.76" fill="none" stroke="#F5F1EA" stroke-width="1.2"/>
+      <rect x="6.12" y="6.12" width="21.76" height="21.76" fill="none" stroke="#F5F1EA" stroke-width="1.2" transform="rotate(45 17 17)"/>
+    </pattern>
+  </defs>
+</svg>
+
+
+<!-- ============ COUVERTURE ============ -->
+<header class="cover">
+  <svg class="band" width="100%" height="34" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-creme)"/></svg>
+  <div class="cover-in">
+    <div class="eyebrow">ShoePartner · Identité de marque</div>
+    <h1 style="margin-top:18px">Charte graphique</h1>
+    <p class="lede" style="color:rgba(245,241,234,.78); margin-top:22px; max-width:62ch; font-size:19px">
+      Logo, palette, typographie et règles d'application pour un fournisseur de matières
+      et de solutions digitales destiné aux ateliers de la chaussure.
+    </p>
+
+    <div style="margin-top:56px; display:flex; align-items:center; gap:56px; flex-wrap:wrap">
+      <div class="lockup" style="font-size:36px; --t1:#F5F1EA; --t2:#B4763A; --t3:rgba(245,241,234,.55)">
+        <div class="ico"><svg class="mark" style="--c1:#B4763A;--c2:#3A2A20"><use href="#sp-a"/></svg></div>
+        <div class="txt">
+          <div class="wm"><b>Shoe</b><i>Partner</i></div>
+          <div class="tag">Matières &amp; Digital pour la chaussure</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <div>Version<b>1.0 — Turn 1</b></div>
+      <div>Date<b>Août 2026</b></div>
+      <div>Périmètre<b>Logo · Couleur · Typo · Applications</b></div>
+      <div>Statut<b>Trois routes à arbitrer</b></div>
+      <div>Source<b>Claude Design · ShoePartner logo system</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+
+<!-- ============ SOMMAIRE ============ -->
+<section id="sommaire" style="padding-top:56px">
+  <div class="eyebrow">Sommaire</div>
+  <nav class="toc" style="margin-top:20px">
+    <a href="#marque"><span>01</span> La marque</a>
+    <a href="#logo"><span>02</span> Le système de logo</a>
+    <a href="#construction"><span>03</span> Construction &amp; zone de protection</a>
+    <a href="#reduction"><span>04</span> Réduction &amp; tailles minimales</a>
+    <a href="#interdits"><span>05</span> Usages interdits</a>
+    <a href="#palette"><span>06</span> Palette chromatique</a>
+    <a href="#typo"><span>07</span> Typographie</a>
+    <a href="#maroc"><span>08</span> Signature marocaine</a>
+    <a href="#applications"><span>09</span> Applications</a>
+    <a href="#fichiers"><span>10</span> Fichiers livrés</a>
+  </nav>
+</section>
+
+
+<!-- ============ 01 · LA MARQUE ============ -->
+<section id="marque" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">01</div>
+      <h2 style="margin-top:14px">La marque</h2>
+    </div>
+    <div class="note" style="text-align:right">Flat vector<br>16 px → 2 m<br>1 couleur / kraft OK</div>
+  </div>
+
+  <div class="grid2" style="gap:26px">
+    <div class="stack">
+      <h3>Positionnement</h3>
+      <p class="lede">
+        ShoePartner tient deux métiers dans une seule marque : la <b style="font-weight:500">matière</b> —
+        cuir, semelles, fournitures d'atelier — et le <b style="font-weight:500">digital</b> — catalogue,
+        traçabilité, devis. Toute l'identité se construit sur cette dualité : une forme pleine
+        pour la matière, une forme ponctuée pour la donnée.
+      </p>
+      <p class="lede">
+        L'ancrage est marocain (Fès, Casablanca, Marrakech) mais l'expression reste industrielle et sobre.
+        Le vocabulaire local intervient comme structure — la géométrie du zellige — jamais comme décor
+        folklorique.
+      </p>
+    </div>
+
+    <div class="stack">
+      <h3>Principes non négociables</h3>
+      <div>
+        <div class="kv"><b>Vecteur plat</b><span>Aucun dégradé, aucune ombre, aucun effet de matière.</span></div>
+        <div class="kv"><b>Une seule encre</b><span>Le logo doit rester lisible imprimé en espresso sur carton kraft.</span></div>
+        <div class="kv"><b>16 px → 2 m</b><span>De la favicon à la signalétique d'atelier, sans redessin.</span></div>
+        <div class="kv"><b>Dualité lisible</b><span>Plein = matière · ponctué = digital. Cette opposition ne s'inverse jamais.</span></div>
+        <div class="kv" style="border-bottom:none"><b>Sobriété</b><span>Pas de motif derrière la marque, pas de couleur hors palette.</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="callout" style="margin-top:34px">
+    <h4>Signature verbale</h4>
+    <p style="font-size:15px; color:rgba(58,42,32,.8)">
+      Nom : <b style="font-weight:500">ShoePartner</b> — un seul mot, deux graisses, jamais « Shoe Partner » en deux mots.<br>
+      Baseline : <b style="font-weight:500">Matières &amp; Digital pour la chaussure</b> — IBM Plex Mono, capitales, interlettrage 0,26 em.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============ 02 · LE SYSTÈME DE LOGO ============ -->
+<section id="logo" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">02</div>
+      <h2 style="margin-top:14px">Le système de logo</h2>
+    </div>
+    <div class="note" style="text-align:right">Trois routes<br>Icône · Lockup H · Lockup V<br>Monochrome · Fond foncé</div>
+  </div>
+
+  <div class="callout" style="margin-bottom:38px; border-left-color:var(--annot); background:rgba(168,57,43,.05)">
+    <h4 style="color:var(--annot)">À arbitrer — une seule route sera retenue</h4>
+    <p style="font-size:15px; color:rgba(58,42,32,.85)">
+      Cette version 1.0 documente les <b style="font-weight:500">trois routes</b> issues du système de logo,
+      chacune déclinée complètement. La charte définitive ne doit en conserver qu'une : toutes les sections
+      suivantes (palette, typographie, applications) sont communes aux trois et restent valables quel que
+      soit l'arbitrage.
+    </p>
+  </div>
+
+  <!-- ROUTE A -->
+  <div class="stack" style="gap:18px">
+    <div style="display:flex; align-items:center; gap:14px">
+      <div class="sec-no">A</div>
+      <h3>La semelle</h3>
+    </div>
+    <p class="lede">
+      Profil de forme / semelle réduit à une silhouette géométrique, avec une ligne de piqûre pointillée
+      en réserve. La forme pleine tient à 16 px et s'imprime en une seule encre : la piqûre devient le
+      carton nu. Lecture immédiate pour un atelier — c'est l'outil, pas la chaussure.
+    </p>
+
+    <div class="grid2" style="margin-top:6px">
+      <div class="panel center" style="gap:50px; padding:44px">
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#B4763A;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="panel" style="display:flex; align-items:center; padding:44px">
+        <div class="lockup" style="font-size:clamp(17px,2.4vw,30px); --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="panel espresso center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#F5F1EA; --t2:#0E7C86; --t3:rgba(245,241,234,.55)">
+          <div class="ico"><svg class="mark" style="--c1:#B4763A;--c2:#3A2A20"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#000; --t2:#000; --t3:rgba(0,0,0,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#000000;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel dark center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#fff; --t2:#fff; --t3:rgba(255,255,255,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#FFFFFF;--c2:#22201E"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="display:flex; align-items:center; gap:28px; padding:24px 32px; flex-wrap:wrap">
+      <div style="width:64px;height:64px;background:#3A2A20;padding:10px"><svg class="mark" style="--c1:#F5F1EA;--c2:#3A2A20"><use href="#sp-a"/></svg></div>
+      <div style="width:32px;height:32px;background:#3A2A20;padding:5px"><svg class="mark" style="--c1:#F5F1EA"><use href="#sp-a-flat"/></svg></div>
+      <div style="width:16px;height:16px;background:#3A2A20;padding:2px"><svg class="mark" style="--c1:#F5F1EA"><use href="#sp-a-flat"/></svg></div>
+      <div class="note">Réserve = 10 % de la boîte · Piqûre supprimée sous 40 px</div>
+    </div>
+  </div>
+
+  <!-- ROUTE B -->
+  <div class="stack" style="gap:18px; margin-top:56px">
+    <div style="display:flex; align-items:center; gap:14px">
+      <div class="sec-no">B</div>
+      <h3>Le maillon</h3>
+    </div>
+    <p class="lede">
+      Deux demi-maillons imbriqués : à gauche un trait plein continu — le cuir, la matière ; à droite
+      la même course en nœuds ponctués — le digital, la donnée. Même géométrie, deux langages, une seule
+      pièce. C'est la promesse du partenariat sans le cliché de la poignée de main.
+    </p>
+
+    <div class="grid2" style="margin-top:6px">
+      <div class="panel center" style="gap:50px; padding:44px">
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#B4763A;--c2:#0E7C86"><use href="#sp-b"/></svg></div>
+      </div>
+      <div class="panel" style="display:flex; align-items:center; padding:44px">
+        <div class="lockup" style="font-size:clamp(17px,2.4vw,30px); --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="panel espresso center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#F5F1EA; --t2:#0E7C86; --t3:rgba(245,241,234,.55)">
+          <div class="ico"><svg class="mark" style="--c1:#F5F1EA;--c2:#0E7C86"><use href="#sp-b"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#000; --t2:#000; --t3:rgba(0,0,0,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#000000;--c2:#000000"><use href="#sp-b"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel dark center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#fff; --t2:#fff; --t3:rgba(255,255,255,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#FFFFFF;--c2:#FFFFFF"><use href="#sp-b"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="display:flex; align-items:center; gap:28px; padding:24px 32px; flex-wrap:wrap">
+      <div style="width:64px;height:64px;background:#3A2A20;padding:8px"><svg class="mark" style="--c1:#F5F1EA;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+      <div style="width:32px;height:32px;background:#3A2A20;padding:4px"><svg class="mark" style="--c1:#F5F1EA;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+      <div style="width:16px;height:16px;background:#3A2A20;padding:2px"><svg class="mark" style="--c1:#F5F1EA"><use href="#sp-b-solid"/></svg></div>
+      <div class="note">Sous 20 px : maillon plein, une seule couleur<br>(les nœuds ponctués se referment en trait continu)</div>
+    </div>
+  </div>
+
+  <!-- ROUTE C -->
+  <div class="stack" style="gap:18px; margin-top:56px">
+    <div style="display:flex; align-items:center; gap:14px">
+      <div class="sec-no">C</div>
+      <h3>Monogramme SP · zellige</h3>
+    </div>
+    <p class="lede">
+      Le S est tracé en points de couture, le P en trait plein comme un profil de semelle. L'étoile à huit
+      branches — deux carrés superposés, rien de plus — encadre le monogramme : le zellige y est structure,
+      pas décor. Le cadre saute sous 24 px, le monogramme reste.
+    </p>
+
+    <div class="grid2" style="margin-top:6px">
+      <div class="panel center" style="gap:50px; padding:44px">
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c"/></svg></div>
+        <div style="width:132px;height:132px"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c-plain"/></svg></div>
+      </div>
+      <div class="panel" style="display:flex; align-items:center; padding:44px">
+        <div class="lockup" style="font-size:clamp(17px,2.4vw,30px); --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="panel espresso center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#F5F1EA; --t2:#0E7C86; --t3:rgba(245,241,234,.55)">
+          <div class="ico"><svg class="mark" style="--c1:#F5F1EA;--c2:#0E7C86"><use href="#sp-c"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#000; --t2:#000; --t3:rgba(0,0,0,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#000000;--c2:#000000"><use href="#sp-c"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+      <div class="panel dark center" style="padding:32px 18px">
+        <div class="lockup v" style="font-size:19px; --t1:#fff; --t2:#fff; --t3:rgba(255,255,255,.6)">
+          <div class="ico"><svg class="mark" style="--c1:#FFFFFF;--c2:#FFFFFF"><use href="#sp-c"/></svg></div>
+          <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="display:flex; align-items:center; gap:28px; padding:24px 32px; flex-wrap:wrap">
+      <div style="width:64px;height:64px;background:#3A2A20;padding:6px"><svg class="mark" style="--c1:#F5F1EA;--c2:#B4763A"><use href="#sp-c"/></svg></div>
+      <div style="width:32px;height:32px;background:#3A2A20;padding:3px"><svg class="mark" style="--c1:#F5F1EA;--c2:#F5F1EA"><use href="#sp-c-plain"/></svg></div>
+      <div style="width:16px;height:16px;background:#3A2A20;padding:1px"><svg class="mark" style="--c1:#F5F1EA;--c2:#F5F1EA"><use href="#sp-c-plain"/></svg></div>
+      <div class="note">Cadre zellige au-dessus de 24 px<br>SP seul en dessous</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 03 · CONSTRUCTION ============ -->
+<section id="construction" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">03</div>
+      <h2 style="margin-top:14px">Construction &amp; zone de protection</h2>
+    </div>
+    <div class="note" style="text-align:right">Grille 100 × 100<br>Zone = hauteur d'icône ÷ 2</div>
+  </div>
+
+  <div class="grid2" style="gap:26px">
+    <div class="stack">
+      <h3>Zone de protection</h3>
+      <p class="lede">
+        Aucun élément — texte, image, bord de support, autre logo — ne pénètre la zone claire autour du
+        lockup. Elle vaut <b style="font-weight:500">la moitié de la hauteur de l'icône</b> sur les quatre
+        côtés, quelle que soit la taille d'emploi.
+      </p>
+      <div class="panel center" style="padding:44px 30px">
+        <div class="clear-zone">
+          <div class="lockup" style="font-size:26px; --t1:#3A2A20; --t2:#B4763A">
+            <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+            <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+          </div>
+        </div>
+      </div>
+      <p class="note">Trait pointillé teal = limite de la zone de protection. Il ne s'imprime jamais.</p>
+    </div>
+
+    <div class="stack">
+      <h3>Proportions du lockup</h3>
+      <p class="lede">
+        Le lockup est construit en <b style="font-weight:500">em</b>, indexé sur la taille du mot-symbole :
+        il se redimensionne sans jamais se recomposer.
+      </p>
+      <div class="panel">
+        <div class="kv"><b>Icône · horizontal</b><span>2,5 em de côté</span></div>
+        <div class="kv"><b>Icône · vertical</b><span>3,2 em de côté</span></div>
+        <div class="kv"><b>Écart icône / texte</b><span>0,62 em (H) · 0,52 em (V)</span></div>
+        <div class="kv"><b>Interlettrage marque</b><span>0,14 em, capitales</span></div>
+        <div class="kv"><b>Graisses</b><span>« Shoe » 600 · « Partner » 300</span></div>
+        <div class="kv"><b>Baseline</b><span>0,235 em · interlettrage 0,26 em · IBM Plex Mono</span></div>
+        <div class="kv" style="border-bottom:none"><b>Écart texte / baseline</b><span>0,34 em (H) · 0,38 em (V)</span></div>
+      </div>
+      <div class="callout">
+        <h4>La règle qui porte tout le système</h4>
+        <p style="font-size:14.5px; color:rgba(58,42,32,.8)">
+          « Shoe » en 600 porte la matière, « Partner » en 300 allège vers le digital.
+          Cette hiérarchie de graisses ne s'inverse jamais, quelle que soit la route retenue.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 04 · RÉDUCTION ============ -->
+<section id="reduction">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">04</div>
+      <h2 style="margin-top:14px">Réduction &amp; tailles minimales</h2>
+    </div>
+    <div class="note" style="text-align:right">96 px écran<br>22 mm imprimé</div>
+  </div>
+
+  <div class="grid2" style="gap:26px">
+    <div class="stack">
+      <h3>Seuils</h3>
+      <div class="panel">
+        <div class="kv"><b>Lockup horizontal</b><span>96 px de large minimum · 22 mm imprimé</span></div>
+        <div class="kv"><b>Lockup vertical</b><span>64 px de large minimum · 16 mm imprimé</span></div>
+        <div class="kv"><b>Icône seule</b><span>16 px minimum, dans sa variante simplifiée</span></div>
+        <div class="kv" style="border-bottom:none"><b>Réserve favicon</b><span>10 % de la boîte sur les quatre côtés</span></div>
+      </div>
+      <p class="note">
+        Sous les seuils de lockup, on ne réduit pas : on passe à l'icône seule.
+      </p>
+    </div>
+
+    <div class="stack">
+      <h3>Variantes de réduction par route</h3>
+      <div class="panel">
+        <div class="kv"><b>Route A · la semelle</b><span>La piqûre pointillée disparaît sous 40 px. La silhouette pleine seule.</span></div>
+        <div class="kv"><b>Route B · le maillon</b><span>Sous 20 px, les nœuds ponctués se referment : maillon plein, une seule couleur.</span></div>
+        <div class="kv" style="border-bottom:none"><b>Route C · monogramme</b><span>Le cadre zellige disparaît sous 24 px. Le SP passe à 0,92 d'échelle et occupe la boîte.</span></div>
+      </div>
+      <div class="panel" style="display:flex; align-items:flex-end; gap:34px; flex-wrap:wrap; padding:26px 30px">
+        <div style="text-align:center">
+          <div style="width:56px;height:56px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+          <div class="note" style="margin-top:8px">≥ 40 px</div>
+        </div>
+        <div style="text-align:center">
+          <div style="width:32px;height:32px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20"><use href="#sp-a-flat"/></svg></div>
+          <div class="note" style="margin-top:8px">&lt; 40 px</div>
+        </div>
+        <div style="width:1px;height:56px;background:var(--rule)"></div>
+        <div style="text-align:center">
+          <div style="width:56px;height:56px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+          <div class="note" style="margin-top:8px">≥ 20 px</div>
+        </div>
+        <div style="text-align:center">
+          <div style="width:32px;height:32px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20"><use href="#sp-b-solid"/></svg></div>
+          <div class="note" style="margin-top:8px">&lt; 20 px</div>
+        </div>
+        <div style="width:1px;height:56px;background:var(--rule)"></div>
+        <div style="text-align:center">
+          <div style="width:56px;height:56px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c"/></svg></div>
+          <div class="note" style="margin-top:8px">≥ 24 px</div>
+        </div>
+        <div style="text-align:center">
+          <div style="width:32px;height:32px;margin:0 auto"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-c-plain"/></svg></div>
+          <div class="note" style="margin-top:8px">&lt; 24 px</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 05 · USAGES INTERDITS ============ -->
+<section id="interdits" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">05</div>
+      <h2 style="margin-top:14px">Usages interdits</h2>
+    </div>
+    <div class="note" style="text-align:right">Le rouge est une annotation<br>de document — hors palette</div>
+  </div>
+
+  <div class="grid3">
+    <div class="no">
+      <div class="art" style="background:linear-gradient(135deg,#B4763A,#0E7C86)">
+        <div style="width:64px;height:64px"><svg class="mark" style="--c1:#FFFCF7;--c2:#3A2A20"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Dégradé</b>Aucun dégradé, ni dans la marque, ni derrière elle.</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div style="width:64px;height:64px;filter:drop-shadow(5px 7px 4px rgba(58,42,32,.5))"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Ombre portée</b>Vecteur plat uniquement — pas de relief, pas de biseau.</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div style="width:64px;height:64px;transform:rotate(-17deg)"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Rotation</b>La marque reste toujours à l'horizontale.</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div style="width:64px;height:64px;transform:scaleX(1.6) scaleY(.82)"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Déformation</b>Jamais d'étirement : les proportions sont verrouillées.</div>
+    </div>
+
+    <div class="no">
+      <div class="art" style="position:relative">
+        <svg width="100%" height="100%" style="position:absolute;inset:0;opacity:.55" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-cognac)"/></svg>
+        <div style="width:64px;height:64px;position:relative"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Trame derrière la marque</b>Le zellige reste sur les bandes et les fonds, jamais sous le logo.</div>
+    </div>
+
+    <div class="no">
+      <div class="art" style="background:#7B2D8E">
+        <div style="width:64px;height:64px"><svg class="mark" style="--c1:#D8FF3A;--c2:#7B2D8E"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Couleur hors palette</b>Six couleurs, pas une de plus. Aucune couleur « touristique ».</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div class="lockup" style="font-size:15px; --t1:#3A2A20; --t2:#B4763A">
+          <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+          <div class="txt"><div class="wm" style="letter-spacing:0"><i style="font-weight:600">Shoe</i>&nbsp;<b style="font-weight:300">Partner</b></div></div>
+        </div>
+      </div>
+      <div class="cap"><b>Recomposition</b>Graisses inversées, interlettrage modifié, nom en deux mots : interdit.</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div style="width:64px;height:64px"><svg class="mark" style="--c1:#FFFCF7;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      </div>
+      <div class="cap"><b>Contraste insuffisant</b>Jamais la marque claire sur fond clair, ni foncée sur fond foncé.</div>
+    </div>
+
+    <div class="no">
+      <div class="art">
+        <div style="width:64px;height:64px">
+          <svg viewBox="0 0 100 100" class="mark" aria-hidden="true">
+            <g fill="#3A2A20" stroke="#B4763A" stroke-width="3.5">
+              <circle cx="30" cy="50" r="14"/>
+              <circle cx="70" cy="50" r="22"/>
+              <path d="M32.8 36.28 L74.4 28.44 L74.4 71.56 L32.8 63.72 Z"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="cap"><b>Contour parasite</b>Pas de filet, pas de cerne autour des formes pleines.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 06 · PALETTE ============ -->
+<section id="palette" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">06</div>
+      <h2 style="margin-top:14px">Palette chromatique</h2>
+    </div>
+    <div class="note" style="text-align:right">6 couleurs de marque<br>+ 1 papier</div>
+  </div>
+
+  <div class="grid3" style="margin-bottom:34px">
+    <div class="swatch" style="background:#B4763A;color:#fff">
+      <div class="nm">Cognac</div><div class="hx">#B4763A · matière / cuir</div>
+    </div>
+    <div class="swatch" style="background:#3A2A20;color:#F5F1EA">
+      <div class="nm">Espresso</div><div class="hx">#3A2A20 · base / texte</div>
+    </div>
+    <div class="swatch" style="background:#0E7C86;color:#fff">
+      <div class="nm">Teal signal</div><div class="hx">#0E7C86 · pôle digital</div>
+    </div>
+    <div class="swatch" style="background:#22201E;color:#F5F1EA">
+      <div class="nm">Charbon</div><div class="hx">#22201E · fonds foncés</div>
+    </div>
+    <div class="swatch" style="background:#F5F1EA;color:#3A2A20;border:1px solid var(--rule)">
+      <div class="nm">Blanc cassé</div><div class="hx">#F5F1EA · fonds clairs</div>
+    </div>
+    <div class="swatch" style="background:#C39A6B;color:#3A2A20">
+      <div class="nm">Kraft</div><div class="hx">#C39A6B · carton, référence</div>
+    </div>
+  </div>
+
+  <h3 style="margin-bottom:16px">Références techniques</h3>
+  <table>
+    <thead>
+      <tr><th>Couleur</th><th>Hex</th><th>RVB</th><th>CMJN indicatif</th><th>Rôle</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="chip" style="background:#B4763A"></span>Cognac</td><td class="mono">#B4763A</td><td class="mono">180 · 118 · 58</td><td class="mono">0 / 34 / 68 / 29</td><td>Accent matière, icône, « Partner »</td></tr>
+      <tr><td><span class="chip" style="background:#3A2A20"></span>Espresso</td><td class="mono">#3A2A20</td><td class="mono">58 · 42 · 32</td><td class="mono">0 / 28 / 45 / 77</td><td>Texte courant, encre unique, fonds</td></tr>
+      <tr><td><span class="chip" style="background:#0E7C86"></span>Teal signal</td><td class="mono">#0E7C86</td><td class="mono">14 · 124 · 134</td><td class="mono">90 / 7 / 0 / 47</td><td>Actions, liens, pôle digital</td></tr>
+      <tr><td><span class="chip" style="background:#22201E"></span>Charbon</td><td class="mono">#22201E</td><td class="mono">34 · 32 · 30</td><td class="mono">0 / 6 / 12 / 87</td><td>Fonds foncés, mode sombre</td></tr>
+      <tr><td><span class="chip" style="background:#F5F1EA"></span>Blanc cassé</td><td class="mono">#F5F1EA</td><td class="mono">245 · 241 · 234</td><td class="mono">0 / 2 / 4 / 4</td><td>Fonds clairs, texte sur foncé</td></tr>
+      <tr><td><span class="chip" style="background:#C39A6B"></span>Kraft</td><td class="mono">#C39A6B</td><td class="mono">195 · 154 · 107</td><td class="mono">0 / 21 / 45 / 24</td><td>Simulation carton — support, pas encre</td></tr>
+      <tr><td><span class="chip" style="background:#FFFCF7"></span>Papier</td><td class="mono">#FFFCF7</td><td class="mono">255 · 252 · 247</td><td class="mono">0 / 1 / 3 / 0</td><td>Surface des blocs, réserve de piqûre</td></tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin-top:12px">
+    CMJN obtenu par conversion directe depuis le RVB — à valider sur épreuve contractuelle avec l'imprimeur.
+    Aucune référence Pantone n'est arrêtée à ce stade.
+  </p>
+
+  <h3 style="margin-top:44px; margin-bottom:16px">Contrastes vérifiés</h3>
+  <table>
+    <thead>
+      <tr><th>Texte sur fond</th><th>Ratio</th><th>Texte courant</th><th>Emploi</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Espresso sur blanc cassé</td><td class="mono">12,2 : 1</td><td><span class="pass ok">AAA</span></td><td>Texte courant par défaut</td></tr>
+      <tr><td>Blanc cassé sur charbon</td><td class="mono">14,4 : 1</td><td><span class="pass ok">AAA</span></td><td>Mode sombre</td></tr>
+      <tr><td>Blanc cassé sur espresso</td><td class="mono">12,2 : 1</td><td><span class="pass ok">AAA</span></td><td>Fonds foncés</td></tr>
+      <tr><td>Espresso sur kraft</td><td class="mono">5,3 : 1</td><td><span class="pass ok">AA</span></td><td>Impression 1 encre sur carton</td></tr>
+      <tr><td>Blanc sur teal signal</td><td class="mono">4,9 : 1</td><td><span class="pass ok">AA</span></td><td>Boutons, pastilles d'action</td></tr>
+      <tr><td>Teal sur papier #FFFCF7</td><td class="mono">4,8 : 1</td><td><span class="pass ok">AA</span></td><td>Liens sur bloc papier</td></tr>
+      <tr><td>Teal sur blanc cassé #F5F1EA</td><td class="mono">4,4 : 1</td><td><span class="pass warn">AA large</span></td><td>Titres ≥ 24 px seulement — pas de texte courant</td></tr>
+      <tr><td>Cognac sur blanc cassé</td><td class="mono">3,3 : 1</td><td><span class="pass warn">AA large</span></td><td>Accent et titres uniquement — jamais de paragraphe</td></tr>
+      <tr><td>Teal sur espresso</td><td class="mono">2,8 : 1</td><td><span class="pass warn">Insuffisant</span></td><td>Réservé au lockup (logo exempté) — jamais de texte</td></tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin-top:12px">
+    Ratios WCAG 2.1. Seuils : 4,5 : 1 texte courant (AA) · 3 : 1 texte large ≥ 24 px ou 18,66 px gras · 7 : 1 (AAA).
+    Les logos ne sont pas soumis à ces seuils, mais tout texte l'est.
+  </p>
+
+  <div class="callout" style="margin-top:34px">
+    <h4>Impression une encre</h4>
+    <p style="font-size:15px; color:rgba(58,42,32,.82)">
+      Espresso <b style="font-weight:500">#3A2A20</b> sur kraft, ou blanc <b style="font-weight:500">#FFFFFF</b> sur espresso.
+      Aucun dégradé, aucune ombre, aucun contour parasite. Sur la route A, la piqûre devient le carton nu — elle
+      n'est jamais imprimée en seconde encre.
+    </p>
+  </div>
+</section>
+
+
+<!-- ============ 07 · TYPOGRAPHIE ============ -->
+<section id="typo" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">07</div>
+      <h2 style="margin-top:14px">Typographie</h2>
+    </div>
+    <div class="note" style="text-align:right">Jost · IBM Plex Mono<br>Noto Kufi Arabic</div>
+  </div>
+
+  <div class="grid2" style="gap:26px; align-items:start">
+    <div class="panel stack">
+      <div class="eyebrow">Jost · géométrique · marque &amp; titres</div>
+      <div style="font-size:64px; font-weight:600; letter-spacing:-.01em; line-height:1">Aa Bb Cc</div>
+      <div style="font-size:26px; font-weight:300; letter-spacing:.14em; text-transform:uppercase">Shoe<span style="font-weight:600">Partner</span></div>
+      <div style="display:flex; gap:22px; flex-wrap:wrap; font-size:15px; color:rgba(58,42,32,.72)">
+        <span style="font-weight:300">300 Light</span>
+        <span style="font-weight:400">400 Regular</span>
+        <span style="font-weight:500">500 Medium</span>
+        <span style="font-weight:600">600 Semibold</span>
+        <span style="font-weight:700">700 Bold</span>
+      </div>
+      <p class="note">Licence SIL Open Font — libre pour l'usage commercial, web et print.</p>
+    </div>
+
+    <div class="panel stack">
+      <div class="eyebrow">IBM Plex Mono · références, lots, QR, étiquettes</div>
+      <div style="font-family:var(--mono); font-size:22px; letter-spacing:.08em">SEM-TPR-42 / 0248 · QR-8841</div>
+      <div style="font-family:var(--mono); font-size:14px; letter-spacing:.05em; color:rgba(58,42,32,.72); line-height:1.9">
+        400 Regular · 500 Medium<br>
+        0123456789 — chiffres tabulaires<br>
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+      </div>
+      <p class="note">Réservé aux données : références, numéros de lot, baseline, sur-titres. Jamais pour du texte courant.</p>
+    </div>
+  </div>
+
+  <h3 style="margin:44px 0 16px">Échelle typographique</h3>
+  <table>
+    <thead>
+      <tr><th>Niveau</th><th>Fonte</th><th>Taille</th><th>Graisse</th><th>Interlettrage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Titre de couverture</td><td>Jost</td><td class="mono">52–72 px</td><td class="mono">600</td><td class="mono">-0,015 em</td></tr>
+      <tr><td>Titre de section</td><td>Jost</td><td class="mono">34 px</td><td class="mono">600</td><td class="mono">-0,005 em</td></tr>
+      <tr><td>Sous-titre</td><td>Jost</td><td class="mono">22–26 px</td><td class="mono">600</td><td class="mono">0,005 em</td></tr>
+      <tr><td>Chapô</td><td>Jost</td><td class="mono">17–19 px</td><td class="mono">300</td><td class="mono">0</td></tr>
+      <tr><td>Texte courant</td><td>Jost</td><td class="mono">15–16 px</td><td class="mono">300–400</td><td class="mono">0</td></tr>
+      <tr><td>Sur-titre / eyebrow</td><td>IBM Plex Mono</td><td class="mono">11 px</td><td class="mono">400</td><td class="mono">0,22 em · capitales</td></tr>
+      <tr><td>Données &amp; références</td><td>IBM Plex Mono</td><td class="mono">11–14 px</td><td class="mono">400–500</td><td class="mono">0,05–0,16 em</td></tr>
+      <tr><td>Mot-symbole</td><td>Jost</td><td class="mono">1 em</td><td class="mono">600 / 300</td><td class="mono">0,14 em · capitales</td></tr>
+      <tr><td>Baseline</td><td>IBM Plex Mono</td><td class="mono">0,235 em</td><td class="mono">400</td><td class="mono">0,26 em · capitales</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+<!-- ============ 08 · SIGNATURE MAROCAINE ============ -->
+<section id="maroc" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">08</div>
+      <h2 style="margin-top:14px">Signature marocaine</h2>
+    </div>
+    <div class="note" style="text-align:right">Trame zellige<br>Verrou bilingue</div>
+  </div>
+
+  <p class="lede" style="margin-bottom:30px">
+    Deux éléments seulement, tenus à distance du logo : une trame zellige à huit branches — deux carrés,
+    rien d'autre — réservée aux bandes d'emballage et fonds de catalogue, et un verrou bilingue latin / arabe
+    pour les supports locaux. Aucun motif derrière la marque, aucune couleur touristique.
+  </p>
+
+  <h3 style="margin-bottom:16px">Trame zellige · bandes &amp; fonds</h3>
+  <div class="grid2">
+    <div style="background:#F5F1EA; border:1px solid var(--rule); height:158px; overflow:hidden">
+      <svg width="100%" height="100%" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-cognac)"/></svg>
+    </div>
+    <div style="background:#3A2A20; height:158px; overflow:hidden">
+      <svg width="100%" height="100%" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-teal)"/></svg>
+    </div>
+  </div>
+
+  <div style="background:#C39A6B; margin-top:16px">
+    <div style="height:28px; opacity:.5; overflow:hidden">
+      <svg width="100%" height="28" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-espresso)"/></svg>
+    </div>
+    <div style="padding:22px 26px; font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:rgba(58,42,32,.85)">
+      Bande de scellage · carton kraft · 1 encre espresso
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px">
+    <div class="kv"><b>Tuile</b><span>44 px · carré interne à 0,64 de la tuile · filet 1,2 px</span></div>
+    <div class="kv"><b>Construction</b><span>Un carré + le même carré tourné à 45° autour du centre. Rien d'autre.</span></div>
+    <div class="kv"><b>Emplois autorisés</b><span>Bandes de scellage, fonds de catalogue, en-têtes de couverture.</span></div>
+    <div class="kv" style="border-bottom:none"><b>Interdit</b><span>Derrière le logo, dans le lockup, ou comme texture de fond de page web.</span></div>
+  </div>
+
+  <h3 style="margin:44px 0 16px">Verrou bilingue latin / arabe</h3>
+  <div class="grid3">
+    <div class="panel" style="display:flex; flex-direction:column; align-items:center; gap:14px; padding:26px 18px">
+      <div style="width:52px;height:52px"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+      <div style="font-size:16px; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600">Shoe</span><span style="font-weight:300; color:#B4763A">Partner</span></div>
+      <div style="width:44px; height:1px; background:rgba(58,42,32,.25)"></div>
+      <div style="font-family:var(--arabe); font-size:19px; direction:rtl" lang="ar"><span style="font-weight:600">شو</span> <span style="font-weight:400; color:#B4763A">بارتنر</span></div>
+    </div>
+    <div class="panel" style="display:flex; flex-direction:column; align-items:center; gap:14px; padding:26px 18px">
+      <div style="width:52px;height:52px"><svg class="mark" style="--c1:#3A2A20;--c2:#B4763A"><use href="#sp-b"/></svg></div>
+      <div style="font-size:16px; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600">Shoe</span><span style="font-weight:300; color:#B4763A">Partner</span></div>
+      <div style="width:44px; height:1px; background:rgba(58,42,32,.25)"></div>
+      <div style="font-family:var(--arabe); font-size:19px; direction:rtl" lang="ar"><span style="font-weight:600">شو</span> <span style="font-weight:400; color:#B4763A">بارتنر</span></div>
+    </div>
+    <div class="panel dark" style="display:flex; flex-direction:column; align-items:center; gap:14px; padding:26px 18px">
+      <div style="width:52px;height:52px"><svg class="mark" style="--c1:#F5F1EA;--c2:#0E7C86"><use href="#sp-c"/></svg></div>
+      <div style="font-size:16px; letter-spacing:.14em; text-transform:uppercase; white-space:nowrap"><span style="font-weight:600">Shoe</span><span style="font-weight:300; color:#0E7C86">Partner</span></div>
+      <div style="width:44px; height:1px; background:rgba(245,241,234,.25)"></div>
+      <div style="font-family:var(--arabe); font-size:19px; direction:rtl" lang="ar"><span style="font-weight:600">شو</span> <span style="font-weight:400; color:#0E7C86">بارتنر</span></div>
+    </div>
+  </div>
+  <p class="note" style="margin-top:12px">
+    Arabe : Noto Kufi — géométrique, même logique de graisse que Jost.<br>
+    L'arabe ne dépasse jamais la largeur du mot latin ; jamais de calligraphie cursive.
+  </p>
+</section>
+
+
+<!-- ============ 09 · APPLICATIONS ============ -->
+<section id="applications" class="brk">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">09</div>
+      <h2 style="margin-top:14px">Applications</h2>
+    </div>
+    <div class="note" style="text-align:right">Carton kraft<br>Header web · Avatar social</div>
+  </div>
+
+  <h3 style="margin-bottom:16px">Emballage · carton kraft, une encre</h3>
+  <div style="background:#C39A6B; padding:56px 46px 42px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; position:relative; overflow:hidden">
+    <div style="position:absolute; top:0; left:0; right:0; height:24px; opacity:.45">
+      <svg width="100%" height="24" aria-hidden="true"><rect width="100%" height="100%" fill="url(#zl-espresso)"/></svg>
+    </div>
+    <div class="lockup" style="font-size:26px; --t1:#3A2A20; --t2:#3A2A20; --t3:rgba(58,42,32,.6)">
+      <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#C39A6B"><use href="#sp-a"/></svg></div>
+      <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+    </div>
+    <div style="font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:rgba(58,42,32,.85); text-align:right; line-height:1.9">
+      Semelles · PU / TPR<br>Lot ____ · Fès, Maroc
+    </div>
+  </div>
+  <p class="note" style="margin-top:10px">
+    Une seule encre espresso. La piqûre de la route A n'est pas imprimée : c'est le carton nu qui apparaît en réserve.
+  </p>
+
+  <h3 style="margin:44px 0 16px">Header web</h3>
+  <div class="panel flush">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:18px 24px; border-bottom:1px solid var(--rule); gap:24px; flex-wrap:wrap">
+      <div class="lockup" style="font-size:17px; --t1:#3A2A20; --t2:#B4763A">
+        <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#FFFCF7"><use href="#sp-a"/></svg></div>
+        <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px; font-size:14px; font-weight:400; color:rgba(58,42,32,.78)">
+        <span>Matières</span><span>Digital</span><span>Catalogue</span>
+        <span style="background:#0E7C86; color:#fff; padding:9px 18px; font-size:13px; letter-spacing:.08em; text-transform:uppercase">Devis</span>
+      </div>
+    </div>
+    <div style="padding:24px; display:flex; align-items:center; gap:22px; flex-wrap:wrap">
+      <div style="width:84px;height:84px;border-radius:50%;background:#3A2A20;padding:16px;flex:none"><svg class="mark" style="--c1:#F5F1EA;--c2:#3A2A20"><use href="#sp-a"/></svg></div>
+      <div style="width:84px;height:84px;border-radius:50%;background:#B4763A;padding:14px;flex:none"><svg class="mark" style="--c1:#FFFFFF;--c2:#3A2A20"><use href="#sp-b"/></svg></div>
+      <div style="width:84px;height:84px;border-radius:50%;background:#0E7C86;padding:10px;flex:none"><svg class="mark" style="--c1:#FFFFFF;--c2:#FFFFFF"><use href="#sp-c"/></svg></div>
+      <div class="note">Avatar social · @shoepartner.ma<br>Icône seule, centrée, réserve 10 %</div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:16px">
+    <div class="kv"><b>Header web</b><span>Lockup horizontal sans baseline, hauteur d'icône 42 px, marge gauche = zone de protection.</span></div>
+    <div class="kv"><b>Avatar social</b><span>Icône seule sur pastille pleine. Jamais le lockup complet dans un cercle.</span></div>
+    <div class="kv"><b>Favicon</b><span>Variante simplifiée de la route retenue, réserve 10 %, fond espresso.</span></div>
+    <div class="kv" style="border-bottom:none"><b>Signalétique atelier</b><span>Lockup horizontal, une encre, jusqu'à 2 m de large sans redessin.</span></div>
+  </div>
+</section>
+
+
+<!-- ============ 10 · FICHIERS ============ -->
+<section id="fichiers">
+  <div class="sec-head">
+    <div>
+      <div class="sec-no">10</div>
+      <h2 style="margin-top:14px">Fichiers livrés</h2>
+    </div>
+    <div class="note" style="text-align:right">SVG vectoriel<br>14 fichiers</div>
+  </div>
+
+  <div class="grid2" style="gap:26px">
+    <div class="stack-s">
+      <h3 style="margin-bottom:8px">Icônes</h3>
+      <div class="kv"><b>Route A</b><span>
+        <a class="dl" href="assets/logo/shoepartner-icone-a-couleur.svg">couleur</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-a-cognac.svg">cognac</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-a-mono-noir.svg">mono noir</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-a-mono-blanc.svg">mono blanc</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-a-petit.svg">petit format</a>
+      </span></div>
+      <div class="kv"><b>Route B</b><span>
+        <a class="dl" href="assets/logo/shoepartner-icone-b-couleur.svg">couleur</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-b-mono-noir.svg">mono noir</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-b-mono-blanc.svg">mono blanc</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-b-petit.svg">petit format</a>
+      </span></div>
+      <div class="kv"><b>Route C</b><span>
+        <a class="dl" href="assets/logo/shoepartner-icone-c-couleur.svg">couleur</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-c-mono-noir.svg">mono noir</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-c-mono-blanc.svg">mono blanc</a> ·
+        <a class="dl" href="assets/logo/shoepartner-icone-c-petit.svg">petit format</a>
+      </span></div>
+      <div class="kv" style="border-bottom:none"><b>Trame</b><span>
+        <a class="dl" href="assets/logo/shoepartner-trame-zellige.svg">trame zellige (tuile 44)</a>
+      </span></div>
+    </div>
+
+    <div class="stack-s">
+      <h3 style="margin-bottom:8px">Reste à produire</h3>
+      <div class="kv"><b>Lockups vectoriels</b><span>Texte vectorisé (Jost + IBM Plex Mono en courbes) — nécessaire pour l'imprimeur.</span></div>
+      <div class="kv"><b>Favicon</b><span>.ico multi-résolutions 16 / 32 / 48 + PNG 180 (Apple touch).</span></div>
+      <div class="kv"><b>Épreuve couleur</b><span>Validation CMJN et choix Pantone avec l'imprimeur.</span></div>
+      <div class="kv" style="border-bottom:none"><b>Arbitrage</b><span>Choix d'une route unique, puis retrait des deux autres de cette charte.</span></div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:26px">
+    <h4 style="margin-bottom:12px">Arborescence</h4>
+    <pre style="font-family:var(--mono); font-size:12.5px; line-height:1.9; margin:0; color:rgba(58,42,32,.78); overflow-x:auto">shoe partner/
+├── charte-graphique.html        ← ce document
+├── assets/logo/                 14 fichiers SVG
+└── design/                      source Claude Design
+    ├── ShoePartner Logo System.dc.html
+    ├── Mark.dc.html · Lockup.dc.html · Zellige.dc.html
+    └── support.js</pre>
+  </div>
+
+  <footer>
+    <div style="display:flex; justify-content:space-between; gap:30px; flex-wrap:wrap; align-items:flex-end">
+      <div class="lockup" style="font-size:20px; --t1:#3A2A20; --t2:#B4763A">
+        <div class="ico"><svg class="mark" style="--c1:#3A2A20;--c2:#EAE4DA"><use href="#sp-a"/></svg></div>
+        <div class="txt"><div class="wm"><b>Shoe</b><i>Partner</i></div><div class="tag">Matières &amp; Digital pour la chaussure</div></div>
+      </div>
+      <div class="note" style="text-align:right">
+        Charte graphique v1.0 · Août 2026<br>
+        Source : Claude Design — ShoePartner logo system
+      </div>
+    </div>
+  </footer>
+</section>
+
+</div>
+</body>
+</html>

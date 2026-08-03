@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+  <title>ShoePartner — icône route C · < 24 px, sans cadre</title>
+  <g transform="translate(50,50) scale(0.92) translate(-62.5,-47)">
+    <path d="M58 34 C58 27 40 27 40 36 C40 44 58 44 58 54 C58 63 40 63 40 56" fill="none" stroke="#B4763A" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="6.5 5.5"/>
+    <path d="M68 30 V64" fill="none" stroke="#3A2A20" stroke-width="6.5" stroke-linecap="round"/>
+    <path d="M68 30 H75 A9 9 0 0 1 75 48 H68" fill="none" stroke="#3A2A20" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

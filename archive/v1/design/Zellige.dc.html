@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<svg width="100%" height="100%" style="display:block; width:100%; height:100%">
+  <defs>
+    <pattern id="{{ pid }}" width="{{ tile }}" height="{{ tile }}" patternUnits="userSpaceOnUse">
+      <rect x="{{ off }}" y="{{ off }}" width="{{ sq }}" height="{{ sq }}" fill="none" stroke="{{ color }}" stroke-width="{{ weight }}"></rect>
+      <rect x="{{ off }}" y="{{ off }}" width="{{ sq }}" height="{{ sq }}" fill="none" stroke="{{ color }}" stroke-width="{{ weight }}" transform="{{ rot }}"></rect>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="{{ fillRef }}"></rect>
+</svg>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:340,&quot;height&quot;:120},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3A2A20&quot;,&quot;options&quot;:[&quot;#3A2A20&quot;,&quot;#B4763A&quot;,&quot;#0E7C86&quot;,&quot;#F5F1EA&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;tile&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:44,&quot;min&quot;:16,&quot;max&quot;:120,&quot;step&quot;:2,&quot;tsType&quot;:&quot;number&quot;},&quot;weight&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:1.2,&quot;min&quot;:0.5,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.pid = 'zl' + Math.random().toString(36).slice(2, 8);
+  }
+  renderVals() {
+    const p = this.props || {};
+    const tile = parseFloat(p.tile) || 44;
+    const sq = tile * 0.64;
+    const off = (tile - sq) / 2;
+    const c = tile / 2;
+    return {
+      pid: this.pid,
+      fillRef: 'url(#' + this.pid + ')',
+      color: p.color || '#3A2A20',
+      weight: parseFloat(p.weight) || 1.2,
+      tile, sq, off,
+      rot: 'rotate(45 ' + c + ' ' + c + ')'
+    };
+  }
+}
+</script>
+</body>
+</html>

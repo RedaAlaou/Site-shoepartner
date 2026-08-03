@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</helmet>
+<sc-if value="{{ isH }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex; align-items:center; gap:0.62em; font-family:Jost, sans-serif; line-height:1">
+    <div style="width:2.5em; height:2.5em; flex:none">
+      <dc-import name="Mark" route="{{ route }}" primary="{{ c1 }}" secondary="{{ c2 }}" star="{{ star }}" hint-size="100%,100%"></dc-import>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:0.34em">
+      <div style="display:flex; align-items:baseline; gap:0.2em; font-size:1em; letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap">
+        <span style="font-weight:600; color:{{ t1 }}">Shoe</span><span style="font-weight:300; color:{{ t2 }}">Partner</span>
+      </div>
+      <sc-if value="{{ showTag }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:0.235em; letter-spacing:0.26em; text-transform:uppercase; color:{{ t3 }}; white-space:nowrap">{{ tagline }}</div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+<sc-if value="{{ isV }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex; flex-direction:column; align-items:center; gap:0.52em; font-family:Jost, sans-serif; line-height:1">
+    <div style="width:3.2em; height:3.2em">
+      <dc-import name="Mark" route="{{ route }}" primary="{{ c1 }}" secondary="{{ c2 }}" star="{{ star }}" hint-size="100%,100%"></dc-import>
+    </div>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:0.38em">
+      <div style="display:flex; align-items:baseline; gap:0.2em; font-size:1em; letter-spacing:0.14em; text-transform:uppercase; white-space:nowrap">
+        <span style="font-weight:600; color:{{ t1 }}">Shoe</span><span style="font-weight:300; color:{{ t2 }}">Partner</span>
+      </div>
+      <sc-if value="{{ showTag }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'IBM Plex Mono', monospace; font-size:0.235em; letter-spacing:0.26em; text-transform:uppercase; color:{{ t3 }}; white-space:nowrap">{{ tagline }}</div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:140},&quot;route&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;],&quot;default&quot;:&quot;a&quot;,&quot;tsType&quot;:&quot;'a'|'b'|'c'&quot;},&quot;variant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;h&quot;,&quot;v&quot;],&quot;default&quot;:&quot;h&quot;,&quot;tsType&quot;:&quot;'h'|'v'&quot;},&quot;c1&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3A2A20&quot;,&quot;options&quot;:[&quot;#3A2A20&quot;,&quot;#B4763A&quot;,&quot;#0E7C86&quot;,&quot;#F5F1EA&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;c2&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#B4763A&quot;,&quot;options&quot;:[&quot;#B4763A&quot;,&quot;#F5F1EA&quot;,&quot;#0E7C86&quot;,&quot;#3A2A20&quot;],&quot;tsType&quot;:&quot;string&quot;},&quot;t1&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3A2A20&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;t2&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#B4763A&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;t3&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;rgba(58,42,32,0.55)&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;star&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showTag&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;tagline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Matières &amp; Digital pour la chaussure&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props || {};
+    const v = (p.variant || 'h').toLowerCase();
+    const c1 = p.c1 || '#3A2A20';
+    return {
+      isH: v === 'h',
+      isV: v === 'v',
+      route: p.route || 'a',
+      c1,
+      c2: p.c2 || '#B4763A',
+      star: p.star !== false && p.star !== 'false',
+      t1: p.t1 || '#3A2A20',
+      t2: p.t2 || '#B4763A',
+      t3: p.t3 || 'rgba(58,42,32,0.55)',
+      showTag: p.showTag !== false && p.showTag !== 'false',
+      tagline: p.tagline || 'Matières & Digital pour la chaussure'
+    };
+  }
+}
+</script>
+</body>
+</html>
