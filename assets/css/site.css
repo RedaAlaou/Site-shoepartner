@@ -165,9 +165,42 @@ nav.main a.nl{
 }
 nav.main a.nl:hover{color:var(--marine);border-bottom-color:var(--rule-fort)}
 nav.main a.nl.on{color:var(--marine);font-weight:600;border-bottom-color:var(--or)}
-.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-right:-10px}
+.burger{display:none;background:none;border:0;padding:10px;cursor:pointer;margin-inline-end:-10px}
 .burger svg{width:26px;height:18px}
 @media(max-width:1000px){nav.main{display:none}.burger{display:block}}
+
+/* ---------- sélecteur de langue ---------- */
+nav.main{margin-inline-start:auto}
+.hactions{display:flex;align-items:center;gap:14px;flex:none}
+.lang{
+  display:inline-flex;align-items:center;gap:8px;line-height:1;text-decoration:none;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(19,42,70,.72);border:1px solid var(--rule-fort);padding:9px 13px;
+  transition:border-color .22s var(--ease),color .22s var(--ease),background .22s var(--ease);
+}
+.lang:hover{border-color:var(--or);background:rgba(197,157,83,.1);color:var(--marine)}
+.lang .globe{width:13px;height:13px;flex:none}
+/* la langue cible s'écrit toujours dans sa propre graphie */
+.lang[lang="ar"]{font-family:var(--arabe);font-size:12.5px;letter-spacing:normal}
+/* sur petit écran, le nom complet ne tient pas à côté du burger : on garde
+   le globe et le code court, le nom entier restant dans le menu déroulant */
+.lang .lang-code{display:none;font-family:var(--mono);letter-spacing:.14em}
+@media(max-width:620px){
+  .lang .lang-name{display:none}
+  .lang .lang-code{display:inline}
+  .lang{padding:9px 11px;gap:6px}
+  .site-in{gap:14px}
+}
+/* très petits écrans : le verrou, la bascule et le burger doivent tenir sur
+   une seule ligne — c'est le lockup qui cède, pas la bascule de langue */
+@media(max-width:400px){
+  header.site .lockup{font-size:15px}
+  .lang{padding:8px 9px;gap:5px;font-size:10.5px}
+  .hactions{gap:8px}
+}
+@media(max-width:340px){ header.site .lockup{font-size:13.5px} }
+.mnav .lang-m{color:var(--bronze)}
+.mnav .lang-m[lang="ar"]{font-family:var(--arabe)}
 
 .mnav{
   position:fixed;inset:0;z-index:80;background:var(--papier);
@@ -178,7 +211,7 @@ nav.main a.nl.on{color:var(--marine);font-weight:600;border-bottom-color:var(--o
 .mnav.open{transform:none;visibility:visible}
 .mnav-top{display:flex;align-items:center;justify-content:space-between;height:var(--head-h);margin-bottom:26px}
 .mnav-top .lockup{font-size:17px}
-.mnav .close{background:none;border:0;padding:10px;cursor:pointer;margin-right:-10px}
+.mnav .close{background:none;border:0;padding:10px;cursor:pointer;margin-inline-end:-10px}
 .mnav a.nl{
   font-family:var(--display);font-size:clamp(24px,6vw,32px);font-weight:800;letter-spacing:-.02em;
   text-decoration:none;color:var(--marine);padding:15px 0;border-bottom:1px solid var(--rule);
@@ -243,8 +276,10 @@ body.lock{overflow:hidden}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ---------- grilles ---------- */
-.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
+/* min() : sans lui, la piste garde son minimum de 300 px et déborde
+   sur les écrans plus étroits que 344 px */
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:20px}
+.g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(255px,100%),1fr));gap:18px}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 @media(max-width:1020px){.g4{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:540px){.g4{grid-template-columns:1fr}}
@@ -420,7 +455,13 @@ table.spec td.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em
 .cinfo{display:flex;gap:18px;padding:13px 0;border-bottom:1px solid var(--rule-clair);font-family:var(--mono)}
 .cinfo:last-child{border-bottom:0}
 .cinfo .k{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:rgba(245,241,232,.45);width:92px;flex:none;padding-top:4px}
-.cinfo .v{font-size:13px;letter-spacing:.03em;line-height:1.75}
+.cinfo .v{font-size:13px;letter-spacing:.03em;line-height:1.75;min-width:0;overflow-wrap:anywhere}
+/* comme les .kv : sur mobile l'intitulé passe au-dessus, sinon une adresse
+   e-mail insécable déborde du panneau */
+@media(max-width:560px){
+  .cinfo{flex-direction:column;gap:4px}
+  .cinfo .k{width:auto;padding-top:0}
+}
 .cinfo .v a{text-decoration:none;border-bottom:1px dashed rgba(245,241,232,.4)}
 .cinfo .v a:hover{border-bottom-style:solid}
 
@@ -524,6 +565,70 @@ footer.site h4{font-family:var(--mono);font-weight:500;font-size:10.5px;letter-s
 .rv.d2{transition-delay:.16s}
 .rv.d3{transition-delay:.24s}
 .rv.d4{transition-delay:.32s}
+
+/* ==========================================================================
+   Version arabe — droite à gauche
+   Le latin garde ses fontes : Montserrat et IBM Plex Mono n'ont pas de glyphes
+   arabes, le navigateur bascule donc tout seul sur les fontes arabes, signe
+   par signe. Une référence CUI-VG-101 reste en mono, la phrase autour est en
+   arabe — sans un seul balisage supplémentaire.
+   ========================================================================== */
+[dir="rtl"]{
+  --display:'Montserrat','Noto Kufi Arabic','Segoe UI',system-ui,sans-serif;
+  --sans:'Inter','IBM Plex Sans Arabic','Segoe UI',system-ui,-apple-system,sans-serif;
+  --mono:'IBM Plex Mono','IBM Plex Sans Arabic',SFMono-Regular,Consolas,monospace;
+}
+[dir="rtl"] body{font-size:17px;line-height:1.9}
+
+/* l'interlettrage casse la lecture de l'arabe : on le neutralise partout,
+   puis on le rend aux seuls blocs purement latins (codes, URL, coordonnées) */
+[dir="rtl"] :is(h1,h2,h3,h4,h5,p,a,span,li,b,i,small,button,label,th,td,div,blockquote,input,select,textarea){
+  letter-spacing:normal;
+}
+[dir="rtl"] :is(.rf,.url,.geo,.ltr){letter-spacing:.05em}
+
+/* Ordre latin garanti au milieu de l'arabe — uniquement sur les contenus
+   entièrement latins. Un « +212 … » ou un « @shoepartner.ma » commence par un
+   caractère neutre que l'algorithme bidi renverrait sinon en fin de ligne.
+   Les cellules mixtes (« بكرة 500 م ») doivent au contraire rester en RTL. */
+[dir="rtl"] :is(.url,.geo,.ltr,a[href^="tel:"],a[href^="mailto:"]){
+  direction:ltr;unicode-bidi:isolate;
+}
+
+/* l'arabe a besoin d'interligne : Noto Kufi monte haut et descend bas */
+[dir="rtl"] :is(p,li,td,.kv,.lede){line-height:1.9}
+[dir="rtl"] :is(h1,h2,h3,h4,h5){line-height:1.42}
+[dir="rtl"] .hero h1{line-height:1.28;max-width:18ch}
+[dir="rtl"] .phero h1{max-width:20ch}
+[dir="rtl"] .cta-panel h2{max-width:20ch}
+[dir="rtl"] .lede{max-width:58ch}
+[dir="rtl"] .hero .lede{max-width:46ch}
+[dir="rtl"] .foot-contact{line-height:2.15}
+/* les intitulés arabes sont plus longs que leurs équivalents français */
+[dir="rtl"] .cinfo .k{width:118px}
+[dir="rtl"] .kv b{width:210px}
+[dir="rtl"] .foot-brand p{max-width:34ch}
+[dir="rtl"] .acc-p p{max-width:70ch}
+
+/* ---- symétries ---- */
+[dir="rtl"] .sec-head .note{text-align:left}
+[dir="rtl"] .hero .watermark{right:auto;left:-90px}
+[dir="rtl"] .phero .watermark{right:auto;left:-60px}
+[dir="rtl"] .cta-panel .watermark{right:auto;left:-70px}
+[dir="rtl"] .totop{right:auto;left:22px}
+[dir="rtl"] table.spec th,[dir="rtl"] table.spec td{text-align:right;padding:13px 0 13px 16px}
+[dir="rtl"] .acc-b{text-align:right}
+[dir="rtl"] .city .geo{text-align:left}
+@media(max-width:620px){[dir="rtl"] .city .geo{text-align:right}}
+[dir="rtl"] .city:hover{transform:translateX(-4px)}
+
+/* la flèche des liens et boutons pointe vers l'avant de la lecture ;
+   « scale » se compose avant « transform », le survol reste donc juste */
+[dir="rtl"] svg.ar{scale:-1 1}
+
+/* le bandeau défile dans le sens de la lecture : il entre par la gauche */
+[dir="rtl"] .marquee .track{animation-name:mq-rtl}
+@keyframes mq-rtl{from{transform:translateX(0)}to{transform:translateX(50%)}}
 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}

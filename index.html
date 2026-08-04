@@ -1,41 +1,54 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shoe Partner — Matières &amp; digital pour la chaussure</title>
-<meta name="description" content="Cuirs, semelles et fournitures pour les ateliers de la chaussure au Maroc — avec catalogue en ligne, traçabilité par lot et devis sous 24 h. Fès · Casablanca · Marrakech.">
-<meta property="og:title" content="Shoe Partner — Matières &amp; digital pour la chaussure">
-<meta property="og:description" content="Un seul partenaire, de la matière à la donnée. Cuirs, semelles, fournitures — et la plateforme pour les commander, les tracer, les recommander.">
+<script>
+/* العربية هي لغة الموقع الأساسية. من اختار الفرنسية سابقاً يعود إليها مباشرة،
+   قبل أول عرض للصفحة — أي دون وميض. */
+(function(){try{if(localStorage.getItem('sp-lang')==='fr')location.replace('fr/index.html');}catch(e){}})();
+</script>
+<title>شو بارتنر — مواد ورقمنة لصناعة الأحذية</title>
+<meta name="description" content="جلود ونعال ولوازم لورشات صناعة الأحذية بالمغرب — مع كتالوغ إلكتروني وتتبّع لكل دفعة وعرض سعر خلال 24 ساعة. فاس · الدار البيضاء · مراكش.">
+<meta property="og:title" content="شو بارتنر — مواد ورقمنة لصناعة الأحذية">
+<meta property="og:description" content="شريك واحد، من المادة إلى المعلومة. جلود ونعال ولوازم — والمنصة التي تتيح طلبها وتتبّعها وإعادة طلبها.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ar_MA">
+<meta property="og:locale:alternate" content="fr_MA">
+<link rel="alternate" hreflang="ar" href="index.html">
+<link rel="alternate" hreflang="fr" href="fr/index.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
 <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Kufi+Arabic:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
 </head>
 <body>
 
 <header class="site">
   <div class="site-in">
-    <a href="index.html" class="lockup" aria-label="Shoe Partner — accueil">
+    <a href="index.html" class="lockup" aria-label="شو بارتنر — الصفحة الرئيسية">
       <img class="ico" src="assets/logo/shoepartner-marque-couleur.svg" alt="">
       <span class="wm">Shoe Partner</span>
     </a>
-    <nav class="main" aria-label="Navigation principale">
-      <a class="nl" href="matieres.html">Matières</a>
-      <a class="nl" href="plateforme.html">Plateforme</a>
-      <a class="nl" href="savoir-faire.html">Savoir-faire</a>
-      <a class="nl" href="a-propos.html">À propos</a>
-      <a class="btn sm" href="contact.html">Devis</a>
+    <nav class="main" aria-label="القائمة الرئيسية">
+      <a class="nl" href="matieres.html">المواد</a>
+      <a class="nl" href="plateforme.html">المنصة</a>
+      <a class="nl" href="savoir-faire.html">طريقة عملنا</a>
+      <a class="nl" href="a-propos.html">من نحن</a>
+      <a class="btn sm" href="contact.html">عرض سعر</a>
     </nav>
-    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav">
-      <svg viewBox="0 0 26 18" aria-hidden="true">
-        <line x1="1" y1="2"  x2="25" y2="2"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="1" y1="9"  x2="25" y2="9"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="1" y1="16" x2="25" y2="16" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
-      </svg>
-    </button>
+    <div class="hactions">
+      <a class="lang" href="fr/index.html" hreflang="fr" lang="fr" title="Voir le site en français" aria-label="Voir le site en français"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.3c2.1 2.1 2.1 11.3 0 13.4M8 1.3c-2.1 2.1-2.1 11.3 0 13.4M1.5 6h13M1.5 10h13" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="lang-name">Français</span><span class="lang-code">FR</span></a>
+      <button class="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 26 18" aria-hidden="true">
+          <line x1="1" y1="2"  x2="25" y2="2"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="9"  x2="25" y2="9"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="16" x2="25" y2="16" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -45,115 +58,113 @@
       <img class="ico" src="assets/logo/shoepartner-marque-couleur.svg" alt="">
       <span class="wm">Shoe Partner</span>
     </span>
-    <button class="close" aria-label="Fermer le menu">
+    <button class="close" aria-label="إغلاق القائمة">
       <svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true">
         <line x1="2" y1="2" x2="20" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
         <line x1="20" y1="2" x2="2" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
     </button>
   </div>
-  <a class="nl" href="index.html">Accueil <span>00</span></a>
-  <a class="nl" href="matieres.html">Matières <span>01</span></a>
-  <a class="nl" href="plateforme.html">Plateforme <span>02</span></a>
-  <a class="nl" href="savoir-faire.html">Savoir-faire <span>03</span></a>
-  <a class="nl" href="a-propos.html">À propos <span>04</span></a>
-  <a class="btn" href="contact.html">Demander un devis</a>
+  <a class="nl" href="index.html">الرئيسية <span>00</span></a>
+  <a class="nl" href="matieres.html">المواد <span>01</span></a>
+  <a class="nl" href="plateforme.html">المنصة <span>02</span></a>
+  <a class="nl" href="savoir-faire.html">طريقة عملنا <span>03</span></a>
+  <a class="nl" href="a-propos.html">من نحن <span>04</span></a>
+  <a class="nl lang-m" href="fr/index.html" hreflang="fr" lang="fr">Français <span>FR</span></a>
+  <a class="btn" href="contact.html">اطلب عرض سعر</a>
 </div>
 
 <main>
 
-<!-- ============ HERO ============ -->
+<!-- ============ الواجهة ============ -->
 <section class="hero">
   <img class="watermark" src="assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
   <div class="hero-in">
     <div>
-      <p class="eyebrow">Fournisseur des ateliers de la chaussure · Maroc</p>
-      <h1 style="margin-top:20px">La matière et la donnée.<br><span class="alt">Un seul partenaire.</span></h1>
+      <p class="eyebrow">مورّد ورشات صناعة الأحذية · المغرب</p>
+      <h1 style="margin-top:20px">المادة والمعلومة.<br><span class="alt">شريك واحد.</span></h1>
       <p class="lede">
-        Shoe Partner fournit aux ateliers marocains les cuirs, semelles et fournitures dont ils
-        dépendent — et la plateforme digitale pour les commander, les tracer et les recommander
-        sans friction.
+        تزوّد «شو بارتنر» الورشات المغربية بالجلود والنعال واللوازم التي تعتمد عليها —
+        وبالمنصة الرقمية التي تتيح طلبها وتتبّعها وإعادة طلبها دون عناء.
       </p>
       <div class="btns">
-        <a class="btn" href="contact.html">Demander un devis <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
-        <a class="btn ghost light" href="matieres.html">Parcourir les matières</a>
+        <a class="btn" href="contact.html">اطلب عرض سعر <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+        <a class="btn ghost light" href="matieres.html">تصفّح المواد</a>
       </div>
     </div>
     <div class="hero-visual">
-      <img class="mk" src="assets/logo/shoepartner-marque-fond-fonce.svg" alt="Marque Shoe Partner — peau de cuir et empreinte de semelle">
+      <img class="mk" src="assets/logo/shoepartner-marque-fond-fonce.svg" alt="علامة شو بارتنر — قطعة جلد وأثر نعل">
     </div>
   </div>
 
   <div class="hero-stats">
     <div class="row">
-      <div class="stat rv">   <div class="n"><span data-n="120">0</span><small>+</small></div><div class="l">Ateliers partenaires</div></div>
-      <div class="stat rv d1"><div class="n"><span data-n="1400">0</span></div><div class="l">Références au catalogue</div></div>
-      <div class="stat rv d2"><div class="n"><span data-n="48">0</span><small>&nbsp;h</small></div><div class="l">Livraison nationale</div></div>
-      <div class="stat rv d3"><div class="n"><span data-n="24">0</span><small>&nbsp;h</small></div><div class="l">Réponse devis</div></div>
+      <div class="stat rv">   <div class="n"><span data-n="120">0</span><small>+</small></div><div class="l">ورشة شريكة</div></div>
+      <div class="stat rv d1"><div class="n"><span data-n="1400">0</span></div><div class="l">مرجع في الكتالوغ</div></div>
+      <div class="stat rv d2"><div class="n"><span data-n="48">0</span><small>&nbsp;ساعة</small></div><div class="l">التوصيل داخل المغرب</div></div>
+      <div class="stat rv d3"><div class="n"><span data-n="24">0</span><small>&nbsp;ساعة</small></div><div class="l">الرد على طلب السعر</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ BANDEAU ============ -->
+<!-- ============ الشريط ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="track">
     <div class="seq">
-      <span>Cuir tannage végétal · Fès</span><i class="dot"></i>
-      <span>Semelles PU / TPR moulées</span><i class="dot"></i>
-      <span>Fils · œillets · renforts</span><i class="dot"></i>
-      <span>Traçabilité par lot — QR</span><i class="dot"></i>
-      <span>Devis sous 24 h</span><i class="dot"></i>
-      <span>Livraison 48 h</span><i class="dot"></i>
+      <span>جلد بالدباغة النباتية · فاس</span><i class="dot"></i>
+      <span>نعال PU / TPR مقولبة</span><i class="dot"></i>
+      <span>خيوط · حلقات · تقويات</span><i class="dot"></i>
+      <span>تتبّع لكل دفعة — رمز QR</span><i class="dot"></i>
+      <span>عرض سعر خلال 24 ساعة</span><i class="dot"></i>
+      <span>توصيل خلال 48 ساعة</span><i class="dot"></i>
     </div>
     <div class="seq">
-      <span>Cuir tannage végétal · Fès</span><i class="dot"></i>
-      <span>Semelles PU / TPR moulées</span><i class="dot"></i>
-      <span>Fils · œillets · renforts</span><i class="dot"></i>
-      <span>Traçabilité par lot — QR</span><i class="dot"></i>
-      <span>Devis sous 24 h</span><i class="dot"></i>
-      <span>Livraison 48 h</span><i class="dot"></i>
+      <span>جلد بالدباغة النباتية · فاس</span><i class="dot"></i>
+      <span>نعال PU / TPR مقولبة</span><i class="dot"></i>
+      <span>خيوط · حلقات · تقويات</span><i class="dot"></i>
+      <span>تتبّع لكل دفعة — رمز QR</span><i class="dot"></i>
+      <span>عرض سعر خلال 24 ساعة</span><i class="dot"></i>
+      <span>توصيل خلال 48 ساعة</span><i class="dot"></i>
     </div>
   </div>
 </div>
 
-<!-- ============ 01 · DEUX PÔLES ============ -->
+<!-- ============ 01 · القطبان ============ -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="sec-no">01</span><h2>Un métier, deux pôles</h2></div>
-      <p class="note">La peau et l'empreinte<br>Les deux moitiés du logo</p>
+      <div><span class="sec-no">01</span><h2>مهنة واحدة، قطبان</h2></div>
+      <p class="note">الجلد والأثر<br>نصفا الشعار</p>
     </div>
 
     <div class="g2">
       <article class="pole mat rv">
-        <span class="pk">La peau — la matière</span>
-        <h3>Ce que vos mains travaillent</h3>
+        <span class="pk">الجلد — المادة</span>
+        <h3>ما تشتغل عليه أيديكم</h3>
         <p>
-          Nous sélectionnons, contrôlons et stockons ce qui fait la qualité d'une paire :
-          le cuir des tanneries de Fès, les semelles moulées à la demande, la fourniture
-          qui ne lâche pas en fin de série.
+          ننتقي ونراقب ونخزّن ما يصنع جودة الحذاء: جلد مدابغ فاس، ونعال تُقولب حسب
+          الطلب، ولوازم لا تخذلكم في آخر السلسلة.
         </p>
         <ul>
-          <li>Cuirs — tannage végétal et chrome, contrôle lot par lot</li>
-          <li>Semelles PU, TPR et gomme — moulage à la demande</li>
-          <li>Textiles, doublures et renforts</li>
-          <li>Fils, œillets, colles et petite fourniture</li>
+          <li>جلود — دباغة نباتية أو بالكروم، مراقبة دفعة بدفعة</li>
+          <li>نعال PU وTPR ومطاط — قولبة حسب الطلب</li>
+          <li>أقمشة وبطانات وتقويات</li>
+          <li>خيوط وحلقات ولواصق ولوازم صغيرة</li>
         </ul>
-        <p class="foot">Dépôts — Fès · Casablanca · Marrakech</p>
+        <p class="foot">المستودعات — فاس · الدار البيضاء · مراكش</p>
       </article>
 
       <article class="pole dig rv d1">
-        <span class="pk">L'empreinte — la trace</span>
-        <h3>Ce que votre atelier pilote</h3>
+        <span class="pk">الأثر — التتبّع</span>
+        <h3>ما تديره ورشتكم</h3>
         <p>
-          Chaque carton livré porte un QR. Derrière : le catalogue complet, l'origine du lot,
-          l'historique de vos commandes et le réassort en un geste. La donnée suit la matière,
-          jamais l'inverse.
+          كل صندوق يُسلَّم يحمل رمز QR. خلفه: الكتالوغ الكامل، ومصدر الدفعة، وسجل
+          طلباتكم، وإعادة الطلب بحركة واحدة. المعلومة تتبع المادة، لا العكس.
         </p>
         <ul>
-          <li>Catalogue en ligne — 1 400 références, fiches techniques</li>
-          <li>Traçabilité par lot — origine, tannerie, date, contrôle</li>
-          <li>Devis en 24 h, historique et réassort en un clic</li>
+          <li>كتالوغ إلكتروني — 1400 مرجع مع بطاقات تقنية</li>
+          <li>تتبّع لكل دفعة — المصدر، المدبغة، التاريخ، المراقبة</li>
+          <li>عرض سعر خلال 24 ساعة، وسجل كامل، وإعادة طلب بنقرة</li>
         </ul>
         <p class="foot">app.shoepartner.ma</p>
       </article>
@@ -161,12 +172,12 @@
   </div>
 </section>
 
-<!-- ============ 02 · MATIÈRES ============ -->
+<!-- ============ 02 · المواد ============ -->
 <section class="sec paper">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="sec-no">02</span><h2>Les matières</h2></div>
-      <p class="note">1 400 références<br>Contrôle qualité par lot</p>
+      <div><span class="sec-no">02</span><h2>المواد</h2></div>
+      <p class="note">1400 مرجع<br>مراقبة جودة لكل دفعة</p>
     </div>
 
     <div class="g4">
@@ -178,10 +189,10 @@
           </svg>
         </span>
         <span class="bd">
-          <span class="ref">CUI — 320 réf.</span>
-          <h3>Cuirs</h3>
-          <p>Vachette, chèvre et croûte — tannage végétal ou chrome, sélection en tannerie à Fès, surface contrôlée au m².</p>
-          <span class="go"><span class="alink">Voir les cuirs <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+          <span class="ref">CUI — 320 مرجع</span>
+          <h3>الجلود</h3>
+          <p>جلد البقر والماعز والجلد المشقوق — دباغة نباتية أو بالكروم، انتقاء داخل مدابغ فاس، ومساحة مراقَبة بالمتر المربع.</p>
+          <span class="go"><span class="alink">شاهد الجلود <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
         </span>
       </a>
 
@@ -194,10 +205,10 @@
           </svg>
         </span>
         <span class="bd">
-          <span class="ref">SEM — 410 réf.</span>
-          <h3>Semelles</h3>
-          <p>PU, TPR et gomme naturelle — pointures 35 à 47, moulage à la demande à partir de 300 paires.</p>
-          <span class="go"><span class="alink">Voir les semelles <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+          <span class="ref">SEM — 410 مرجع</span>
+          <h3>النعال</h3>
+          <p>PU وTPR ومطاط طبيعي — مقاسات من 35 إلى 47، وقولبة حسب الطلب ابتداءً من 300 زوج.</p>
+          <span class="go"><span class="alink">شاهد النعال <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
         </span>
       </a>
 
@@ -211,10 +222,10 @@
           </svg>
         </span>
         <span class="bd">
-          <span class="ref">TEX — 260 réf.</span>
-          <h3>Textiles &amp; doublures</h3>
-          <p>Doublures coton et synthétiques, toiles de renfort, mousses — au rouleau ou à la coupe.</p>
-          <span class="go"><span class="alink">Voir les textiles <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+          <span class="ref">TEX — 260 مرجع</span>
+          <h3>الأقمشة والبطانات</h3>
+          <p>بطانات قطنية واصطناعية، وأقمشة تقوية، وإسفنج — باللفة الكاملة أو بالقياس.</p>
+          <span class="go"><span class="alink">شاهد الأقمشة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
         </span>
       </a>
 
@@ -231,46 +242,46 @@
           </svg>
         </span>
         <span class="bd">
-          <span class="ref">FRN — 410 réf.</span>
-          <h3>Fournitures</h3>
-          <p>Fils poissés, œillets, boucles, colles et renforts thermocollants — les consommables de toute la fabrication.</p>
-          <span class="go"><span class="alink">Voir les fournitures <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+          <span class="ref">FRN — 410 مرجع</span>
+          <h3>اللوازم</h3>
+          <p>خيوط مشمّعة، وحلقات، وأبازيم، ولواصق، وتقويات حرارية — مستهلكات كل مراحل التصنيع.</p>
+          <span class="go"><span class="alink">شاهد اللوازم <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
         </span>
       </a>
     </div>
 
     <p class="note rv" style="margin-top:26px">
-      Échantillons gratuits pour tout atelier en activité — première livraison sous 48&nbsp;h ouvrées.
+      عيّنات مجانية لكل ورشة عاملة — أول توصيل خلال 48 ساعة عمل.
     </p>
   </div>
 </section>
 
-<!-- ============ 03 · PLATEFORME ============ -->
+<!-- ============ 03 · المنصة ============ -->
 <section class="sec dark">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="sec-no">03</span><h2>La plateforme</h2></div>
-      <p class="note">app.shoepartner.ma<br>Incluse, sans abonnement</p>
+      <div><span class="sec-no">03</span><h2>المنصة</h2></div>
+      <p class="note">app.shoepartner.ma<br>مشمولة، بدون اشتراك</p>
     </div>
 
     <div class="split top">
-      <div class="browser rv" aria-label="Aperçu de la plateforme">
+      <div class="browser rv" aria-label="معاينة المنصة">
         <div class="tb">
           <span class="dots"><i></i><i></i><i></i></span>
           <span class="url">app.shoepartner.ma</span>
         </div>
-        <div class="ptabs" role="tablist" aria-label="Fonctions de la plateforme">
-          <button class="ptab on" role="tab" aria-selected="true"  type="button">Catalogue</button>
-          <button class="ptab"    role="tab" aria-selected="false" type="button">Traçabilité</button>
-          <button class="ptab"    role="tab" aria-selected="false" type="button">Devis</button>
+        <div class="ptabs" role="tablist" aria-label="وظائف المنصة">
+          <button class="ptab on" role="tab" aria-selected="true"  type="button">الكتالوغ</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">التتبّع</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">عرض السعر</button>
         </div>
 
         <div class="ppanel on" role="tabpanel">
-          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">Vachette tannage végétal · 1,8 mm</span><span class="chip ok">En stock</span><button class="mini" type="button">Devis</button></div>
-          <div class="prow"><span class="rf">CUI-CH-214</span><span class="nm">Chèvre chrome souple · noir</span><span class="chip ok">En stock</span><button class="mini" type="button">Devis</button></div>
-          <div class="prow"><span class="rf">SEM-TPR-42</span><span class="nm">Semelle TPR ville · 36–46</span><span class="chip cmd">Sur commande</span><button class="mini" type="button">Devis</button></div>
-          <div class="prow"><span class="rf">SEM-PU-118</span><span class="nm">Semelle PU bi-densité · 39–47</span><span class="chip ok">En stock</span><button class="mini" type="button">Devis</button></div>
-          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">Fil poissé 0,8 mm · bobine 500 m</span><span class="chip ok">En stock</span><button class="mini" type="button">Devis</button></div>
+          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">جلد بقر بالدباغة النباتية · 1,8 مم</span><span class="chip ok">متوفر</span><button class="mini" type="button">عرض سعر</button></div>
+          <div class="prow"><span class="rf">CUI-CH-214</span><span class="nm">جلد ماعز بالكروم، ليّن · أسود</span><span class="chip ok">متوفر</span><button class="mini" type="button">عرض سعر</button></div>
+          <div class="prow"><span class="rf">SEM-TPR-42</span><span class="nm">نعل TPR للمدينة · 36–46</span><span class="chip cmd">عند الطلب</span><button class="mini" type="button">عرض سعر</button></div>
+          <div class="prow"><span class="rf">SEM-PU-118</span><span class="nm">نعل PU مزدوج الكثافة · 39–47</span><span class="chip ok">متوفر</span><button class="mini" type="button">عرض سعر</button></div>
+          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">خيط مشمّع 0,8 مم · بكرة 500 م</span><span class="chip ok">متوفر</span><button class="mini" type="button">عرض سعر</button></div>
         </div>
 
         <div class="ppanel" role="tabpanel">
@@ -292,140 +303,140 @@
               </g>
             </svg>
             <div style="flex:1;min-width:0">
-              <div class="trow"><span class="k">Lot</span><span class="v">CUI-VG-0248</span></div>
-              <div class="trow"><span class="k">Tannerie</span><span class="v">Aïn Nokbi — Fès</span></div>
-              <div class="trow"><span class="k">Tannage</span><span class="v">Végétal · mimosa</span></div>
-              <div class="trow"><span class="k">Surface</span><span class="v">142 m² · 61 peaux</span></div>
-              <div class="trow"><span class="k">Contrôle</span><span class="v">Conforme — 14.07.2026</span></div>
+              <div class="trow"><span class="k">الدفعة</span><span class="v">CUI-VG-0248</span></div>
+              <div class="trow"><span class="k">المدبغة</span><span class="v">عين النقبي — فاس</span></div>
+              <div class="trow"><span class="k">الدباغة</span><span class="v">نباتية · ميموزا</span></div>
+              <div class="trow"><span class="k">المساحة</span><span class="v">142 م² · 61 قطعة</span></div>
+              <div class="trow"><span class="k">المراقبة</span><span class="v">مطابقة — 14.07.2026</span></div>
             </div>
           </div>
-          <p class="tnote">→ Le même QR, scanné par vos clients export, prouve l'origine de chaque cuir.</p>
+          <p class="tnote">← رمز QR نفسه، حين يمسحه زبناؤكم في التصدير، يُثبت مصدر كل جلد.</p>
         </div>
 
         <div class="ppanel" role="tabpanel">
-          <div class="drow"><span>Vachette végétal 1,8 mm <span class="q">· 60 m²</span></span><span class="q">CUI-VG-101</span></div>
-          <div class="drow"><span>Semelle TPR ville 36–46 <span class="q">· 400 paires</span></span><span class="q">SEM-TPR-42</span></div>
-          <div class="drow"><span>Fil poissé 0,8 mm <span class="q">· 24 bobines</span></span><span class="q">FRN-FIL-77</span></div>
-          <div class="dtot"><span>Estimation</span><span class="m">28 640 MAD HT</span></div>
-          <p style="font-size:13.8px;color:rgba(19,42,70,.65);margin:2px 0 18px">Réponse ferme sous 24 h ouvrées — prix bloqués 15 jours.</p>
-          <button class="mini" type="button" style="padding:12px 22px;font-size:11.5px">Envoyer la demande</button>
+          <div class="drow"><span>جلد بقر نباتي 1,8 مم <span class="q">· 60 م²</span></span><span class="q">CUI-VG-101</span></div>
+          <div class="drow"><span>نعل TPR للمدينة 36–46 <span class="q">· 400 زوج</span></span><span class="q">SEM-TPR-42</span></div>
+          <div class="drow"><span>خيط مشمّع 0,8 مم <span class="q">· 24 بكرة</span></span><span class="q">FRN-FIL-77</span></div>
+          <div class="dtot"><span>تقدير</span><span class="m">28 640 درهم خارج الرسوم</span></div>
+          <p style="font-size:13.8px;color:rgba(19,42,70,.65);margin:2px 0 18px">رد نهائي خلال 24 ساعة عمل — أسعار ثابتة لمدة 15 يوماً.</p>
+          <button class="mini" type="button" style="padding:12px 22px;font-size:11.5px">أرسل الطلب</button>
         </div>
       </div>
 
       <div class="feat">
         <div class="fitem rv">
           <span class="no">01</span>
-          <div><h3>Catalogue en ligne</h3><p>1 400 références avec fiche technique, stock réel et prix dégressifs. Fini le déplacement pour vérifier une disponibilité.</p></div>
+          <div><h3>كتالوغ إلكتروني</h3><p>1400 مرجع مع بطاقة تقنية ومخزون فعلي وأسعار تنازلية. انتهى التنقّل للتأكد من توفّر مادة.</p></div>
         </div>
         <div class="fitem rv d1">
           <span class="no">02</span>
-          <div><h3>Traçabilité par lot</h3><p>Chaque carton porte un QR : tannerie d'origine, date, numéro de lot, contrôle qualité. L'argument qui ouvre les marchés export.</p></div>
+          <div><h3>تتبّع لكل دفعة</h3><p>كل صندوق يحمل رمز QR: المدبغة الأصلية، والتاريخ، ورقم الدفعة، ومراقبة الجودة. الحجة التي تفتح أسواق التصدير.</p></div>
         </div>
         <div class="fitem rv d2">
           <span class="no">03</span>
-          <div><h3>Devis &amp; réassort</h3><p>Devis en 24 h, historique complet, réassort du dernier lot en un clic — depuis l'atelier, le soir, sur téléphone.</p></div>
+          <div><h3>عرض السعر وإعادة الطلب</h3><p>عرض سعر خلال 24 ساعة، وسجل كامل، وإعادة طلب آخر دفعة بنقرة واحدة — من الورشة، مساءً، عبر الهاتف.</p></div>
         </div>
         <div class="rv d3" style="padding-top:26px">
-          <a class="alink" href="plateforme.html">Découvrir la plateforme <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+          <a class="alink" href="plateforme.html">اكتشف المنصة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 · CIRCUIT ============ -->
+<!-- ============ 04 · المسار ============ -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="sec-no">04</span><h2>Le circuit, sans surprise</h2></div>
-      <p class="note">De l'échantillon<br>à la livraison tracée</p>
+      <div><span class="sec-no">04</span><h2>المسار، دون مفاجآت</h2></div>
+      <p class="note">من العيّنة<br>إلى التسليم المتتبَّع</p>
     </div>
 
     <div class="steps">
       <div class="step rv">
-        <span class="no">01</span><h3>Échantillons</h3>
-        <p>Vous recevez les matières candidates, gratuitement, avec leurs fiches techniques complètes.</p>
-        <p class="d">Sous 48 h</p>
+        <span class="no">01</span><h3>العيّنات</h3>
+        <p>تتوصّلون بالمواد المرشّحة، مجاناً، مرفقة ببطاقاتها التقنية الكاملة.</p>
+        <p class="d">خلال 48 ساعة</p>
       </div>
       <div class="step rv d1">
-        <span class="no">02</span><h3>Devis ferme</h3>
-        <p>Cahier des charges reçu, prix bloqués 15 jours, dégressifs affichés dès la première ligne.</p>
-        <p class="d">Sous 24 h</p>
+        <span class="no">02</span><h3>عرض سعر نهائي</h3>
+        <p>فور توصّلنا بدفتر التحمّلات: أسعار ثابتة 15 يوماً، والتخفيضات التدريجية معروضة من السطر الأول.</p>
+        <p class="d">خلال 24 ساعة</p>
       </div>
       <div class="step rv d2">
-        <span class="no">03</span><h3>Préparation contrôlée</h3>
-        <p>Chaque lot est vérifié, étiqueté et scellé au dépôt — carton kraft, une encre, QR de lot.</p>
-        <p class="d">Contrôle 100 % des lots</p>
+        <span class="no">03</span><h3>تحضير مراقَب</h3>
+        <p>كل دفعة تُفحص وتُعنون وتُختم في المستودع — صندوق كرافت، وحبر واحد، ورمز QR للدفعة.</p>
+        <p class="d">مراقبة 100 % من الدفعات</p>
       </div>
       <div class="step rv d3">
-        <span class="no">04</span><h3>Livraison tracée</h3>
-        <p>48 h sur Fès, Casablanca et Marrakech. Le QR du carton archive le lot dans votre historique.</p>
-        <p class="d">48 h ouvrées</p>
+        <span class="no">04</span><h3>تسليم متتبَّع</h3>
+        <p>48 ساعة في فاس والدار البيضاء ومراكش. رمز QR على الصندوق يحفظ الدفعة في سجلكم.</p>
+        <p class="d">48 ساعة عمل</p>
       </div>
     </div>
 
     <div class="rv" style="margin-top:44px">
-      <a class="alink" href="savoir-faire.html">Voir le savoir-faire en détail <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+      <a class="alink" href="savoir-faire.html">اطّلع على طريقة عملنا بالتفصيل <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ============ BANDE KRAFT ============ -->
+<!-- ============ شريط الكرافت ============ -->
 <div class="kraft-band">
   <div class="in">
-    <span>Bande de scellage · carton kraft · 1 encre marine</span>
-    <span>Lot ____ · Maroc</span>
+    <span>شريط الختم · صندوق كرافت · حبر بحري واحد</span>
+    <span>الدفعة ____ · المغرب</span>
   </div>
 </div>
 
-<!-- ============ 05 · TÉMOIGNAGES ============ -->
+<!-- ============ 05 · شهادات ============ -->
 <section class="sec paper">
   <div class="wrap">
     <div class="sec-head rv">
-      <div><span class="sec-no">05</span><h2>Ils fabriquent avec nous</h2></div>
-      <p class="note">120+ ateliers<br>3 villes</p>
+      <div><span class="sec-no">05</span><h2>يصنعون معنا</h2></div>
+      <p class="note">أكثر من 120 ورشة<br>3 مدن</p>
     </div>
 
     <div class="g3">
       <blockquote class="quote rv" style="margin:0">
-        <span class="gm" aria-hidden="true">“</span>
-        <p>Trois fournisseurs testés en deux ans. On est restés pour une raison simple&nbsp;: le lot annoncé est le lot livré, au mètre près.</p>
-        <footer class="who"><b>Atelier Skalli</b><span>Fabricant · Fès</span></footer>
+        <span class="gm" aria-hidden="true">”</span>
+        <p>جرّبنا ثلاثة موردين في سنتين. بقينا هنا لسبب بسيط: الدفعة المعلنة هي الدفعة المسلَّمة، بالمتر الواحد.</p>
+        <footer class="who"><b>ورشة السقلي</b><span>صانع · فاس</span></footer>
       </blockquote>
       <blockquote class="quote rv d1" style="margin:0">
-        <span class="gm" aria-hidden="true">“</span>
-        <p>Le réassort se fait le soir, en cinq minutes, depuis le téléphone. Avant, c'était une matinée perdue au marché des fournitures.</p>
-        <footer class="who"><b>Chaussures Benkirane</b><span>Production · Casablanca</span></footer>
+        <span class="gm" aria-hidden="true">”</span>
+        <p>إعادة الطلب تتم مساءً، في خمس دقائق، من الهاتف. قبل ذلك، كان صباح كامل يضيع في سوق اللوازم.</p>
+        <footer class="who"><b>أحذية بنكيران</b><span>الإنتاج · الدار البيضاء</span></footer>
       </blockquote>
       <blockquote class="quote rv d2" style="margin:0">
-        <span class="gm" aria-hidden="true">“</span>
-        <p>L'audit export voulait l'origine de chaque cuir. On l'avait, en un scan. C'est ce QR qui nous a fait gagner le contrat.</p>
-        <footer class="who"><b>Manufacture Louz</b><span>Export · Marrakech</span></footer>
+        <span class="gm" aria-hidden="true">”</span>
+        <p>طلب مدقّق التصدير مصدر كل جلد. كان لدينا، بمسح واحد. هذا الرمز هو ما جعلنا نربح الصفقة.</p>
+        <footer class="who"><b>مصنع لوز</b><span>التصدير · مراكش</span></footer>
       </blockquote>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
+<!-- ============ نداء ============ -->
 <section class="sec tight">
   <div class="wrap">
     <div class="cta-panel rv">
       <img class="watermark" src="assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
       <div class="split">
         <div>
-          <p class="eyebrow">Premier contact</p>
-          <h2 style="margin-top:14px">Votre prochaine production commence par un devis.</h2>
-          <p class="lede">Envoyez votre cahier des charges — matières, quantités, délais. Réponse ferme sous 24&nbsp;h ouvrées, échantillons sous 48&nbsp;h.</p>
+          <p class="eyebrow">أول اتصال</p>
+          <h2 style="margin-top:14px">إنتاجكم القادم يبدأ بعرض سعر.</h2>
+          <p class="lede">أرسلوا دفتر تحمّلاتكم — المواد، والكميات، والآجال. رد نهائي خلال 24 ساعة عمل، وعيّنات خلال 48 ساعة.</p>
           <div class="btns">
-            <a class="btn" href="contact.html">Demander un devis <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+            <a class="btn" href="contact.html">اطلب عرض سعر <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
             <a class="btn ghost light" href="tel:+212522468000">+212 5 22 46 80 00</a>
           </div>
         </div>
         <div>
-          <div class="cinfo"><span class="k">Email</span><span class="v"><a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a></span></div>
-          <div class="cinfo"><span class="k">Téléphone</span><span class="v"><a href="tel:+212522468000">+212 5 22 46 80 00</a></span></div>
-          <div class="cinfo"><span class="k">Adresse</span><span class="v">Zone industrielle Sidi Bernoussi<br>Casablanca — Maroc</span></div>
-          <div class="cinfo"><span class="k">Horaires</span><span class="v">Lun – Sam · 8 h – 18 h</span></div>
+          <div class="cinfo"><span class="k">البريد الإلكتروني</span><span class="v"><a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a></span></div>
+          <div class="cinfo"><span class="k">الهاتف</span><span class="v"><a href="tel:+212522468000">+212 5 22 46 80 00</a></span></div>
+          <div class="cinfo"><span class="k">العنوان</span><span class="v">المنطقة الصناعية سيدي البرنوصي<br>الدار البيضاء — المغرب</span></div>
+          <div class="cinfo"><span class="k">أوقات العمل</span><span class="v">الاثنين – السبت · 8:00 – 18:00</span></div>
         </div>
       </div>
     </div>
@@ -442,49 +453,50 @@
           <img class="ico" src="assets/logo/shoepartner-marque-fond-fonce.svg" alt="">
           <span class="wm" style="--wm:var(--creme)">Shoe Partner</span>
         </span>
-        <span class="ar" lang="ar">شو بارتنر</span>
-        <p>Fournisseur des ateliers de la chaussure — depuis 2018, de Fès à Marrakech.</p>
+        <span class="ar">شو بارتنر</span>
+        <p>مورّد ورشات صناعة الأحذية — منذ 2018، من فاس إلى مراكش.</p>
       </div>
       <div>
-        <h4>Navigation</h4>
+        <h4>التصفح</h4>
         <ul class="flinks">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="matieres.html">Matières</a></li>
-          <li><a href="plateforme.html">Plateforme</a></li>
-          <li><a href="savoir-faire.html">Savoir-faire</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="matieres.html">المواد</a></li>
+          <li><a href="plateforme.html">المنصة</a></li>
+          <li><a href="savoir-faire.html">طريقة عملنا</a></li>
+          <li><a href="a-propos.html">من نحن</a></li>
+          <li><a href="fr/index.html" hreflang="fr" lang="fr">Français</a></li>
         </ul>
       </div>
       <div>
-        <h4>Matières</h4>
+        <h4>المواد</h4>
         <ul class="flinks">
-          <li><a href="matieres.html#cuirs">Cuirs</a></li>
-          <li><a href="matieres.html#semelles">Semelles</a></li>
-          <li><a href="matieres.html#textiles">Textiles &amp; doublures</a></li>
-          <li><a href="matieres.html#fournitures">Fournitures</a></li>
+          <li><a href="matieres.html#cuirs">الجلود</a></li>
+          <li><a href="matieres.html#semelles">النعال</a></li>
+          <li><a href="matieres.html#textiles">الأقمشة والبطانات</a></li>
+          <li><a href="matieres.html#fournitures">اللوازم</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contact</h4>
+        <h4>اتصل بنا</h4>
         <p class="foot-contact">
           <a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a><br>
           <a href="tel:+212522468000">+212 5 22 46 80 00</a><br>
-          ZI Sidi Bernoussi — Casablanca<br>
-          @shoepartner.ma
+          المنطقة الصناعية سيدي البرنوصي — الدار البيضاء<br>
+          <span class="ltr">@shoepartner.ma</span>
         </p>
       </div>
     </div>
     <div class="foot-bot">
-      <span>© 2026 Shoe Partner SARL — Casablanca, Maroc</span>
-      <span><a href="charte-graphique.html">Charte graphique</a> · <a href="contact.html">Mentions légales</a></span>
+      <span>© 2026 Shoe Partner SARL — الدار البيضاء، المغرب</span>
+      <span><a href="contact.html#mentions">المعلومات القانونية</a></span>
     </div>
   </div>
 </footer>
 
-<button class="totop" aria-label="Retour en haut">
+<button class="totop" aria-label="العودة إلى الأعلى">
   <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15V2M2 8l6-6 6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
 </button>
 
-<script src="assets/js/site.js?v=2"></script>
+<script src="assets/js/site.js?v=3"></script>
 </body>
 </html>

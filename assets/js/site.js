@@ -28,6 +28,16 @@
     });
   }
 
+  /* ---------- mémoire de la langue ----------
+     L'arabe est la langue principale du site. On retient le choix contraire
+     pour que la page d'accueil s'ouvre directement en français au retour
+     — la bascule elle-même reste toujours visible dans l'en-tête. */
+  [].forEach.call(document.querySelectorAll('.lang,.lang-m'), function(a){
+    a.addEventListener('click', function(){
+      try{ localStorage.setItem('sp-lang', a.getAttribute('hreflang') || 'ar'); }catch(e){}
+    });
+  });
+
   /* ---------- onglets (maquette plateforme) ---------- */
   var tabs = [].slice.call(document.querySelectorAll('.ptab'));
   var panels = [].slice.call(document.querySelectorAll('.ppanel'));
@@ -74,12 +84,14 @@
   }
   function startCount(el){
     var target = parseInt(el.getAttribute('data-n'), 10);
-    if(reduced){ el.textContent = fmt(target); return; }
+    /* data-raw : pas de séparateur de milliers — une année s'écrit 2018, pas 2 018 */
+    var show = el.hasAttribute('data-raw') ? String : fmt;
+    if(reduced){ el.textContent = show(target); return; }
     var t0 = Date.now();
     var iv = setInterval(function(){
       var p = Math.min((Date.now() - t0) / 1400, 1);
       p = 1 - Math.pow(1 - p, 3);
-      el.textContent = fmt(Math.round(target * p));
+      el.textContent = show(Math.round(target * p));
       if(p >= 1) clearInterval(iv);
     }, 16);
   }
