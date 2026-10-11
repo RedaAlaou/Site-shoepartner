@@ -144,19 +144,38 @@
     window.scrollTo({top:0, behavior: reduced ? 'auto' : 'smooth'});
   });
 
-  /* ---------- formulaire de devis (validation côté client) ---------- */
+  /* ---------- WhatsApp : construction d'un lien prérempli ---------- */
+  var WA = '212647907032';
+  function waLink(text){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
+
+  /* ---------- formulaire de devis → message WhatsApp ---------- */
   var form = document.querySelector('form[data-quote]');
   if(form){
+    /* ?sujet=cuir présélectionne le besoin */
+    try{
+      var sujet = new URLSearchParams(location.search).get('sujet');
+      var sel = form.querySelector('select#f-sujet');
+      if(sujet && sel && sel.querySelector('option[value="' + sujet + '"]')) sel.value = sujet;
+    }catch(e){}
     form.addEventListener('submit', function(e){
       e.preventDefault();
       var ok = true;
       [].forEach.call(form.querySelectorAll('[required]'), function(inp){
         var field = inp.closest('.field');
-        var bad = !inp.value.trim() || (inp.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(inp.value));
+        var bad = !inp.value.trim();
         field.classList.toggle('bad', bad);
         if(bad && ok){ inp.focus(); ok = false; }
       });
       if(!ok) return;
+      var lines = [form.getAttribute('data-intro') || ''];
+      [].forEach.call(form.querySelectorAll('input,select,textarea'), function(inp){
+        if(!inp.value.trim()) return;
+        var lab = form.querySelector('label[for="' + inp.id + '"]');
+        var name = lab ? lab.childNodes[0].textContent.trim() : inp.name;
+        var val = inp.tagName === 'SELECT' ? inp.options[inp.selectedIndex].text : inp.value.trim();
+        lines.push('• ' + name + ' : ' + val);
+      });
+      window.open(waLink(lines.join('\n')), '_blank', 'noopener');
       form.style.display = 'none';
       var okBox = document.querySelector('.formok');
       if(okBox){
@@ -171,4 +190,105 @@
       });
     });
   }
+
+  /* ---------- configurateur de lot (page Chaussures) ---------- */
+  var cfg = document.querySelector('[data-cfg]');
+  if(cfg){
+    var grid = cfg.querySelector('[data-sizes-grid]');
+    var totalEl = cfg.querySelector('[data-cfg-total]');
+    var send = cfg.querySelector('[data-cfg-send]');
+    var nameEl = cfg.querySelector('[data-cfg-name]');
+    var colorEl = cfg.querySelector('[data-cfg-color]');
+    var explodeBtn = cfg.querySelector('[data-explode]');
+    var models = [].slice.call(cfg.querySelectorAll('[data-model]'));
+    var colors = [].slice.call(cfg.querySelectorAll('[data-color]'));
+    var qty = {};   /* quantités gardées d'un modèle à l'autre */
+
+    var cur = function(list){ return list.filter(function(b){ return b.classList.contains('on'); })[0] || list[0]; };
+    function emit(){
+      var m = cur(models), c = cur(colors);
+      if(nameEl) nameEl.textContent = m.textContent;
+      if(colorEl) colorEl.textContent = c.getAttribute('title');
+      document.dispatchEvent(new CustomEvent('sp:config', {detail:{
+        model: m.getAttribute('data-model'), color: c.getAttribute('data-color'),
+        explode: explodeBtn && explodeBtn.getAttribute('aria-pressed') === 'true'
+      }}));
+      update();
+    }
+    function sizes(){
+      var r = (cur(models).getAttribute('data-sizes') || '39-46').split('-');
+      var out = []; for(var s = +r[0]; s <= +r[1]; s++) out.push(s); return out;
+    }
+    function buildGrid(){
+      grid.innerHTML = '';
+      sizes().forEach(function(s){
+        var box = document.createElement('label'); box.className = 'size';
+        box.innerHTML = '<span>' + s + '</span><input type="number" min="0" max="999" inputmode="numeric" placeholder="0" aria-label="' + s + '">';
+        var inp = box.querySelector('input');
+        if(qty[s]) inp.value = qty[s];
+        inp.addEventListener('input', function(){ qty[s] = Math.max(0, parseInt(inp.value, 10) || 0); update(); });
+        grid.appendChild(box);
+      });
+      update();
+    }
+    function update(){
+      var tot = 0, parts = [];
+      sizes().forEach(function(s, i){
+        var q = qty[s] || 0; tot += q;
+        var box = grid.children[i]; if(box) box.classList.toggle('has', q > 0);
+        if(q) parts.push(s + ' × ' + q);
+      });
+      totalEl.textContent = tot;
+      var d = cfg.dataset;
+      var msg = [d.intro,
+        '• ' + d.lModel + ' : ' + cur(models).textContent,
+        '• ' + d.lColor + ' : ' + cur(colors).getAttribute('title'),
+        '• ' + d.lSizes + ' : ' + (parts.join(', ') || '—'),
+        '• ' + d.lTotal + ' : ' + tot + ' ' + d.lPairs].join('\n');
+      send.href = waLink(msg);
+      send.setAttribute('aria-disabled', tot ? 'false' : 'true');
+    }
+    send.addEventListener('click', function(e){
+      if(totalEl.textContent === '0'){
+        e.preventDefault();
+        var first = grid.querySelector('input'); if(first) first.focus();
+        grid.animate && grid.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}], {duration:300});
+      }
+    });
+    /* série type : répartition en cloche centrée sur la pointure médiane */
+    [].forEach.call(cfg.querySelectorAll('[data-run]'), function(b){
+      b.addEventListener('click', function(){
+        var n = +b.getAttribute('data-run'), ss = sizes();
+        ss.forEach(function(s){ qty[s] = 0; });
+        if(n){
+          var mid = (ss.length - 1) / 2, w = ss.map(function(_, i){ return Math.exp(-Math.pow((i - mid) / (ss.length / 3.2), 2)); });
+          var sum = w.reduce(function(a, b){ return a + b; }, 0), left = n;
+          var alloc = w.map(function(x){ var q = Math.floor(n * x / sum); left -= q; return q; });
+          var order = w.map(function(x, i){ return i; }).sort(function(a, b){ return w[b] - w[a]; });
+          for(var k = 0; left > 0; k++, left--) alloc[order[k % order.length]]++;
+          ss.forEach(function(s, i){ qty[s] = alloc[i]; });
+        }
+        buildGrid();
+      });
+    });
+    models.forEach(function(b){ b.addEventListener('click', function(){
+      models.forEach(function(x){ x.classList.toggle('on', x === b); }); buildGrid(); emit();
+    }); });
+    colors.forEach(function(b){ b.addEventListener('click', function(){
+      colors.forEach(function(x){ x.classList.toggle('on', x === b); }); emit();
+    }); });
+    if(explodeBtn) explodeBtn.addEventListener('click', function(){
+      explodeBtn.setAttribute('aria-pressed', String(explodeBtn.getAttribute('aria-pressed') !== 'true')); emit();
+    });
+    buildGrid(); emit();
+  }
+
+  /* ---------- 3D : filet de sécurité ----------
+     Si le module 3D n'a pas démarré (navigateur ancien, WebGL coupé),
+     les blocs basculent sur leur version fixe. */
+  setTimeout(function(){
+    [].forEach.call(document.querySelectorAll('[data-3d]'), function(el){
+      if(!el.classList.contains('ready')) el.classList.add('no3d');
+    });
+  }, 5000);
 })();

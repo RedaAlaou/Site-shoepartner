@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* العربية هي لغة الموقع الأساسية. من اختار الفرنسية سابقاً يعود إليها مباشرة،
+   قبل أول عرض للصفحة — أي دون وميض. */
+(function(){try{if(localStorage.getItem('sp-lang')==='fr')location.replace('fr/index.html');}catch(e){}})();
+</script>
+<title>شو بارتنر — منصة رقمنة ورشات صناعة الأحذية</title>
+<meta name="description" content="منصة واحدة لإدارة ورشة الأحذية: أوامر الإنتاج، والمخزون الفعلي، وتتبّع الدفعات برمز QR، وتموين المواد. تشتغل من هاتف الورشة. فاس · الدار البيضاء · مراكش.">
+<meta property="og:title" content="شو بارتنر — منصة رقمنة ورشات صناعة الأحذية">
+<meta property="og:description" content="ورشتكم كاملة على شاشة واحدة: الإنتاج، والمخزون، والتتبّع، والتموين. صُمّمت للورشات المغربية.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_MA">
+<meta property="og:locale:alternate" content="fr_MA">
+<link rel="alternate" hreflang="ar" href="index.html">
+<link rel="alternate" hreflang="fr" href="fr/index.html">
+<link rel="alternate" hreflang="x-default" href="index.html">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css?v=3">
+</head>
+<body>
+
+<header class="site">
+  <div class="site-in">
+    <a href="index.html" class="lockup" aria-label="شو بارتنر — الصفحة الرئيسية">
+      <img class="ico" src="assets/logo/shoepartner-marque-couleur.svg" alt="">
+      <span class="wm">Shoe Partner</span>
+    </a>
+    <nav class="main" aria-label="القائمة الرئيسية">
+      <a class="nl" href="plateforme.html">المنصة</a>
+      <a class="nl" href="matieres.html">التموين</a>
+      <a class="nl" href="savoir-faire.html">طريقة عملنا</a>
+      <a class="nl" href="a-propos.html">من نحن</a>
+      <a class="btn sm" href="contact.html">عرض تجريبي</a>
+    </nav>
+    <div class="hactions">
+      <a class="lang" href="fr/index.html" hreflang="fr" lang="fr" title="Voir le site en français" aria-label="Voir le site en français"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.3c2.1 2.1 2.1 11.3 0 13.4M8 1.3c-2.1 2.1-2.1 11.3 0 13.4M1.5 6h13M1.5 10h13" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="lang-name">Français</span><span class="lang-code">FR</span></a>
+      <button class="burger" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 26 18" aria-hidden="true">
+          <line x1="1" y1="2"  x2="25" y2="2"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="9"  x2="25" y2="9"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="16" x2="25" y2="16" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="mnav-top">
+    <span class="lockup">
+      <img class="ico" src="assets/logo/shoepartner-marque-couleur.svg" alt="">
+      <span class="wm">Shoe Partner</span>
+    </span>
+    <button class="close" aria-label="إغلاق القائمة">
+      <svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true">
+        <line x1="2" y1="2" x2="20" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="20" y1="2" x2="2" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <a class="nl" href="index.html">الرئيسية <span>00</span></a>
+  <a class="nl" href="plateforme.html">المنصة <span>01</span></a>
+  <a class="nl" href="matieres.html">التموين <span>02</span></a>
+  <a class="nl" href="savoir-faire.html">طريقة عملنا <span>03</span></a>
+  <a class="nl" href="a-propos.html">من نحن <span>04</span></a>
+  <a class="nl lang-m" href="fr/index.html" hreflang="fr" lang="fr">Français <span>FR</span></a>
+  <a class="btn" href="contact.html">اطلب عرضاً تجريبياً</a>
+</div>
+
+<main>
+
+<!-- ============ الواجهة ============ -->
+<section class="hero">
+  <img class="watermark" src="assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+  <div class="hero-in">
+    <div>
+      <p class="eyebrow">منصة رقمنة ورشات صناعة الأحذية · المغرب</p>
+      <h1 style="margin-top:20px">ورشتكم كاملة،<br><span class="alt">على شاشة واحدة.</span></h1>
+      <p class="lede">
+        أوامر الإنتاج، والمخزون الفعلي، وتتبّع الدفعات، وتموين المواد — في منصة واحدة
+        صُمّمت لورشات الأحذية المغربية، وتشتغل من هاتف الورشة كما تشتغل من مكتب المسيّر.
+      </p>
+      <div class="btns">
+        <a class="btn" href="contact.html">اطلب عرضاً تجريبياً <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+        <a class="btn ghost light" href="plateforme.html">اكتشف المنصة</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img class="mk" src="assets/logo/shoepartner-marque-fond-fonce.svg" alt="علامة شو بارتنر — قطعة جلد وأثر نعل">
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="row">
+      <div class="stat rv">   <div class="n"><span data-n="120">0</span><small>+</small></div><div class="l">ورشة تشتغل بالمنصة</div></div>
+      <div class="stat rv d1"><div class="n"><span data-n="4">0</span></div><div class="l">وحدات مندمجة</div></div>
+      <div class="stat rv d2"><div class="n"><span data-n="48">0</span><small>&nbsp;ساعة</small></div><div class="l">مدة الانطلاق</div></div>
+      <div class="stat rv d3"><div class="n"><span data-n="1400">0</span></div><div class="l">مرجع في كتالوغ التموين</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ الشريط ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <div class="seq">
+      <span>أوامر إنتاج ومراحلها</span><i class="dot"></i>
+      <span>مخزون فعلي، محيَّن لحظة بلحظة</span><i class="dot"></i>
+      <span>تنبيه قبل النفاد</span><i class="dot"></i>
+      <span>بطاقة دفعة برمز QR</span><i class="dot"></i>
+      <span>طلب المواد من داخل المنصة</span><i class="dot"></i>
+      <span>تشتغل من الهاتف</span><i class="dot"></i>
+    </div>
+    <div class="seq">
+      <span>أوامر إنتاج ومراحلها</span><i class="dot"></i>
+      <span>مخزون فعلي، محيَّن لحظة بلحظة</span><i class="dot"></i>
+      <span>تنبيه قبل النفاد</span><i class="dot"></i>
+      <span>بطاقة دفعة برمز QR</span><i class="dot"></i>
+      <span>طلب المواد من داخل المنصة</span><i class="dot"></i>
+      <span>تشتغل من الهاتف</span><i class="dot"></i>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 01 · من الورق إلى الشاشة ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">01</span><h2>من الورق إلى الشاشة</h2></div>
+      <p class="note">دفتر وواتساب<br>مقابل منصة واحدة</p>
+    </div>
+
+    <div class="g2">
+      <article class="pole mat rv">
+        <span class="pk">اليوم — على الورق</span>
+        <h3>ما يضيع في الطريق</h3>
+        <p>
+          تُسجَّل الطلبية في دفتر، ويُسأل عن المخزون بمكالمة، ويُتفق على الأجل في واتساب.
+          ثم يأتي يوم يسأل فيه الزبون عن مصدر دفعة — فيبدأ البحث من الصفر.
+        </p>
+        <ul>
+          <li>أوامر إنتاج متفرّقة بين الدفتر والذاكرة</li>
+          <li>مخزون لا يُعرف إلا حين ينفد وسط الإنتاج</li>
+          <li>دفعات بلا أثر مكتوب — ولا دليل عند التصدير</li>
+          <li>إعادة الطلب تُعاد صياغتها في كل مرة</li>
+        </ul>
+        <p class="foot">الوضع في أغلب الورشات المغربية</p>
+      </article>
+
+      <article class="pole dig rv d1">
+        <span class="pk">مع شو بارتنر — على المنصة</span>
+        <h3>ما تراه الورشة فوراً</h3>
+        <p>
+          كل أمر إنتاج له بطاقة، وكل مادة لها رصيد، وكل دفعة لها رمز. المعلومة تُدخَل
+          مرة واحدة — عند القص أو عند التسلّم — ثم تخدم الورشة كلها.
+        </p>
+        <ul>
+          <li>أوامر الإنتاج ومراحلها، محيَّنة لحظة بلحظة</li>
+          <li>مخزون فعلي، وتنبيه قبل النفاد بوقت كافٍ</li>
+          <li>بطاقة دفعة برمز QR، محفوظة عشر سنوات</li>
+          <li>طلب المواد وإعادة الطلب من داخل المنصة نفسها</li>
+        </ul>
+        <p class="foot">app.shoepartner.ma</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · الوحدات ============ -->
+<section class="sec paper">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">02</span><h2>أربع وحدات، منصة واحدة</h2></div>
+      <p class="note">مندمجة فيما بينها<br>تُفعَّل واحدة واحدة</p>
+    </div>
+
+    <div class="g4">
+      <a class="card rv" href="plateforme.html#production">
+        <span class="pic" aria-hidden="true">
+          <svg viewBox="0 0 104 78">
+            <rect x="14" y="15" width="50" height="11" fill="#132A46"/>
+            <rect x="30" y="33" width="56" height="11" fill="#C59D53"/>
+            <rect x="14" y="51" width="34" height="11" fill="#132A46"/>
+            <path d="M14 69h76" stroke="#132A46" stroke-width="2.2" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="bd">
+          <span class="ref">الوحدة 01</span>
+          <h3>الإنتاج</h3>
+          <p>أوامر الإنتاج، ومراحلها من القص إلى التجميع، والكميات المنجزة، والآجال. تعرفون أين وصل كل موديل دون أن تجولوا بين الطاولات.</p>
+          <span class="go"><span class="alink">شاهد الوحدة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+        </span>
+      </a>
+
+      <a class="card rv d1" href="plateforme.html#stock">
+        <span class="pic" aria-hidden="true">
+          <svg viewBox="0 0 104 78">
+            <rect x="12" y="13" width="80" height="4" fill="#132A46"/>
+            <rect x="12" y="41" width="80" height="4" fill="#132A46"/>
+            <rect x="12" y="69" width="80" height="4" fill="#132A46"/>
+            <rect x="18" y="21" width="22" height="20" fill="#C59D53"/>
+            <rect x="46" y="21" width="22" height="20" fill="#C59D53"/>
+            <rect x="18" y="49" width="22" height="20" fill="#C59D53"/>
+            <rect x="47" y="50" width="20" height="18" fill="none" stroke="#132A46" stroke-width="2.2" stroke-dasharray="3.4 4.2"/>
+          </svg>
+        </span>
+        <span class="bd">
+          <span class="ref">الوحدة 02</span>
+          <h3>المخزون</h3>
+          <p>رصيد كل مادة، ينقص تلقائياً مع كل أمر إنتاج. عتبة تنبيه لكل مرجع، وجرد يُغلق في ساعة بدل يوم كامل.</p>
+          <span class="go"><span class="alink">شاهد الوحدة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+        </span>
+      </a>
+
+      <a class="card rv d2" href="plateforme.html#tracabilite">
+        <span class="pic" aria-hidden="true">
+          <svg viewBox="0 0 104 78">
+            <path d="M14 8h22v22H14zM20 14h10v10H20z" fill="#132A46" fill-rule="evenodd"/>
+            <path d="M68 8h22v22H68zM74 14h10v10H74z" fill="#132A46" fill-rule="evenodd"/>
+            <path d="M14 48h22v22H14zM20 54h10v10H20z" fill="#132A46" fill-rule="evenodd"/>
+            <rect x="46" y="14" width="8" height="8" fill="#C59D53"/>
+            <rect x="46" y="36" width="8" height="8" fill="#C59D53"/>
+            <rect x="68" y="48" width="8" height="8" fill="#C59D53"/>
+            <rect x="82" y="62" width="8" height="8" fill="#C59D53"/>
+            <rect x="68" y="62" width="8" height="8" fill="#132A46"/>
+            <rect x="46" y="58" width="8" height="8" fill="#132A46"/>
+          </svg>
+        </span>
+        <span class="bd">
+          <span class="ref">الوحدة 03</span>
+          <h3>التتبّع</h3>
+          <p>رمز QR لكل دفعة داخلة وكل دفعة خارجة: المصدر، والتاريخ، والمراقبة. الدليل الذي يطلبه الآمرون بالشراء الأوروبيون.</p>
+          <span class="go"><span class="alink">شاهد الوحدة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+        </span>
+      </a>
+
+      <a class="card rv d3" href="plateforme.html#sourcing">
+        <span class="pic" aria-hidden="true">
+          <svg viewBox="0 0 104 78">
+            <path d="M18 16C30 6 56 4 72 10c18 7 24 24 18 40-6 16-28 24-48 20C22 66 8 52 10 36c1-9 2-15 8-20Z" fill="#C59D53"/>
+            <path d="M26 22c10-8 30-10 42-5 14 6 19 18 14 30" fill="none" stroke="#132A46" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="bd">
+          <span class="ref">الوحدة 04</span>
+          <h3>التموين</h3>
+          <p>كتالوغ من 1400 مرجع — جلود، ونعال، وأقمشة، ولوازم — مربوط بمخزونكم. حين ينزل الرصيد، يُصاغ الطلب من داخل المنصة.</p>
+          <span class="go"><span class="alink">شاهد الوحدة <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></span></span>
+        </span>
+      </a>
+    </div>
+
+    <p class="note rv" style="margin-top:26px">
+      لا يلزم تفعيل الأربع دفعةً واحدة — تبدأ أغلب الورشات بالإنتاج والمخزون.
+    </p>
+  </div>
+</section>
+
+<!-- ============ 03 · المنصة ============ -->
+<section class="sec dark">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">03</span><h2>المنصة</h2></div>
+      <p class="note">app.shoepartner.ma<br>داخل المتصفح، دون تثبيت</p>
+    </div>
+
+    <div class="split top">
+      <div class="browser rv" aria-label="معاينة المنصة">
+        <div class="tb">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="url">app.shoepartner.ma</span>
+        </div>
+        <div class="ptabs" role="tablist" aria-label="وحدات المنصة">
+          <button class="ptab on" role="tab" aria-selected="true"  type="button">الإنتاج</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">المخزون</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">التتبّع</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">التموين</button>
+        </div>
+
+        <div class="ppanel on" role="tabpanel">
+          <div class="prow"><span class="rf">OF-2418</span><span class="nm">حذاء مدينة جلد أسود · 240 زوج</span><span class="chip cmd">الخياطة</span><button class="mini" type="button">البطاقة</button></div>
+          <div class="prow"><span class="rf">OF-2419</span><span class="nm">صندل صيفي · 180 زوج</span><span class="chip cmd">التجميع</span><button class="mini" type="button">البطاقة</button></div>
+          <div class="prow"><span class="rf">OF-2420</span><span class="nm">حذاء سلامة S1 · 500 زوج</span><span class="chip ok">مُنجَز</span><button class="mini" type="button">البطاقة</button></div>
+          <div class="prow"><span class="rf">OF-2421</span><span class="nm">مكاسان نسائي · 120 زوج</span><span class="chip cmd">القص</span><button class="mini" type="button">البطاقة</button></div>
+          <div class="prow"><span class="rf">OF-2422</span><span class="nm">حذاء مدرسي للأطفال · 300 زوج</span><span class="chip cmd">مُبرمَج</span><button class="mini" type="button">البطاقة</button></div>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">جلد بقر نباتي 1,8 مم · 142 م²</span><span class="chip ok">كافٍ</span><button class="mini" type="button">الحركات</button></div>
+          <div class="prow"><span class="rf">SEM-PU-118</span><span class="nm">نعل PU مزدوج الكثافة · 860 زوج</span><span class="chip ok">كافٍ</span><button class="mini" type="button">الحركات</button></div>
+          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">خيط مشمّع 0,8 مم · 6 بكرات</span><span class="chip cmd">قرب النفاد</span><button class="mini" type="button">اطلب</button></div>
+          <div class="prow"><span class="rf">FRN-COL-05</span><span class="nm">لاصق نيوبرين · عبوتان</span><span class="chip cmd">قرب النفاد</span><button class="mini" type="button">اطلب</button></div>
+          <div class="prow"><span class="rf">TEX-DB-012</span><span class="nm">بطانة قطن خام · 310 م</span><span class="chip ok">كافٍ</span><button class="mini" type="button">الحركات</button></div>
+          <p class="tnote">← تنبيه تلقائي حين ينزل الرصيد تحت العتبة التي تحدّدونها، مع الكمية المقترحة لإعادة التموين.</p>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="trace">
+            <svg class="qr" viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#132A46">
+                <path d="M4 4h16v16H4zM8 8h8v8H8z" fill-rule="evenodd"/>
+                <path d="M40 4h16v16H40zM44 8h8v8h-8z" fill-rule="evenodd"/>
+                <path d="M4 40h16v16H4zM8 44h8v8H8z" fill-rule="evenodd"/>
+                <rect x="26" y="6" width="4" height="4"/><rect x="32" y="10" width="4" height="4"/>
+                <rect x="26" y="16" width="4" height="4"/><rect x="24" y="24" width="4" height="4"/>
+                <rect x="32" y="26" width="8" height="4"/><rect x="44" y="26" width="4" height="4"/>
+                <rect x="52" y="24" width="4" height="4"/><rect x="6" y="26" width="6" height="4"/>
+                <rect x="16" y="30" width="4" height="4"/><rect x="26" y="34" width="4" height="4"/>
+                <rect x="34" y="36" width="4" height="4"/><rect x="42" y="34" width="4" height="4"/>
+                <rect x="50" y="38" width="6" height="4"/><rect x="26" y="44" width="4" height="4"/>
+                <rect x="32" y="50" width="4" height="4"/><rect x="40" y="46" width="4" height="4"/>
+                <rect x="48" y="50" width="4" height="4"/><rect x="52" y="44" width="4" height="4"/>
+              </g>
+            </svg>
+            <div style="flex:1;min-width:0">
+              <div class="trow"><span class="k">الدفعة</span><span class="v">CUI-VG-0248</span></div>
+              <div class="trow"><span class="k">المصدر</span><span class="v">عين النقبي — فاس</span></div>
+              <div class="trow"><span class="k">الدباغة</span><span class="v">نباتية · ميموزا</span></div>
+              <div class="trow"><span class="k">المستهلَك</span><span class="v">OF-2418 · 61 م²</span></div>
+              <div class="trow"><span class="k">المراقبة</span><span class="v">مطابقة — 14.07.2026</span></div>
+            </div>
+          </div>
+          <p class="tnote">← رمز QR نفسه، حين يمسحه زبناؤكم في التصدير، يُثبت مصدر كل جلد.</p>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">جلد بقر بالدباغة النباتية · 1,8 مم</span><span class="chip ok">متوفر</span><button class="mini" type="button">أضف</button></div>
+          <div class="prow"><span class="rf">SEM-TPR-42</span><span class="nm">نعل TPR للمدينة · 36–46</span><span class="chip cmd">عند الطلب</span><button class="mini" type="button">أضف</button></div>
+          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">خيط مشمّع 0,8 مم · بكرة 500 م</span><span class="chip ok">متوفر</span><button class="mini" type="button">أضف</button></div>
+          <div class="dtot"><span>السلة — 3 مراجع</span><span class="m">28 640 درهم خارج الرسوم</span></div>
+          <p class="tnote">← الكميات مقترحة انطلاقاً من رصيدكم واستهلاك أوامر الإنتاج الجارية.</p>
+        </div>
+      </div>
+
+      <div class="feat">
+        <div class="fitem rv">
+          <span class="no">01</span>
+          <div><h3>الإنتاج</h3><p>أمر إنتاج لكل موديل، ومرحلة معلومة في كل لحظة، وأجل يُقارَن بالمنجَز فعلاً — لا بالمقدَّر.</p></div>
+        </div>
+        <div class="fitem rv d1">
+          <span class="no">02</span>
+          <div><h3>المخزون</h3><p>الرصيد ينقص مع القص، لا مع الفاتورة. والتنبيه يصل قبل النفاد بوقت يكفي للطلب.</p></div>
+        </div>
+        <div class="fitem rv d2">
+          <span class="no">03</span>
+          <div><h3>التتبّع</h3><p>كل دفعة تحمل رمزها: المصدر، والتاريخ، والمراقبة، والأمر الذي استهلكها. الحجة التي تفتح أسواق التصدير.</p></div>
+        </div>
+        <div class="fitem rv d3">
+          <span class="no">04</span>
+          <div><h3>التموين</h3><p>كتالوغ مربوط بمخزونكم: تُصاغ الطلبية من داخل المنصة، ويُحفظ سجلها لإعادة الطلب بنقرتين.</p></div>
+        </div>
+        <div class="rv d3" style="padding-top:26px">
+          <a class="alink" href="plateforme.html">اكتشف المنصة بالتفصيل <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · الانطلاق ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">04</span><h2>الانطلاق، دون توقّف الإنتاج</h2></div>
+      <p class="note">من الزيارة الأولى<br>إلى ورشة رقمية</p>
+    </div>
+
+    <div class="steps">
+      <div class="step rv">
+        <span class="no">01</span><h3>التشخيص</h3>
+        <p>نمرّ يوماً في ورشتكم: كيف تُسجَّل الطلبية اليوم، وأين تضيع المعلومة، وما الذي يستحق الرقمنة أولاً.</p>
+        <p class="d">يوم واحد، مجاناً</p>
+      </div>
+      <div class="step rv d1">
+        <span class="no">02</span><h3>الإعداد</h3>
+        <p>نحمّل موديلاتكم، وموادكم، وأرصدتكم، وفرقكم. تفتحون المنصة وهي مملوءة ببيانات ورشتكم، لا بأمثلة.</p>
+        <p class="d">خلال 48 ساعة</p>
+      </div>
+      <div class="step rv d2">
+        <span class="no">03</span><h3>التكوين</h3>
+        <p>نصف يوم داخل الورشة، بالدارجة، مع من سيستعمل المنصة فعلاً: رئيس الورشة، والمخزنجي، والمسيّر.</p>
+        <p class="d">نصف يوم في عين المكان</p>
+      </div>
+      <div class="step rv d3">
+        <span class="no">04</span><h3>التشغيل والمتابعة</h3>
+        <p>الشهر الأول بمرافقة أسبوعية. ثم يبقى الهاتف والواتساب مفتوحين — يجيب عليهما من يعرف ورشتكم.</p>
+        <p class="d">مرافقة مستمرة</p>
+      </div>
+    </div>
+
+    <div class="rv" style="margin-top:44px">
+      <a class="alink" href="savoir-faire.html">اطّلع على طريقة عملنا بالتفصيل <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ شريط الدفعة ============ -->
+<div class="kraft-band">
+  <div class="in">
+    <span>ملصق الدفعة · رمز QR · حبر بحري واحد</span>
+    <span>الدفعة ____ · المغرب</span>
+  </div>
+</div>
+
+<!-- ============ 05 · شهادات ============ -->
+<section class="sec paper">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">05</span><h2>يشتغلون بها كل يوم</h2></div>
+      <p class="note">أكثر من 120 ورشة<br>3 مدن</p>
+    </div>
+
+    <div class="g3">
+      <blockquote class="quote rv" style="margin:0">
+        <span class="gm" aria-hidden="true">”</span>
+        <p>كنا نعرف مخزوننا في آخر الشهر. صرنا نعرفه في كل لحظة — واختفت الطلبيات المستعجلة يوم الجمعة.</p>
+        <footer class="who"><b>ورشة السقلي</b><span>صانع · فاس</span></footer>
+      </blockquote>
+      <blockquote class="quote rv d1" style="margin:0">
+        <span class="gm" aria-hidden="true">”</span>
+        <p>كل أمر إنتاج له بطاقة. رئيس الورشة يفتح هاتفه ويعرف أين وصل كل موديل، دون أن يجول بين الطاولات.</p>
+        <footer class="who"><b>أحذية بنكيران</b><span>الإنتاج · الدار البيضاء</span></footer>
+      </blockquote>
+      <blockquote class="quote rv d2" style="margin:0">
+        <span class="gm" aria-hidden="true">”</span>
+        <p>طلب مدقّق التصدير مصدر كل جلد. كان لدينا، بمسح واحد. هذا الرمز هو ما جعلنا نربح الصفقة.</p>
+        <footer class="who"><b>مصنع لوز</b><span>التصدير · مراكش</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ نداء ============ -->
+<section class="sec tight">
+  <div class="wrap">
+    <div class="cta-panel rv">
+      <img class="watermark" src="assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+      <div class="split">
+        <div>
+          <p class="eyebrow">أول اتصال</p>
+          <h2 style="margin-top:14px">ورشتكم الرقمية تبدأ بعرض تجريبي.</h2>
+          <p class="lede">نعرض عليكم المنصة على بيانات ورشتكم أنتم — نصف ساعة، عبر الهاتف أو في عين المكان، ودون أي التزام.</p>
+          <div class="btns">
+            <a class="btn" href="contact.html">اطلب عرضاً تجريبياً <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+            <a class="btn ghost light" href="tel:+212522468000">+212 5 22 46 80 00</a>
+          </div>
+        </div>
+        <div>
+          <div class="cinfo"><span class="k">البريد الإلكتروني</span><span class="v"><a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a></span></div>
+          <div class="cinfo"><span class="k">الهاتف</span><span class="v"><a href="tel:+212522468000">+212 5 22 46 80 00</a></span></div>
+          <div class="cinfo"><span class="k">العنوان</span><span class="v">المنطقة الصناعية سيدي البرنوصي<br>الدار البيضاء — المغرب</span></div>
+          <div class="cinfo"><span class="k">أوقات العمل</span><span class="v">الاثنين – السبت · 8:00 – 18:00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="foot-in">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="lockup">
+          <img class="ico" src="assets/logo/shoepartner-marque-fond-fonce.svg" alt="">
+          <span class="wm" style="--wm:var(--creme)">Shoe Partner</span>
+        </span>
+        <span class="ar">شو بارتنر</span>
+        <p>منصة رقمنة ورشات صناعة الأحذية — منذ 2018، من فاس إلى مراكش.</p>
+      </div>
+      <div>
+        <h4>التصفح</h4>
+        <ul class="flinks">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="plateforme.html">المنصة</a></li>
+          <li><a href="matieres.html">التموين</a></li>
+          <li><a href="savoir-faire.html">طريقة عملنا</a></li>
+          <li><a href="a-propos.html">من نحن</a></li>
+          <li><a href="fr/index.html" hreflang="fr" lang="fr">Français</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>الوحدات</h4>
+        <ul class="flinks">
+          <li><a href="plateforme.html#production">الإنتاج</a></li>
+          <li><a href="plateforme.html#stock">المخزون</a></li>
+          <li><a href="plateforme.html#tracabilite">التتبّع</a></li>
+          <li><a href="matieres.html">التموين</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>اتصل بنا</h4>
+        <p class="foot-contact">
+          <a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a><br>
+          <a href="tel:+212522468000">+212 5 22 46 80 00</a><br>
+          المنطقة الصناعية سيدي البرنوصي — الدار البيضاء<br>
+          <span class="ltr">@shoepartner.ma</span>
+        </p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Shoe Partner SARL — الدار البيضاء، المغرب</span>
+      <span><a href="contact.html#mentions">المعلومات القانونية</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" aria-label="العودة إلى الأعلى">
+  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15V2M2 8l6-6 6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+</button>
+
+<script src="assets/js/site.js?v=3"></script>
+</body>
+</html>

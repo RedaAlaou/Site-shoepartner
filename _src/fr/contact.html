@@ -1,0 +1,68 @@
+<!--meta
+title: Demander un prix — Shoe Partner
+description: Demandez un devis pour des matières premières de chaussure ou des chaussures finies en gros. Réponse par WhatsApp, téléphone ou e-mail.
+nav: contact
+-->
+
+<section class="phero">
+  <img class="watermark" src="{{root}}assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+  <div class="phero-in">
+    <nav class="crumb" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <span>/</span> <span>Demander un prix</span></nav>
+    <h1>Demander un prix.</h1>
+    <p class="lede">Dites-nous ce qu'il vous faut : la demande part sur WhatsApp, déjà rédigée. Vous pouvez aussi nous appeler ou nous écrire.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split top">
+      <div class="rv">
+        <form class="form" data-quote novalidate
+              data-intro="Bonjour ShoePartner, voici ma demande de prix :">
+          <div class="field"><label for="f-nom">Nom <span class="req">*</span></label><input id="f-nom" name="Nom" autocomplete="name" required><span class="err">Indiquez votre nom</span></div>
+          <div class="field"><label for="f-soc">Atelier ou société</label><input id="f-soc" name="Société" autocomplete="organization"></div>
+          <div class="field"><label for="f-tel">Téléphone / WhatsApp <span class="req">*</span></label><input id="f-tel" name="Téléphone" type="tel" autocomplete="tel" required><span class="err">Indiquez un numéro</span></div>
+          <div class="field"><label for="f-ville">Ville</label><input id="f-ville" name="Ville" autocomplete="address-level2"></div>
+          <div class="field"><label for="f-prof">Vous êtes</label>
+            <select id="f-prof" name="Profil"><option>Artisan / atelier</option><option>Fabricant / usine</option><option>Magasin / revendeur</option><option>Grossiste</option><option>Autre</option></select></div>
+          <div class="field"><label for="f-sujet">Votre besoin</label>
+            <select id="f-sujet" name="Besoin">
+              <option value="matieres">Plusieurs matières premières</option>
+              <option value="cuir">Cuir naturel</option><option value="simili">Simili cuir</option><option value="semelles">Semelles</option>
+              <option value="metal">Boucles &amp; accessoires métal</option><option value="colles">Colles &amp; produits chimiques</option>
+              <option value="fils">Fils à coudre</option><option value="mousses">Mousses &amp; doublures</option><option value="emballages">Emballages &amp; boîtes</option>
+              <option value="chaussures">Chaussures finies en gros</option>
+            </select></div>
+          <div class="field full"><label for="f-msg">Votre demande <span class="req">*</span></label><textarea id="f-msg" name="Demande" required placeholder="Matière, couleur, épaisseur, quantité… ou modèle et pointures."></textarea><span class="err">Décrivez votre besoin</span></div>
+          <div class="field full"><button class="btn wa" type="submit">{{wai}} Envoyer sur WhatsApp</button></div>
+          <p class="formnote field full">Le formulaire ouvre WhatsApp avec votre message prêt à envoyer. Aucune donnée n'est enregistrée sur ce site.</p>
+        </form>
+        <div class="formok" role="status"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 11l5 5L19 5" stroke="#C59D53" stroke-width="2.6" fill="none"/></svg><div><b>Votre message est prêt dans WhatsApp.</b>Il ne reste qu'à appuyer sur « envoyer ». Si WhatsApp ne s'est pas ouvert, écrivez-nous au {{tel_txt}}.</div></div>
+      </div>
+      <div class="rv d1">
+        <div class="cta-panel" style="padding:44px 38px">
+          <p class="eyebrow">Nous joindre</p>
+          <div style="margin-top:18px">
+            <div class="cinfo"><span class="k">WhatsApp</span><span class="v"><a href="{{wa}}">{{tel_txt}}</a></span></div>
+            <div class="cinfo"><span class="k">Téléphone</span><span class="v"><a href="tel:{{tel}}">{{tel_txt}}</a></span></div>
+            <div class="cinfo"><span class="k">E-mail</span><span class="v"><a href="mailto:{{email}}">{{email}}</a></span></div>
+            <div class="cinfo"><span class="k">Dépôt</span><span class="v">{{addr}}</span></div>
+            <div class="cinfo"><span class="k">Horaires</span><span class="v">Lundi – samedi · 8h00 – 18h00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="mentions">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="sec-no">—</span><h2>Mentions légales</h2></div></div>
+    <div class="rv" style="max-width:78ch">
+      <div class="kv"><b>Éditeur</b><span>Shoe Partner SARL — {{addr}}, Maroc</span></div>
+      <div class="kv"><b>Contact</b><span>{{email}} · {{tel_txt}}</span></div>
+      <div class="kv"><b>Données</b><span>Ce site ne dépose aucun cookie de suivi et n'enregistre pas les formulaires : les demandes sont transmises directement par WhatsApp.</span></div>
+      <div class="kv"><b>Visuels 3D</b><span>Les modèles 3D sont des illustrations ; la matière et les modèles livrés font foi.</span></div>
+    </div>
+  </div>
+</section>

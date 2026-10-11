@@ -1,0 +1,68 @@
+<!--meta
+title: اطلب عرض سعر — شو بارتنر
+description: اطلبوا عرض سعر للمواد الأولية لصناعة الأحذية أو للأحذية الجاهزة بالجملة. الجواب عبر واتساب أو الهاتف أو البريد الإلكتروني.
+nav: contact
+-->
+
+<section class="phero">
+  <img class="watermark" src="{{root}}assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+  <div class="phero-in">
+    <nav class="crumb" aria-label="مسار التصفح"><a href="index.html">الرئيسية</a> <span>/</span> <span>اطلب عرض سعر</span></nav>
+    <h1>اطلب عرض سعر.</h1>
+    <p class="lede">قولوا لنا ما تحتاجونه: يُرسَل الطلب على واتساب، مكتوباً وجاهزاً. ويمكنكم أيضاً الاتصال بنا أو مراسلتنا.</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="split top">
+      <div class="rv">
+        <form class="form" data-quote novalidate
+              data-intro="السلام عليكم شو بارتنر، هذا طلبي لعرض السعر:">
+          <div class="field"><label for="f-nom">الاسم <span class="req">*</span></label><input id="f-nom" name="الاسم" autocomplete="name" required><span class="err">اكتبوا اسمكم</span></div>
+          <div class="field"><label for="f-soc">الورشة أو الشركة</label><input id="f-soc" name="الشركة" autocomplete="organization"></div>
+          <div class="field"><label for="f-tel">الهاتف / واتساب <span class="req">*</span></label><input id="f-tel" name="الهاتف" type="tel" autocomplete="tel" required dir="ltr"><span class="err">اكتبوا رقم الهاتف</span></div>
+          <div class="field"><label for="f-ville">المدينة</label><input id="f-ville" name="المدينة" autocomplete="address-level2"></div>
+          <div class="field"><label for="f-prof">أنتم</label>
+            <select id="f-prof" name="الصفة"><option>صانع / ورشة</option><option>مصنع</option><option>محل / موزّع</option><option>تاجر جملة</option><option>أخرى</option></select></div>
+          <div class="field"><label for="f-sujet">حاجتكم</label>
+            <select id="f-sujet" name="الحاجة">
+              <option value="matieres">عدّة مواد أولية</option>
+              <option value="cuir">الجلد الطبيعي</option><option value="simili">الجلد الصناعي</option><option value="semelles">النعال</option>
+              <option value="metal">الأبازيم والإكسسوارات المعدنية</option><option value="colles">اللواصق والمواد الكيميائية</option>
+              <option value="fils">خيوط الخياطة</option><option value="mousses">الإسفنج والبطانات</option><option value="emballages">التغليف والعلب</option>
+              <option value="chaussures">أحذية جاهزة بالجملة</option>
+            </select></div>
+          <div class="field full"><label for="f-msg">طلبكم <span class="req">*</span></label><textarea id="f-msg" name="الطلب" required placeholder="المادة، اللون، السُّمك، الكمية… أو الموديل والمقاسات."></textarea><span class="err">صفوا حاجتكم</span></div>
+          <div class="field full"><button class="btn wa" type="submit">{{wai}} أرسل على واتساب</button></div>
+          <p class="formnote field full">تفتح الاستمارة واتساب ورسالتكم جاهزة للإرسال. لا يُحفَظ أي معطى على هذا الموقع.</p>
+        </form>
+        <div class="formok" role="status"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M3 11l5 5L19 5" stroke="#C59D53" stroke-width="2.6" fill="none"/></svg><div><b>رسالتكم جاهزة في واتساب.</b>لم يبقَ إلا الضغط على «إرسال». إن لم يُفتح واتساب، راسلونا على <span class="ltr">{{tel_txt}}</span>.</div></div>
+      </div>
+      <div class="rv d1">
+        <div class="cta-panel" style="padding:44px 38px">
+          <p class="eyebrow">للتواصل معنا</p>
+          <div style="margin-top:18px">
+            <div class="cinfo"><span class="k">واتساب</span><span class="v"><a href="{{wa}}">{{tel_txt}}</a></span></div>
+            <div class="cinfo"><span class="k">الهاتف</span><span class="v"><a href="tel:{{tel}}">{{tel_txt}}</a></span></div>
+            <div class="cinfo"><span class="k">البريد الإلكتروني</span><span class="v"><a href="mailto:{{email}}">{{email}}</a></span></div>
+            <div class="cinfo"><span class="k">المستودع</span><span class="v">{{addr}}</span></div>
+            <div class="cinfo"><span class="k">أوقات العمل</span><span class="v">الاثنين – السبت · 8:00 – 18:00</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" id="mentions">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="sec-no">—</span><h2>المعلومات القانونية</h2></div></div>
+    <div class="rv" style="max-width:78ch">
+      <div class="kv"><b>الناشر</b><span>Shoe Partner SARL — {{addr}}، المغرب</span></div>
+      <div class="kv"><b>الاتصال</b><span><span class="ltr">{{email}}</span> · <span class="ltr">{{tel_txt}}</span></span></div>
+      <div class="kv"><b>المعطيات</b><span>لا يضع هذا الموقع أي ملفات تتبّع ولا يحفظ الاستمارات: تُرسَل الطلبات مباشرة عبر واتساب.</span></div>
+      <div class="kv"><b>الصور ثلاثية الأبعاد</b><span>النماذج ثلاثية الأبعاد للتوضيح فقط؛ والعبرة بالمادة والموديلات المسلَّمة.</span></div>
+    </div>
+  </div>
+</section>

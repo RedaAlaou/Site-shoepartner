@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La plateforme — Shoe Partner</title>
+<meta name="description" content="Quatre modules intégrés pour piloter un atelier de chaussure : production, stock, traçabilité par QR et approvisionnement matières. Dans le navigateur, sans installation.">
+<link rel="alternate" hreflang="ar" href="../plateforme.html">
+<link rel="alternate" hreflang="fr" href="plateforme.html">
+<link rel="alternate" hreflang="x-default" href="../plateforme.html">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css?v=3">
+</head>
+<body>
+
+<header class="site">
+  <div class="site-in">
+    <a href="index.html" class="lockup" aria-label="Shoe Partner — accueil">
+      <img class="ico" src="../assets/logo/shoepartner-marque-couleur.svg" alt="">
+      <span class="wm">Shoe Partner</span>
+    </a>
+    <nav class="main" aria-label="Navigation principale">
+      <a class="nl on" href="plateforme.html" aria-current="page">Plateforme</a>
+      <a class="nl" href="matieres.html">Sourcing</a>
+      <a class="nl" href="savoir-faire.html">Savoir-faire</a>
+      <a class="nl" href="a-propos.html">À propos</a>
+      <a class="btn sm" href="contact.html">Démo</a>
+    </nav>
+    <div class="hactions">
+      <a class="lang" href="../plateforme.html" hreflang="ar" lang="ar" title="عرض الموقع بالعربية" aria-label="عرض الموقع بالعربية"><svg class="globe" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.7" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M8 1.3c2.1 2.1 2.1 11.3 0 13.4M8 1.3c-2.1 2.1-2.1 11.3 0 13.4M1.5 6h13M1.5 10h13" fill="none" stroke="currentColor" stroke-width="1.2"/></svg><span class="lang-name">العربية</span><span class="lang-code">AR</span></a>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav">
+        <svg viewBox="0 0 26 18" aria-hidden="true">
+          <line x1="1" y1="2"  x2="25" y2="2"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="9"  x2="25" y2="9"  stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+          <line x1="1" y1="16" x2="25" y2="16" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <div class="mnav-top">
+    <span class="lockup">
+      <img class="ico" src="../assets/logo/shoepartner-marque-couleur.svg" alt="">
+      <span class="wm">Shoe Partner</span>
+    </span>
+    <button class="close" aria-label="Fermer le menu">
+      <svg viewBox="0 0 22 22" width="22" height="22" aria-hidden="true">
+        <line x1="2" y1="2" x2="20" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+        <line x1="20" y1="2" x2="2" y2="20" stroke="#132A46" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <a class="nl" href="index.html">Accueil <span>00</span></a>
+  <a class="nl" href="plateforme.html">Plateforme <span>01</span></a>
+  <a class="nl" href="matieres.html">Sourcing <span>02</span></a>
+  <a class="nl" href="savoir-faire.html">Savoir-faire <span>03</span></a>
+  <a class="nl" href="a-propos.html">À propos <span>04</span></a>
+  <a class="nl lang-m" href="../plateforme.html" hreflang="ar" lang="ar">العربية <span>AR</span></a>
+  <a class="btn" href="contact.html">Demander une démo</a>
+</div>
+
+<main>
+
+<section class="phero">
+  <img class="watermark" src="../assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+  <div class="phero-in">
+    <nav class="crumb" aria-label="Fil d'ariane"><a href="index.html">Accueil</a> <span>/</span> <span>Plateforme</span></nav>
+    <h1>Production, stock, lots et approvisionnement — au même endroit.</h1>
+    <p class="lede">
+      app.shoepartner.ma pilote un atelier de chaussure comme il se pilote vraiment : par
+      ordres de fabrication, par étapes, par soldes et par lots. Dans le navigateur, depuis
+      le téléphone de l'atelier, sans rien installer.
+    </p>
+    <div class="btns" style="margin-top:32px">
+      <a class="btn" href="contact.html">Demander une démo <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+      <a class="btn ghost light" href="savoir-faire.html">Comment se passe la mise en route</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 · APERÇU ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">01</span><h2>Quatre écrans, tout l'atelier</h2></div>
+      <p class="note">Cliquez sur les onglets<br>ou laissez-les défiler</p>
+    </div>
+
+    <div class="split top">
+      <div class="browser rv" aria-label="Aperçu de la plateforme">
+        <div class="tb">
+          <span class="dots"><i></i><i></i><i></i></span>
+          <span class="url">app.shoepartner.ma</span>
+        </div>
+        <div class="ptabs" role="tablist" aria-label="Modules de la plateforme">
+          <button class="ptab on" role="tab" aria-selected="true"  type="button">Production</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">Stock</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">Traçabilité</button>
+          <button class="ptab"    role="tab" aria-selected="false" type="button">Sourcing</button>
+        </div>
+
+        <div class="ppanel on" role="tabpanel">
+          <div class="prow"><span class="rf">OF-2418</span><span class="nm">Derby ville cuir noir · 240 paires</span><span class="chip cmd">Piqûre</span><button class="mini" type="button">Fiche</button></div>
+          <div class="prow"><span class="rf">OF-2419</span><span class="nm">Sandale été · 180 paires</span><span class="chip cmd">Montage</span><button class="mini" type="button">Fiche</button></div>
+          <div class="prow"><span class="rf">OF-2420</span><span class="nm">Sécurité S1 · 500 paires</span><span class="chip ok">Terminé</span><button class="mini" type="button">Fiche</button></div>
+          <div class="prow"><span class="rf">OF-2421</span><span class="nm">Mocassin femme · 120 paires</span><span class="chip cmd">Coupe</span><button class="mini" type="button">Fiche</button></div>
+          <div class="prow"><span class="rf">OF-2422</span><span class="nm">Enfant scolaire · 300 paires</span><span class="chip cmd">Planifié</span><button class="mini" type="button">Fiche</button></div>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">Vachette végétal 1,8 mm · 142 m²</span><span class="chip ok">Suffisant</span><button class="mini" type="button">Mouvements</button></div>
+          <div class="prow"><span class="rf">SEM-PU-118</span><span class="nm">Semelle PU bi-densité · 860 paires</span><span class="chip ok">Suffisant</span><button class="mini" type="button">Mouvements</button></div>
+          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">Fil poissé 0,8 mm · 6 bobines</span><span class="chip cmd">Bientôt épuisé</span><button class="mini" type="button">Commander</button></div>
+          <div class="prow"><span class="rf">FRN-COL-05</span><span class="nm">Colle néoprène · 2 bidons</span><span class="chip cmd">Bientôt épuisé</span><button class="mini" type="button">Commander</button></div>
+          <div class="prow"><span class="rf">TEX-DB-012</span><span class="nm">Doublure coton écru · 310 m</span><span class="chip ok">Suffisant</span><button class="mini" type="button">Mouvements</button></div>
+          <p class="tnote">→ Alerte automatique dès que le solde passe sous le seuil que vous fixez, avec la quantité de réassort proposée.</p>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="trace">
+            <svg class="qr" viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#132A46">
+                <path d="M4 4h16v16H4zM8 8h8v8H8z" fill-rule="evenodd"/>
+                <path d="M40 4h16v16H40zM44 8h8v8h-8z" fill-rule="evenodd"/>
+                <path d="M4 40h16v16H4zM8 44h8v8H8z" fill-rule="evenodd"/>
+                <rect x="26" y="6" width="4" height="4"/><rect x="32" y="10" width="4" height="4"/>
+                <rect x="26" y="16" width="4" height="4"/><rect x="24" y="24" width="4" height="4"/>
+                <rect x="32" y="26" width="8" height="4"/><rect x="44" y="26" width="4" height="4"/>
+                <rect x="52" y="24" width="4" height="4"/><rect x="6" y="26" width="6" height="4"/>
+                <rect x="16" y="30" width="4" height="4"/><rect x="26" y="34" width="4" height="4"/>
+                <rect x="34" y="36" width="4" height="4"/><rect x="42" y="34" width="4" height="4"/>
+                <rect x="50" y="38" width="6" height="4"/><rect x="26" y="44" width="4" height="4"/>
+                <rect x="32" y="50" width="4" height="4"/><rect x="40" y="46" width="4" height="4"/>
+                <rect x="48" y="50" width="4" height="4"/><rect x="52" y="44" width="4" height="4"/>
+              </g>
+            </svg>
+            <div style="flex:1;min-width:0">
+              <div class="trow"><span class="k">Lot</span><span class="v">CUI-VG-0248</span></div>
+              <div class="trow"><span class="k">Origine</span><span class="v">Aïn Nokbi — Fès</span></div>
+              <div class="trow"><span class="k">Tannage</span><span class="v">Végétal · mimosa</span></div>
+              <div class="trow"><span class="k">Consommé par</span><span class="v">OF-2418 · 61 m²</span></div>
+              <div class="trow"><span class="k">Contrôle</span><span class="v">Conforme — 14.07.2026</span></div>
+            </div>
+          </div>
+          <p class="tnote">→ Le même QR, scanné par vos clients export, prouve l'origine de chaque cuir.</p>
+        </div>
+
+        <div class="ppanel" role="tabpanel">
+          <div class="prow"><span class="rf">CUI-VG-101</span><span class="nm">Vachette tannage végétal · 1,8 mm</span><span class="chip ok">En stock</span><button class="mini" type="button">Ajouter</button></div>
+          <div class="prow"><span class="rf">SEM-TPR-42</span><span class="nm">Semelle TPR ville · 36–46</span><span class="chip cmd">Sur commande</span><button class="mini" type="button">Ajouter</button></div>
+          <div class="prow"><span class="rf">FRN-FIL-77</span><span class="nm">Fil poissé 0,8 mm · bobine 500 m</span><span class="chip ok">En stock</span><button class="mini" type="button">Ajouter</button></div>
+          <div class="dtot"><span>Panier — 3 références</span><span class="m">28 640 MAD HT</span></div>
+          <p class="tnote">→ Les quantités sont proposées à partir de votre solde et de la consommation des ordres en cours.</p>
+        </div>
+      </div>
+
+      <div class="feat light">
+        <div class="fitem rv">
+          <span class="no">01</span>
+          <div><h3>Production</h3><p>Un ordre par modèle, des étapes de la coupe au montage, une quantité faite comparée au planifié. Le délai se voit avant d'être dépassé, pas après.</p></div>
+        </div>
+        <div class="fitem rv d1">
+          <span class="no">02</span>
+          <div><h3>Stock</h3><p>Un solde qui baisse à la coupe et non à la facture, un seuil d'alerte par référence, un inventaire bouclé en une heure.</p></div>
+        </div>
+        <div class="fitem rv d2">
+          <span class="no">03</span>
+          <div><h3>Traçabilité</h3><p>Un QR par lot entrant et sortant : origine, date, contrôle, et l'ordre de fabrication qui l'a consommé.</p></div>
+        </div>
+        <div class="fitem rv d3">
+          <span class="no">04</span>
+          <div><h3>Sourcing</h3><p>Un catalogue de 1 400 références branché sur votre stock — optionnel, et compatible avec vos fournisseurs actuels.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 · PRODUCTION ============ -->
+<section class="sec paper" id="production">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">02</span><h2>Production</h2></div>
+      <p class="note">Module 01<br>Un ordre par modèle</p>
+    </div>
+
+    <div class="split top">
+      <div class="stack rv">
+        <p class="lede">
+          Chaque commande devient un ordre de fabrication : modèle, quantité, pointures, délai.
+          L'ordre traverse les étapes de l'atelier une à une, et le fait se saisit à chaque étape.
+          Vous savez où en est chaque modèle, où le travail s'accumule, et si le délai tient
+          encore — avant qu'il n'arrive.
+        </p>
+        <div>
+          <div class="kv"><b>Les étapes</b><span>Coupe, piqûre, montage, finition, emballage — modifiables selon votre atelier</span></div>
+          <div class="kv"><b>La saisie</b><span>Depuis le téléphone en fin d'étape, ou en scannant l'étiquette de l'ordre</span></div>
+          <div class="kv"><b>Ce qui est compté</b><span>Le fait, le reste à faire, le rebut, et le temps passé à chaque étape</span></div>
+          <div class="kv"><b>Les matières</b><span>Une nomenclature par modèle — le stock est décrémenté automatiquement à la coupe</span></div>
+          <div class="kv"><b>L'alerte</b><span>Un ordre en retard sur son planning remonte avant la date de livraison, pas après</span></div>
+        </div>
+      </div>
+
+      <div class="stack rv d1">
+        <div class="card" style="pointer-events:none">
+          <span class="pic" aria-hidden="true">
+            <svg viewBox="0 0 104 78">
+              <rect x="14" y="15" width="50" height="11" fill="#132A46"/>
+              <rect x="30" y="33" width="56" height="11" fill="#C59D53"/>
+              <rect x="14" y="51" width="34" height="11" fill="#132A46"/>
+              <path d="M14 69h76" stroke="#132A46" stroke-width="2.2" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+        <div class="tscroll">
+          <table class="spec">
+            <thead><tr><th>Ordre</th><th>Modèle</th><th>Quantité</th><th>Étape</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">OF-2418</td><td>Derby ville cuir noir</td><td class="mono">240 paires</td><td><span class="chip cmd">Piqûre</span></td></tr>
+              <tr><td class="mono">OF-2419</td><td>Sandale été</td><td class="mono">180 paires</td><td><span class="chip cmd">Montage</span></td></tr>
+              <tr><td class="mono">OF-2420</td><td>Sécurité S1</td><td class="mono">500 paires</td><td><span class="chip ok">Terminé</span></td></tr>
+              <tr><td class="mono">OF-2421</td><td>Mocassin femme</td><td class="mono">120 paires</td><td><span class="chip cmd">Coupe</span></td></tr>
+              <tr><td class="mono">OF-2422</td><td>Enfant scolaire</td><td class="mono">300 paires</td><td><span class="chip cmd">Planifié</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">L'écran des ordres en cours — tel qu'il s'affiche sur le téléphone du chef d'atelier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 · STOCK ============ -->
+<section class="sec" id="stock">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">03</span><h2>Stock</h2></div>
+      <p class="note">Module 02<br>Un solde réel, pas estimé</p>
+    </div>
+
+    <div class="split top">
+      <div class="stack rv">
+        <p class="lede">
+          Le solde baisse quand la matière est coupée, pas quand la facture arrive. Et comme
+          la nomenclature est liée au modèle, le magasin sait ce que le prochain ordre va
+          consommer avant même qu'il démarre — cela suffit à faire disparaître les commandes
+          en urgence du vendredi.
+        </p>
+        <div>
+          <div class="kv"><b>Les mouvements</b><span>Entrée, sortie, retour, casse — chaque mouvement daté et signé</span></div>
+          <div class="kv"><b>Les seuils</b><span>Un seuil d'alerte par référence, en quantité ou en jours de consommation</span></div>
+          <div class="kv"><b>L'alerte</b><span>Notification dans la plateforme et SMS au magasinier et au gérant</span></div>
+          <div class="kv"><b>L'inventaire</b><span>Inventaire au scan depuis le téléphone — l'écart est enregistré et justifié, jamais effacé</span></div>
+          <div class="kv"><b>Multi-dépôts</b><span>Un magasin par site si vous avez plusieurs ateliers</span></div>
+        </div>
+      </div>
+
+      <div class="stack rv d1">
+        <div class="card" style="pointer-events:none">
+          <span class="pic" aria-hidden="true">
+            <svg viewBox="0 0 104 78">
+              <rect x="12" y="13" width="80" height="4" fill="#132A46"/>
+              <rect x="12" y="41" width="80" height="4" fill="#132A46"/>
+              <rect x="12" y="69" width="80" height="4" fill="#132A46"/>
+              <rect x="18" y="21" width="22" height="20" fill="#C59D53"/>
+              <rect x="46" y="21" width="22" height="20" fill="#C59D53"/>
+              <rect x="18" y="49" width="22" height="20" fill="#C59D53"/>
+              <rect x="47" y="50" width="20" height="18" fill="none" stroke="#132A46" stroke-width="2.2" stroke-dasharray="3.4 4.2"/>
+            </svg>
+          </span>
+        </div>
+        <div class="tscroll">
+          <table class="spec">
+            <thead><tr><th>Référence</th><th>Matière</th><th>Solde</th><th>État</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">CUI-VG-101</td><td>Vachette végétal 1,8 mm</td><td class="mono">142 m²</td><td><span class="chip ok">Suffisant</span></td></tr>
+              <tr><td class="mono">SEM-PU-118</td><td>Semelle PU bi-densité</td><td class="mono">860 paires</td><td><span class="chip ok">Suffisant</span></td></tr>
+              <tr><td class="mono">FRN-FIL-77</td><td>Fil poissé 0,8 mm</td><td class="mono">6 bobines</td><td><span class="chip cmd">Bientôt épuisé</span></td></tr>
+              <tr><td class="mono">FRN-COL-05</td><td>Colle néoprène</td><td class="mono">2 bidons</td><td><span class="chip cmd">Bientôt épuisé</span></td></tr>
+              <tr><td class="mono">TEX-DB-012</td><td>Doublure coton écru</td><td class="mono">310 m</td><td><span class="chip ok">Suffisant</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Les deux références « bientôt épuisé » remontent d'elles-mêmes dans la proposition de commande.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 · TRAÇABILITÉ ============ -->
+<section class="sec dark" id="tracabilite">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">04</span><h2>Traçabilité — le code qui ouvre les marchés</h2></div>
+      <p class="note">Module 03<br>Un lot = une fiche</p>
+    </div>
+
+    <div class="split rv">
+      <div class="stack">
+        <p class="lede">
+          Les donneurs d'ordre européens demandent l'origine des matières. Sans réponse
+          documentée, le dossier s'arrête là. Avec la plateforme, la réponse tient dans un scan :
+          chaque lot entrant est enregistré avec sa fiche, chaque lot sortant porte son code —
+          et le lien entre les deux, c'est l'ordre de fabrication qui a consommé l'un pour produire l'autre.
+        </p>
+        <div>
+          <div class="kv"><b>Ce que porte la fiche</b><span>Origine, pays, date, numéro de lot, surface ou quantité, contrôleur, résultat</span></div>
+          <div class="kv"><b>Le lien production</b><span>Quel lot de matière est entré dans quel ordre — et quelles paires en sont sorties</span></div>
+          <div class="kv"><b>Qui peut la consulter</b><span>Vous, et toute personne à qui vous envoyez le code — vos clients compris</span></div>
+          <div class="kv"><b>Durée de conservation</b><span>10 ans, même si le lot est épuisé depuis longtemps</span></div>
+          <div class="kv"><b>Format</b><span>QR imprimé sur l'étiquette + PDF téléchargeable</span></div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <div style="background:var(--papier);padding:28px;border:1px solid rgba(245,241,232,.14);max-width:280px">
+          <svg class="qr" viewBox="0 0 60 60" style="width:220px;height:220px;border:0;padding:0" aria-hidden="true">
+            <g fill="#132A46">
+              <path d="M4 4h16v16H4zM8 8h8v8H8z" fill-rule="evenodd"/>
+              <path d="M40 4h16v16H40zM44 8h8v8h-8z" fill-rule="evenodd"/>
+              <path d="M4 40h16v16H4zM8 44h8v8H8z" fill-rule="evenodd"/>
+              <rect x="26" y="6" width="4" height="4"/><rect x="32" y="10" width="4" height="4"/>
+              <rect x="26" y="16" width="4" height="4"/><rect x="24" y="24" width="4" height="4"/>
+              <rect x="32" y="26" width="8" height="4"/><rect x="44" y="26" width="4" height="4"/>
+              <rect x="52" y="24" width="4" height="4"/><rect x="6" y="26" width="6" height="4"/>
+              <rect x="16" y="30" width="4" height="4"/><rect x="26" y="34" width="4" height="4"/>
+              <rect x="34" y="36" width="4" height="4"/><rect x="42" y="34" width="4" height="4"/>
+              <rect x="50" y="38" width="6" height="4"/><rect x="26" y="44" width="4" height="4"/>
+              <rect x="32" y="50" width="4" height="4"/><rect x="40" y="46" width="4" height="4"/>
+              <rect x="48" y="50" width="4" height="4"/><rect x="52" y="44" width="4" height="4"/>
+            </g>
+          </svg>
+          <p style="font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(19,42,70,.55);margin-top:16px;text-align:center">Lot CUI-VG-0248</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · SOURCING ============ -->
+<section class="sec paper" id="sourcing">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">05</span><h2>Sourcing</h2></div>
+      <p class="note">Module 04<br>Optionnel</p>
+    </div>
+
+    <div class="split top">
+      <div class="stack rv">
+        <p class="lede">
+          Quand le solde d'une matière passe sous son seuil, la plateforme prépare la commande
+          au lieu de se contenter d'alerter. Les quantités sont calculées sur la consommation
+          de vos ordres en cours, pas estimées dans l'urgence. Le module fonctionne avec vos
+          fournisseurs actuels — et avec notre propre catalogue si vous le souhaitez.
+        </p>
+        <div>
+          <div class="kv"><b>Vos fournisseurs</b><span>Leurs prix et leurs délais sont enregistrés, la commande leur part en PDF ou par message</span></div>
+          <div class="kv"><b>Catalogue Shoe Partner</b><span>1 400 références avec fiche technique, stock réel et prix dégressifs</span></div>
+          <div class="kv"><b>Le devis</b><span>Réponse ferme sous 24 h ouvrées, prix bloqués 15 jours</span></div>
+          <div class="kv"><b>La réception</b><span>Scanner l'étiquette du carton entre le lot en stock et ouvre sa fiche</span></div>
+          <div class="kv"><b>Le réassort</b><span>Depuis l'historique, en deux clics — aux mêmes quantités ou ajustées</span></div>
+        </div>
+        <div class="btns" style="margin-top:6px">
+          <a class="btn ghost" href="matieres.html">Voir le catalogue sourcing</a>
+        </div>
+      </div>
+
+      <div class="stack rv d1">
+        <div class="card" style="pointer-events:none">
+          <span class="pic" aria-hidden="true">
+            <svg viewBox="0 0 104 78">
+              <path d="M18 16C30 6 56 4 72 10c18 7 24 24 18 40-6 16-28 24-48 20C22 66 8 52 10 36c1-9 2-15 8-20Z" fill="#C59D53"/>
+              <path d="M26 22c10-8 30-10 42-5 14 6 19 18 14 30" fill="none" stroke="#132A46" stroke-width="2.4" stroke-dasharray="3.4 4.2" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </div>
+        <div class="tscroll">
+          <table class="spec">
+            <thead><tr><th>Famille</th><th>Code</th><th>Références</th><th>Stock</th></tr></thead>
+            <tbody>
+              <tr><td>Cuirs</td><td class="mono">CUI</td><td class="mono">320</td><td><span class="chip ok">Disponible</span></td></tr>
+              <tr><td>Semelles</td><td class="mono">SEM</td><td class="mono">410</td><td><span class="chip ok">Disponible</span></td></tr>
+              <tr><td>Textiles &amp; doublures</td><td class="mono">TEX</td><td class="mono">260</td><td><span class="chip ok">Disponible</span></td></tr>
+              <tr><td>Fournitures</td><td class="mono">FRN</td><td class="mono">410</td><td><span class="chip ok">Disponible</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">La plateforme fonctionne entièrement sans ce module — rien ne vous oblige à acheter chez nous.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 · MISE EN ROUTE ============ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">06</span><h2>La mise en route</h2></div>
+      <p class="note">Sans installation<br>Sans arrêter la production</p>
+    </div>
+
+    <div class="steps">
+      <div class="step rv">
+        <span class="no">01</span><h3>Diagnostic</h3>
+        <p>Une journée dans votre atelier pour comprendre comment vous travaillez vraiment — et ce qui mérite d'être digitalisé en premier.</p>
+        <p class="d">Un jour, gratuit</p>
+      </div>
+      <div class="step rv d1">
+        <span class="no">02</span><h3>Paramétrage</h3>
+        <p>Vos modèles, vos matières, vos soldes et vos équipes — chargés avant la première connexion.</p>
+        <p class="d">Sous 48 h</p>
+      </div>
+      <div class="step rv d2">
+        <span class="no">03</span><h3>Formation</h3>
+        <p>Une demi-journée sur place, en darija, avec ceux qui s'en serviront tous les jours.</p>
+        <p class="d">Une demi-journée</p>
+      </div>
+      <div class="step rv d3">
+        <span class="no">04</span><h3>Accompagnement</h3>
+        <p>Un point hebdomadaire pendant le premier mois, puis un support ouvert par téléphone et WhatsApp.</p>
+        <p class="d">En continu</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 · FAQ ============ -->
+<section class="sec paper">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="sec-no">07</span><h2>Questions fréquentes</h2></div>
+      <p class="note">Sinon, appelez-nous<br>+212 5 22 46 80 00</p>
+    </div>
+
+    <div class="acc rv" style="max-width:900px">
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">Faut-il acheter ses matières chez vous ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>Non. La plateforme fonctionne intégralement avec vos fournisseurs actuels — leurs prix et leurs délais s'enregistrent, les commandes leur partent. Le module sourcing est optionnel : ceux qui choisissent notre catalogue le trouvent branché directement sur leur stock, les autres ne perdent rien des autres modules.</p></div>
+      </div>
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">Combien coûte la plateforme ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>Un abonnement mensuel par atelier, fixé selon les modules activés et la taille de l'atelier. Pas de frais d'ouverture ni d'installation, et le diagnostic comme la première formation sont compris. Nous donnons le chiffre ferme après la journée de diagnostic, pas avant. Pour les ateliers qui s'approvisionnent chez nous, le module sourcing est inclus sans supplément.</p></div>
+      </div>
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">Faut-il installer un logiciel ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>Non. Tout tourne dans un navigateur, sur ordinateur comme sur téléphone. La plupart des ateliers saisissent les étapes de production depuis un téléphone Android ordinaire, directement sur le poste de travail.</p></div>
+      </div>
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">Faut-il une bonne connexion ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>Une connexion 4G ordinaire suffit — les écrans sont volontairement légers. Quant aux étiquettes de lot, elles s'impriment sur l'imprimante de l'atelier, sans matériel particulier.</p></div>
+      </div>
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">À qui appartiennent nos données ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>À vous. Vos modèles, vos soldes, vos prix, votre historique de production restent votre propriété et sont exportables intégralement à tout moment. Nous n'y accédons que pour le support technique et à votre demande, et nous ne les partageons avec aucun autre atelier.</p></div>
+      </div>
+      <div class="acc-i">
+        <button class="acc-b" type="button" aria-expanded="false">Notre atelier est petit — est-ce fait pour nous ?<span class="pm" aria-hidden="true"></span></button>
+        <div class="acc-p"><p>À partir de cinq personnes. Les petits ateliers démarrent en général avec les seuls modules production et stock, et ajoutent le reste quand le besoin arrive — la traçabilité, le plus souvent, le jour où l'export frappe à la porte.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec tight">
+  <div class="wrap">
+    <div class="cta-panel rv">
+      <img class="watermark" src="../assets/logo/shoepartner-marque-mono-blanc.svg" alt="" aria-hidden="true">
+      <div class="split">
+        <div>
+          <p class="eyebrow">Démo</p>
+          <h2 style="margin-top:14px">Trente minutes suffisent pour voir la différence.</h2>
+          <p class="lede">Nous montrons la plateforme sur les données de votre atelier — par téléphone ou sur place, et sans engagement.</p>
+          <div class="btns">
+            <a class="btn" href="contact.html">Demander une démo <svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg></a>
+            <a class="btn ghost light" href="matieres.html">Voir le catalogue sourcing</a>
+          </div>
+        </div>
+        <div>
+          <div class="cinfo"><span class="k">Email</span><span class="v"><a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a></span></div>
+          <div class="cinfo"><span class="k">Téléphone</span><span class="v"><a href="tel:+212522468000">+212 5 22 46 80 00</a></span></div>
+          <div class="cinfo"><span class="k">Horaires</span><span class="v">Lun – Sam · 8 h – 18 h</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="foot-in">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <span class="lockup">
+          <img class="ico" src="../assets/logo/shoepartner-marque-fond-fonce.svg" alt="">
+          <span class="wm" style="--wm:var(--creme)">Shoe Partner</span>
+        </span>
+        <span class="ar" lang="ar">شو بارتنر</span>
+        <p>La plateforme des ateliers de la chaussure — depuis 2018, de Fès à Marrakech.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul class="flinks">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="plateforme.html">Plateforme</a></li>
+          <li><a href="matieres.html">Sourcing</a></li>
+          <li><a href="savoir-faire.html">Savoir-faire</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="../plateforme.html" hreflang="ar" lang="ar">العربية</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Les modules</h4>
+        <ul class="flinks">
+          <li><a href="plateforme.html#production">Production</a></li>
+          <li><a href="plateforme.html#stock">Stock</a></li>
+          <li><a href="plateforme.html#tracabilite">Traçabilité</a></li>
+          <li><a href="matieres.html">Sourcing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p class="foot-contact">
+          <a href="mailto:contact@shoepartner.ma">contact@shoepartner.ma</a><br>
+          <a href="tel:+212522468000">+212 5 22 46 80 00</a><br>
+          ZI Sidi Bernoussi — Casablanca<br>
+          @shoepartner.ma
+        </p>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Shoe Partner SARL — Casablanca, Maroc</span>
+      <span><a href="contact.html#mentions">Mentions légales</a></span>
+    </div>
+  </div>
+</footer>
+
+<button class="totop" aria-label="Retour en haut">
+  <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 15V2M2 8l6-6 6 6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+</button>
+
+<script src="../assets/js/site.js?v=3"></script>
+</body>
+</html>
