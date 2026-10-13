@@ -206,6 +206,8 @@ export const MODELS = {
   derby:    { heelH: 0.9,  instep: 0.7,  toe: 0.4,  sole: 0.1,  heel: 0.17, laces: true,  collar: [0.2, 0.2, 0.23], lace: [0.4, 0.6, 0.1], captoe: false, welt: true,  soleColor: 0x2a211c },
   mocassin: { heelH: 0.7,  instep: 0.56, toe: 0.38, sole: 0.09, heel: 0.09, laces: false, collar: [0.26, 0.26, 0.25], moc: true, strap: true, welt: true, soleColor: 0x5a3a24 },
   securite: { heelH: 1.32, instep: 0.92, toe: 0.54, sole: 0.25, heel: 0,    laces: true,  collar: [0.15, 0.15, 0.21], lace: [0.28, 0.6, 0.11], captoe: true, welt: false, soleColor: 0x1c1c1c, cleat: true },
+  sabot:    { heelH: 0.66, instep: 0.6,  toe: 0.42, sole: 0.26, heel: 0.1,  laces: false, collar: [0.2, 0.2, 0.2], mask: 'sabot', welt: false, soleColor: 0xC9A577, footbed: 0xB98A55 },
+  sandale:  { heelH: 0.6,  instep: 0.5,  toe: 0.34, sole: 0.11, heel: 0.07, laces: false, collar: [0.2, 0.2, 0.2], mask: 'sandale', welt: true, soleColor: 0x5a3a24, footbed: 0xC9A27A },
   confort:  { heelH: 0.88, instep: 0.74, toe: 0.46, sole: 0.22, heel: 0,    laces: false, collar: [0.2, 0.21, 0.2], straps: true, welt: false, soleColor: 0xEDE7DA },
 };
 export const COLORS = {
@@ -309,9 +311,41 @@ function upperMaps(m, col) {
   // ouverture du col (alpha)
   const [a, ga] = cnv(TW, TH);
   ga.fillStyle = '#fff'; ga.fillRect(0, 0, TW, TH);
-  ga.fillStyle = '#000'; ga.beginPath(); ga.ellipse(tx(cu), ty(0.5), tx(ru), rv * TH, 0, 0, Math.PI * 2); ga.fill();
+  if (m.mask) drawMask(m, ga);
+  else { ga.fillStyle = '#000'; ga.beginPath(); ga.ellipse(tx(cu), ty(0.5), tx(ru), rv * TH, 0, 0, Math.PI * 2); ga.fill(); }
   const alpha = new THREE.CanvasTexture(a);
   return { map: toTex(c), alpha };
+}
+
+/* Modèles ouverts : la tige garde la même surface, seule la carte alpha change.
+   sabot   — arrière entièrement ouvert, bord avant arrondi
+   sandale — tout est découpé sauf quatre lanières */
+const sabotEdge = (v) => 0.44 + 0.07 * Math.sqrt(Math.max(0, 1 - Math.pow((v - 0.5) / 0.4, 2)));
+const SANDAL = {
+  across: [[0.66, 0.76], [0.44, 0.52]],          // lanières transversales (u0, u1), sur toute la largeur
+  sides: [[0.2, 0.27], [0.73, 0.8]],             // bride arrière (v0, v1), de u = 0 à u = 0,47
+  sideEnd: 0.47,
+};
+function drawMask(m, g) {
+  if (m.mask === 'sabot') {
+    g.fillStyle = '#000'; g.beginPath(); g.moveTo(0, ty(0));
+    for (let i = 0; i <= 60; i++) { const v = i / 60; g.lineTo(tx(sabotEdge(v)), ty(v)); }
+    g.lineTo(0, ty(1)); g.closePath(); g.fill();
+  } else if (m.mask === 'sandale') {
+    g.fillStyle = '#000'; g.fillRect(0, 0, TW, TH);
+    g.fillStyle = '#fff';
+    for (const [u0, u1] of SANDAL.across) g.fillRect(tx(u0), 0, tx(u1 - u0), TH);
+    for (const [v0, v1] of SANDAL.sides) g.fillRect(0, ty(v1), tx(SANDAL.sideEnd), (v1 - v0) * TH);
+  }
+}
+function maskRims(m, P) {           // bords à épaissir (listes de points 3D)
+  const rims = [], line = (f, n = 40) => { const pts = []; for (let i = 0; i <= n; i++) pts.push(f(i / n)); return pts; };
+  if (m.mask === 'sabot') rims.push(line((t) => { const v = 0.005 + t * 0.99; return P(sabotEdge(v), v); }, 60));
+  if (m.mask === 'sandale') {
+    for (const [u0, u1] of SANDAL.across) for (const u of [u0, u1]) rims.push(line((t) => P(u, 0.004 + t * 0.992)));
+    for (const [v0, v1] of SANDAL.sides) for (const v of [v0, v1]) rims.push(line((t) => P(0.004 + t * (SANDAL.sideEnd - 0.004), v)));
+  }
+  return rims;
 }
 
 function tube(points, r, mat, closed = false, seg = 64) {
@@ -362,15 +396,25 @@ export function shoe(modelKey = 'derby', colorKey = 'cognac') {
   const inner = new THREE.MeshStandardMaterial({ color: 0xE6D6B8, roughness: 0.85, alphaMap: maps.alpha, alphaTest: 0.5, side: THREE.BackSide });
   parts.upper.add(new THREE.Mesh(geo, outer), new THREE.Mesh(geo, inner));
 
-  /* col rembourré qui suit l'ouverture */
-  const [cu, ru, rv] = m.collar, cp = [];
-  for (let i = 0; i < 140; i++) {
-    const a = (i / 140) * Math.PI * 2;
-    cp.push(P(Math.max(0.004, cu + ru * Math.cos(a)), 0.5 + rv * Math.sin(a)));
+  /* col rembourré qui suit l'ouverture — ou bords des modèles ouverts */
+  const rimMat = new THREE.MeshPhysicalMaterial({ color: shade(col.c, -0.15), roughness: 0.5, clearcoat: 0.3, bumpMap: grainTex(), bumpScale: 0.8 });
+  if (m.mask) {
+    for (const r of maskRims(m, P)) parts.upper.add(tube(r, m.mask === 'sabot' ? 0.03 : 0.014, rimMat, false, 80));
+    if (m.mask === 'sandale') {        // petite boucle sur la bride
+      const u = 0.32, v = (SANDAL.sides[1][0] + SANDAL.sides[1][1]) / 2, p = P(u, v), nn = normalAt(P, u, v);
+      const b = buckle(0xC9A55A, 0.16, 0.13); b.scale.setScalar(1);
+      b.position.copy(p).addScaledVector(nn, 0.02); b.lookAt(p.clone().addScaledVector(nn, 1)); parts.laces.add(b);
+    }
+  } else {
+    const [cu, ru, rv] = m.collar, cp = [];
+    for (let i = 0; i < 140; i++) {
+      const a = (i / 140) * Math.PI * 2;
+      cp.push(P(Math.max(0.004, cu + ru * Math.cos(a)), 0.5 + rv * Math.sin(a)));
+    }
+    parts.upper.add(tube(cp, 0.034, rimMat, true, 200));
   }
-  parts.upper.add(tube(cp, 0.034, new THREE.MeshPhysicalMaterial({ color: shade(col.c, -0.15), roughness: 0.5, clearcoat: 0.3, bumpMap: grainTex(), bumpScale: 0.8 }), true, 200));
   // semelle de propreté visible par l'ouverture
-  const insole = new THREE.Mesh(soleGeo(makeLast({ heel: m.heel, W: 0.86, L: 2.4 }), 0.02, 0.01), new THREE.MeshStandardMaterial({ color: 0xD9C3A0, roughness: 0.9 }));
+  const insole = new THREE.Mesh(soleGeo(makeLast({ heel: m.heel, W: 0.86, L: 2.4 }), 0.02, 0.01), new THREE.MeshStandardMaterial({ color: m.footbed || 0xD9C3A0, roughness: 0.8, bumpMap: m.footbed ? grainTex() : null, bumpScale: 0.6 }));
   insole.position.y = m.sole + 0.04; parts.upper.add(insole);
 
   /* laçage : œillets métal + lacets croisés + nœud */

@@ -145,7 +145,7 @@
   });
 
   /* ---------- WhatsApp : construction d'un lien prérempli ---------- */
-  var WA = '212647907032';
+  var WA = '212661474232';
   function waLink(text){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
 
   /* ---------- formulaire de devis → message WhatsApp ---------- */

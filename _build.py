@@ -24,9 +24,9 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "_src"
 V = "5"  # version des ressources (cache)
 
-WA_NUM = "212647907032"
-TEL = "+212647907032"
-TEL_TXT = "06 47 90 70 32"
+WA_NUM = "212661474232"
+TEL = "+212661474232"
+TEL_TXT = "06 61 47 42 32"
 EMAIL = "contact@shoepartner.ma"
 
 ARROW = '<svg class="ar" width="15" height="10" viewBox="0 0 15 10" aria-hidden="true"><path d="M0 5H13M9 1l4 4-4 4" stroke="currentColor" stroke-width="1.7" fill="none"/></svg>'
@@ -49,6 +49,7 @@ ICONS = {
     "mocassin": f'<path d="M8 54c4-10 14-12 26-14 14-2 28-2 40 4 10 4 18 8 18 12v4H8Z" fill="{M}"/><path d="M8 58h84v5H8Z" fill="{O}"/><path d="M50 42c8-6 22-4 28 4" fill="none" stroke="{O}" stroke-width="2.2" {D}/><path d="M46 46h16" stroke="{O}" stroke-width="4"/>',
     "securite": f'<path d="M14 58V18h24c2 10 4 16 12 20 12 4 30 4 40 12 4 4 4 8 4 8Z" fill="{M}"/><path d="M70 42c10 2 20 6 24 16H66Z" fill="#0A1526"/><path d="M10 58h86v10H10Z" fill="{O}"/><path d="M38 24l8 4M38 30l8 4M38 36l8 4" stroke="{O}" stroke-width="2.2"/>',
     "confort": f'<path d="M10 54c2-10 10-14 22-16 8-6 16-10 26-10 14 0 28 10 34 20 2 4 0 6-4 6H10Z" fill="{O}"/><path d="M8 54h86v10c0 2-2 4-4 4H12c-2 0-4-2-4-4Z" fill="{C}" stroke="{M}" stroke-width="2"/><path d="M40 30l12 16M54 28l10 16" stroke="{M}" stroke-width="5"/>',
+    "sabot": f'<path d="M10 52h84v8c0 3-2 5-5 5H15c-3 0-5-2-5-5Z" fill="{O}"/><path d="M44 52c0-14 10-24 26-24 12 0 22 8 24 20l1 4Z" fill="{M}"/><path d="M44 52c2-8 8-14 14-16" fill="none" stroke="{O}" stroke-width="2" {D}/><path d="M10 52c4-3 14-4 34 0" fill="none" stroke="{M}" stroke-width="3"/>',
     "enfant": f'<path d="M22 56c0-8 6-12 14-14 6-6 12-10 20-10 10 0 18 8 22 16 2 4 0 8-4 8Z" fill="{M}"/><path d="M20 56h62v8H20Z" fill="{O}"/><circle cx="56" cy="40" r="4" fill="{O}"/><path d="M40 38h24" stroke="{O}" stroke-width="4"/>',
     "sandale": f'<path d="M10 58c0-6 6-8 14-8h56c8 0 14 2 14 8v4H10Z" fill="{M}"/><path d="M28 50c4-14 16-20 26-20s20 8 22 20" fill="none" stroke="{O}" stroke-width="6"/><path d="M44 50c2-8 6-12 10-12" fill="none" stroke="{O}" stroke-width="4"/>',
 }
@@ -73,8 +74,8 @@ T = {
                f_nav="Navigation", f_cat="Catalogue", f_ct="Contact",
                cats=[("cuir", "Cuir naturel"), ("simili", "Simili cuir"), ("semelles", "Semelles"), ("metal", "Boucles & métal"),
                      ("colles", "Colles & chimie"), ("fils", "Fils à coudre"), ("mousses", "Mousses & doublures"), ("emballages", "Emballages & boîtes")],
-               addr="Zone industrielle Sidi Bernoussi — Casablanca", legal="Mentions légales",
-               rights="© 2026 Shoe Partner SARL — Casablanca, Maroc", top="Retour en haut", wa="Écrire sur WhatsApp",
+               addr="6ᵉ étage, av. Allal Ben Abdellah, quartier L'Hippodrome — Fès", legal="Mentions légales",
+               rights="© 2026 Shoe Partner SARL — Fès, Maroc", top="Retour en haut", wa="Écrire sur WhatsApp",
                wa_text="Bonjour ShoePartner, je voudrais un prix pour : "),
     "ar": dict(cta="اطلب عرض سعر", home="الرئيسية", other="Français", other_lang="fr", other_code="FR",
                other_title="Voir le site en français", menu_open="فتح القائمة", menu_close="إغلاق القائمة",
@@ -83,8 +84,8 @@ T = {
                f_nav="التصفح", f_cat="الكتالوغ", f_ct="اتصل بنا",
                cats=[("cuir", "الجلد الطبيعي"), ("simili", "الجلد الصناعي"), ("semelles", "النعال"), ("metal", "الأبازيم والإكسسوارات"),
                      ("colles", "اللواصق والمواد الكيميائية"), ("fils", "خيوط الخياطة"), ("mousses", "الإسفنج والبطانات"), ("emballages", "التغليف والعلب")],
-               addr="المنطقة الصناعية سيدي البرنوصي — الدار البيضاء", legal="المعلومات القانونية",
-               rights="© 2026 Shoe Partner SARL — الدار البيضاء، المغرب", top="العودة إلى الأعلى", wa="راسلنا على واتساب",
+               addr="الطابق السادس، شارع علال بن عبد الله، حي الهيبودروم — فاس", legal="المعلومات القانونية",
+               rights="© 2026 Shoe Partner SARL — فاس، المغرب", top="العودة إلى الأعلى", wa="راسلنا على واتساب",
                wa_text="السلام عليكم شو بارتنر، بغيت ثمن ديال: "),
 }
 

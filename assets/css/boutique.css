@@ -264,3 +264,16 @@ a.card:hover .pic svg{transform:scale(1.1) rotate(-3deg)}
 @media(max-width:940px){.g3.three{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.g3.three{grid-template-columns:1fr}}
 .duo-c.mat .art{opacity:.22}
+
+/* ---------- nos marques ---------- */
+.brands{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:900px){.brands{grid-template-columns:repeat(2,1fr)}}
+.brand{background:#fff;border:1px solid var(--rule);display:flex;flex-direction:column;transition:border-color .28s var(--ease),transform .28s var(--ease),box-shadow .28s var(--ease)}
+.brand:hover{border-color:var(--or);transform:translateY(-4px);box-shadow:0 14px 34px rgba(19,42,70,.1)}
+.brand .logo{height:150px;display:flex;align-items:center;justify-content:center;padding:26px 28px;border-bottom:1px dashed var(--rule)}
+.brand .logo img{max-height:84px;max-width:100%;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.88;transition:opacity .25s,transform .35s var(--ease)}
+.brand:hover .logo img{opacity:1;transform:scale(1.05)}
+.brand .wordmark{font-family:var(--display);font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:.06em;color:#111}
+.brand .nm{padding:14px 18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(19,42,70,.6);text-align:center}
+[dir="rtl"] .brand .nm{letter-spacing:.12em}
+@media(max-width:540px){.brand .logo{height:118px;padding:18px}}
